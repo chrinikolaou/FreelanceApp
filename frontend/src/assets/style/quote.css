@@ -1,0 +1,95 @@
+.quote-container {
+    width: 100%;
+    min-height: 800px;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 0;
+}
+
+.quote-container img {
+    width: 400px;
+    height: 400px;
+}
+
+.quote-container .text {
+
+    width: 50%;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.quote-container .text .adv {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+    width: 100%;
+
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    transition: all ease-in-out .3s;
+    cursor: pointer;
+
+}
+
+.quote-container .text .adv:hover {
+    background-color: var(--default-border);
+}
+
+
+.quote-container .text .adv .heading {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.quote-container .text .adv img {
+    width: 70px;
+    height: 70px;
+}
+
+.quote-container .text .adv p {
+    width: 60%;
+}
+
+@media (max-width: 700px) {
+    
+
+.quote-container .text {
+    width: 100%;
+}
+
+.quote-container img {
+    width: 350px;
+    height: 350px;
+}
+
+.quote-container .text .adv .heading {
+    font-size: 14px;
+}
+
+.quote-container .text .adv .heading h2 {
+    font-size: 17px;
+}
+
+.quote-container .text .adv p {
+    width: 100%;
+}
+
+}

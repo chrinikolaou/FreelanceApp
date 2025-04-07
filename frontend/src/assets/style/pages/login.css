@@ -1,0 +1,69 @@
+.input-group img {
+    width: 22px;
+    height: 22px;
+}
+
+.input-group {
+    border-radius: 7px;
+}
+
+.auth-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+
+
+
+}
+
+.auth-login form {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    min-width: 600px;
+    max-width: 600px;
+    min-height: 400px;
+    padding: 30px;
+
+
+    border: 1px solid var(--default-border);
+    border-radius: 7px;
+
+}
+
+.auth-login .input-group {
+    width: 60%;
+}
+
+.auth-login hr {
+    width: 60%;
+    border: 1px solid #2e2e2e17;
+    border-radius: 1999px;
+}
+
+.auth-login button {
+    width: 63%;
+    height: 45px;
+}
+
+@media (max-width: 800px) {
+    .auth-login {
+        width: 80%;
+    }
+
+    .auth-login form {
+        width: 90%;
+        min-width: 0;
+    }
+
+    .auth-login .input-group input {
+        width: 80%; 
+    }
+}
