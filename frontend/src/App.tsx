@@ -1,11 +1,11 @@
 import './App.css'
-import Hero from './assets/components/Hero'
-import Navbar from './assets/components/Navbar'
+import Hero from './assets/components/home/Hero'
+import Navbar from './assets/components/home/Navbar'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Login from './assets/pages/Login'
 import Register from './assets/pages/Register'
-import Listings from './assets/components/Listings'
-import Quote from './assets/components/Quote'
+import Listings from './assets/components/home/Listings'
+import Quote from './assets/components/home/Quote'
 
 function App() {
 

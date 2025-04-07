@@ -1,4 +1,4 @@
-import '../style/listings.css';
+import '/src/assets/style/listings.css';
 
 function Listings() {
 

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import '../style/navbar.css';
-import SidePanel from './lib/SidePanel';
+import '/src/assets/style/navbar.css';
+import SidePanel from '../lib/SidePanel';
 
 function Navbar() {
 

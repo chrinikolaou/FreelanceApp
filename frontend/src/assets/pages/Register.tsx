@@ -26,7 +26,7 @@ function Register() {
                 <div className="checkbox-group">
                     <label className="custom-checkbox" htmlFor="accept_tos">
                         <input type="checkbox" name="accept_tos" id="accept_tos" required/>
-                        <span className="checkmark"></span> Accept the <a href="/terms" className="text-link">Terms Of Services</a>
+                        <span className="checkmark"></span> Accept the <a href="/terms" className="text-link" >Terms Of Services</a>
                     </label>
                 </div>
 
