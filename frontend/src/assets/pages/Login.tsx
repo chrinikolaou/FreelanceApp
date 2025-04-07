@@ -6,7 +6,7 @@ function Login() {
         <div className="auth-login">
 
             <form>
-            <h2>Log in to Freelance.com</h2>
+            <h2>Log in to VFreelance.com</h2>
                 <div className="input-group">
                 <img src="/src/assets/images/account.svg"/>
                     <input type="text" placeholder="Email" required/>

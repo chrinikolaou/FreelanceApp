@@ -77,7 +77,7 @@ function Navbar() {
     return (
 
         <nav className="navigation">
-            <h1><a href="/">Freelance</a></h1>
+            <h1><a href="/">VFreelance</a></h1>
             <SidePanel className="mobile-sidepanel" isOpen={isPanelOpen} hasCloseButton={false} onClose={() => setPanelOpen(false)}>
                 <ul className="sidepanel-nav">
                     

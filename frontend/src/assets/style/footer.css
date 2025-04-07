@@ -1,0 +1,86 @@
+footer {
+    margin-top: 300px;
+
+    width: 100%;
+    height: 500px;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    gap: 5rem;
+    border: none;
+}
+
+footer .links {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    text-align: center;
+}
+
+footer .links .link {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    align-items: center;
+  
+}
+
+footer .links .link a:hover {
+    text-decoration: underline;
+}
+
+footer .media {
+    width: 50%;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+footer .media .icons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: start;
+    gap: 0.5rem;
+}
+
+footer .media .icons img {
+    width: 35px;
+    height: 35px;
+    transition: transform ease-in-out .2s;
+}
+
+.designer {
+    font-size: 19px;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+
+@media (max-width: 500px) {
+    footer {
+      min-height: fit-content;
+    }
+
+    footer .media {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 1.25rem;
+    }
+
+}

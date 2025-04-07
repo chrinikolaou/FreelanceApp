@@ -6,6 +6,8 @@ import Login from './assets/pages/Login'
 import Register from './assets/pages/Register'
 import Listings from './assets/components/home/Listings'
 import Quote from './assets/components/home/Quote'
+import Footer from './assets/components/home/Footer'
+import Terms from './assets/pages/Terms'
 
 function App() {
 
@@ -16,6 +18,7 @@ function App() {
       <Hero/>
       <Listings/>
       <Quote/>
+      <Footer/>
     </>
     );
   }
@@ -25,6 +28,7 @@ function App() {
       <>
             <Navbar/>
             <Login/>
+            <Footer/>
       </>
     );
   }
@@ -34,6 +38,17 @@ function App() {
       <>
         <Navbar/>
         <Register/>
+        <Footer/>
+      </>
+    )
+  }
+
+  const TermsPage = () => {
+    return (
+      <>
+        <Navbar/>
+        <Terms/>
+        <Footer/>
       </>
     )
   }
@@ -45,6 +60,7 @@ function App() {
           <Route path="/" element={<HomePage/>}/>
           <Route path="/user/login" element={<LoginPage/>}/>
           <Route path="/user/register" element={<RegisterPage/>}/>
+          <Route path="/legal/terms" element={<TermsPage/>}/>
         </Routes>
       </Router>
 

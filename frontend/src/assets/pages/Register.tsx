@@ -6,7 +6,7 @@ function Register() {
         <div className="auth-register">
 
             <form>
-            <h2>Sign up to Freelance.com</h2>
+            <h2>Sign up to VFreelance.com</h2>
                 <div className="input-group">
                 <img src="/src/assets/images/account.svg"/>
                     <input type="text" placeholder="Email" required/>
