@@ -1,0 +1,22 @@
+.start-container {
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+    background-color: var(--light);
+    min-height: 500px;
+    text-align: center;
+}
+
+.start-container .actions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+
+}

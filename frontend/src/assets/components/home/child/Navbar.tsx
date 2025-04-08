@@ -1,8 +1,13 @@
 import { useEffect, useState } from 'react';
 import '/src/assets/style/navbar.css';
-import SidePanel from '../lib/SidePanel';
+import SidePanel from '../../lib/SidePanel';
 
-function Navbar() {
+
+interface NavbarProps {
+    active: string;
+}
+
+function Navbar({active = "home"}: NavbarProps) {
 
     const [isPanelOpen, setPanelOpen] = useState(false);
     const [isWideScreen, setIsWideScreen] = useState(false);
@@ -51,12 +56,12 @@ function Navbar() {
     const NavElements = () => {
         return (
         <>
-        <div className="nav-links">
-                <a className="nav-link active" href="#">Home</a>
-                <a className="nav-link">View Listings</a>
-                <a className="nav-link">Get a Quote</a>
-                <a className="nav-link">Pricing</a>
-            </div>
+            <div className="nav-links">
+                <a className={`nav-link ${active === "home" ? "active" : ""}`} href="/">Home</a>
+                <a className={`nav-link ${active === "listings" ? "active" : ""}`}>View Listings</a>
+                <a className={`nav-link ${active === "quote" ? "active" : ""}`}>Get a Quote</a>
+                <a className={`nav-link ${active === "pricing" ? "active" : ""}`} href="/pricing">Pricing</a>
+        </div>
             <div className="nav-buttons">
             <form className="" method="post" action="">
                 <div className="input-group search_div">
@@ -81,10 +86,18 @@ function Navbar() {
             <SidePanel className="mobile-sidepanel" isOpen={isPanelOpen} hasCloseButton={false} onClose={() => setPanelOpen(false)}>
                 <ul className="sidepanel-nav">
                     
-                <li><a className="nav-link active" href="#">Home</a></li>
-                <li><a className="nav-link">View Listings</a></li>
-                <li><a className="nav-link">Get a Quote</a></li>
-                <li><a className="nav-link">Pricing</a></li>
+                <li>
+                    <a className={`nav-link ${active === "home" ? "active" : ""}`} href="/">Home</a>
+                </li>
+                <li>
+                    <a className={`nav-link ${active === "listings" ? "active" : ""}`}>View Listings</a>
+                </li>
+                <li>
+                    <a className={`nav-link ${active === "quote" ? "active" : ""}`}>Get a Quote</a>
+                </li>
+                <li>
+                    <a className={`nav-link ${active === "pricing" ? "active" : ""}`} href="/pricing">Pricing</a>
+                </li>
                 <li className="mobile-buttons">
  
                 <a className="text-tertiary nav-link" href="/user/login">Login</a>

@@ -1,0 +1,45 @@
+.pricing-container {
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.pricing-container .containers {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.pricing-container .containers .card {
+    justify-content: space-between;
+}
+
+
+.pricing-container .containers .card .card-info {
+    margin-top: 20px;
+}
+
+.pricing-container .containers .card ul {
+    list-style-type: none;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+
+    gap: 0.5rem;
+
+    min-height: 140px;
+}
+
+.pricing-container .containers .card a {
+    margin-bottom: 25px;
+}
+

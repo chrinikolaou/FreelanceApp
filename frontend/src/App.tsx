@@ -1,32 +1,22 @@
 import './App.css'
-import Hero from './assets/components/home/Hero'
-import Navbar from './assets/components/home/Navbar'
+import Hero from './assets/components/home/child/Hero'
+import Navbar from './assets/components/home/child/Navbar'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Login from './assets/pages/Login'
 import Register from './assets/pages/Register'
-import Listings from './assets/components/home/Listings'
-import Quote from './assets/components/home/Quote'
-import Footer from './assets/components/home/Footer'
+import Listings from './assets/components/home/child/Listings'
+import Quote from './assets/components/home/child/Quote'
+import Footer from './assets/components/global/Footer'
 import Terms from './assets/pages/Terms'
+import HomePage from './assets/components/home/HomePage'
+import Pricing from './assets/pages/Pricing'
 
 function App() {
-
-  const HomePage = () => {
-    return (
-    <>
-      <Navbar/>
-      <Hero/>
-      <Listings/>
-      <Quote/>
-      <Footer/>
-    </>
-    );
-  }
 
   const LoginPage = () => {
     return (
       <>
-            <Navbar/>
+            <Navbar active=""/>
             <Login/>
             <Footer/>
       </>
@@ -36,7 +26,7 @@ function App() {
   const RegisterPage = () => {
     return (
       <>
-        <Navbar/>
+        <Navbar active=""/>
         <Register/>
         <Footer/>
       </>
@@ -46,7 +36,7 @@ function App() {
   const TermsPage = () => {
     return (
       <>
-        <Navbar/>
+        <Navbar active=""/>
         <Terms/>
         <Footer/>
       </>
@@ -58,9 +48,11 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<HomePage/>}/>
+          <Route path="/pricing" element={<Pricing/>}/>
           <Route path="/user/login" element={<LoginPage/>}/>
           <Route path="/user/register" element={<RegisterPage/>}/>
           <Route path="/legal/terms" element={<TermsPage/>}/>
+     
         </Routes>
       </Router>
 

@@ -37,7 +37,9 @@ function Quote() {
             
 
             </div>
+
         </div>
+       
     );
 
 }

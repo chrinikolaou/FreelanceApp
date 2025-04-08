@@ -17,6 +17,7 @@
   --dark: #191919;
   --light: #f0efef;
   --success: #3da338;
+  --yellow: var(--primary);
 
 
   --btn-primary-color: var(--light);
@@ -24,6 +25,7 @@
   --btn-primary-hover-color: #1b58c8;
 
   --default-font-size: 17px;
+  --default-icon-size: 35px;
   --form-search-input-size: 16px;
 
   --default-border: var(--light-border);
@@ -408,4 +410,9 @@ label {
 
 .card:hover {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.star {
+  color: var(--yellow);
+  font-size: var(--default-icon-size);
 }
