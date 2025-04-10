@@ -10,6 +10,7 @@ import Footer from './assets/components/global/Footer'
 import Terms from './assets/pages/Terms'
 import HomePage from './assets/components/home/HomePage'
 import Pricing from './assets/pages/Pricing'
+import ListingPage from './assets/components/home/ListingPage'
 
 function App() {
 
@@ -52,7 +53,7 @@ function App() {
           <Route path="/user/login" element={<LoginPage/>}/>
           <Route path="/user/register" element={<RegisterPage/>}/>
           <Route path="/legal/terms" element={<TermsPage/>}/>
-     
+          <Route path="/listings" element={<ListingPage/>}/>
         </Routes>
       </Router>
 

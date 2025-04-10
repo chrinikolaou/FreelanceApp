@@ -1,0 +1,63 @@
+.jobs-container {
+
+    margin-top: 100px;
+    width: 100%;
+    min-height: 850px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.jobs-container .job {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    width: 100%;
+
+}
+
+.jobs-container .job .title {
+    padding: 10px;
+
+}
+.jobs-container .job h2 {
+    margin-left: 100px;
+    margin-right: 100px;
+    border-bottom: 1px solid var(--default-border);
+}
+
+.jobs-container .job .content {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    max-height: 950px;
+    overflow: auto;
+
+}
+
+.jobs-container .job .content .card {
+    margin-left: 100px;
+    margin-bottom: 100px;
+
+}
+
+@media (max-width: 1000px) {
+
+    .jobs-container .job .title {
+       width: 100%;
+       padding: 0;
+    }
+
+    .jobs-container .job .content {
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .jobs-container .job .content .card {
+        margin: 0;
+    }
+}

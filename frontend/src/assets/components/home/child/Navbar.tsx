@@ -58,7 +58,7 @@ function Navbar({active = "home"}: NavbarProps) {
         <>
             <div className="nav-links">
                 <a className={`nav-link ${active === "home" ? "active" : ""}`} href="/">Home</a>
-                <a className={`nav-link ${active === "listings" ? "active" : ""}`}>View Listings</a>
+                <a className={`nav-link ${active === "listings" ? "active" : ""}`} href="/listings">View Listings</a>
                 <a className={`nav-link ${active === "quote" ? "active" : ""}`}>Get a Quote</a>
                 <a className={`nav-link ${active === "pricing" ? "active" : ""}`} href="/pricing">Pricing</a>
         </div>
@@ -90,7 +90,7 @@ function Navbar({active = "home"}: NavbarProps) {
                     <a className={`nav-link ${active === "home" ? "active" : ""}`} href="/">Home</a>
                 </li>
                 <li>
-                    <a className={`nav-link ${active === "listings" ? "active" : ""}`}>View Listings</a>
+                    <a className={`nav-link ${active === "listings" ? "active" : ""}`} href="/listings">View Listings</a>
                 </li>
                 <li>
                     <a className={`nav-link ${active === "quote" ? "active" : ""}`}>Get a Quote</a>
