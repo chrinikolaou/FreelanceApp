@@ -1,0 +1,22 @@
+[
+  {
+    "ContainingType": "backend.Controllers.AuthController",
+    "Method": "Test",
+    "RelativePath": "api/v1/auth",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]
