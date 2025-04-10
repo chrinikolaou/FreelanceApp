@@ -1,20 +1,43 @@
+import { useState } from 'react';
 import '../style/pages/login.css';
+import axios from 'axios';
 
 function Login() {
     
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            let url = import.meta.env.VITE_API_URL;
+
+            const response = await axios.post(`/login`, {
+                username,
+                password
+            });
+
+            
+            console.log(response);
+            console.log("Login successful");
+        } catch (err) {
+            console.log('Login Error: ', err);
+        }
+    }
+
     return (
         <div className="auth-login">
 
-            <form>
+            <form onSubmit={handleSubmit}>
             <h2>Log in to VFreelance.com</h2>
                 <div className="input-group">
                 <img src="/src/assets/images/account.svg"/>
-                    <input type="text" placeholder="Email" required/>
+                    <input type="text" placeholder="Username" value={username} onChange={(e)=>setUsername(e.target.value)} required/>
                 </div>
           
                 <div className="input-group">
                     <img src="/src/assets/images/lock.svg"/>
-                    <input type="password" placeholder="Password" required/>
+                    <input type="password" placeholder="Password" value={password} onChange={(e)=>setPassword(e.target.value)} required/>
                 </div>
 
                 <div className="group">

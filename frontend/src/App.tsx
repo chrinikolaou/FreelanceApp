@@ -11,6 +11,7 @@ import Terms from './assets/pages/Terms'
 import HomePage from './assets/components/home/HomePage'
 import Pricing from './assets/pages/Pricing'
 import ListingPage from './assets/components/home/ListingPage'
+import ProtectedRoute from './assets/components/global/ProtectedRoute'
 
 function App() {
 
@@ -49,7 +50,8 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<HomePage/>}/>
-          <Route path="/pricing" element={<Pricing/>}/>
+          <Route path="/pricing" element={
+            <ProtectedRoute><Pricing/></ProtectedRoute>}/>
           <Route path="/user/login" element={<LoginPage/>}/>
           <Route path="/user/register" element={<RegisterPage/>}/>
           <Route path="/legal/terms" element={<TermsPage/>}/>
