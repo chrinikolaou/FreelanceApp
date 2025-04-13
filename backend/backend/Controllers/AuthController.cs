@@ -1,5 +1,5 @@
 ﻿using backend.Data;
-using backend.Dto;
+using backend.Dto.AuthDto;
 using backend.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -102,6 +102,18 @@ namespace backend.Controllers
 
             return Ok("User registered successfully");
         }
+
+        [HttpPost("logout")]
+        [Authorize]
+        public IActionResult Logout()
+        {
+            Response.Cookies.Delete("jwt");
+
+            return Ok(new { message = "Logged out successfully." });
+        }
+
+
+
 
 
         [HttpGet("me")]

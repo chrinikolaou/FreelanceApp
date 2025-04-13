@@ -95,26 +95,4 @@ app.UseAuthorization();
 app.MapControllers();
 
 
-using (var scope = app.Services.CreateScope())
-{
-    var db = scope.ServiceProvider.GetRequiredService<DataContext>();
-
-    if (!db.Users.Any())
-    {
-        var testUser = new User
-        {
-            FirstName = "Test",
-            LastName = "User",
-            UserName = "testuser",
-            Email = "test@example.com",
-            Password = "123456",
-            Address = "Athens",
-            ImageUrl = null
-        };
-
-        db.Users.Add(testUser);
-        db.SaveChanges();
-    }
-}
-
 app.Run();

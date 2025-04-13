@@ -1,11 +1,19 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using backend.Enum;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace backend.Models
 {
-    public class Freelancer : User 
+    public class Freelancer
     {
-        public int FreelancerId { get; set; }
+        [Key]
+        public int FreelancerId { get; set; } 
+
+        [Required]
+        public int UserId { get; set; }
+
+        [ForeignKey("UserId")]
+        public User User { get; set; }
 
         [StringLength(2000)]
         public string? Biography { get; set; }
@@ -13,22 +21,10 @@ namespace backend.Models
         [Required]
         [Column(TypeName = "decimal(18,2)")]
         public decimal Balance { get; set; }
-        public enum Role
-        {
-            UI_DESIGNER ,
-            UNITY_DEVELOPER,
-            WEB_DEVELOPER,
-            DISCORD_BOT_DEVELOPER,
-            GRAPHICS_DESIGNER,
-            SOFTWARE_DEVELOPER,
-            MOBILE_DEVELOPER,
-            UNREALENGINE_DEVELOPER,
-            VFX_DESIGNER,
-            ANIMATOR,
-            VIDEO_EDITOR,
-            CONTENT_WRITER
-
-        }
+        [Required]
+        public RoleState Role { get; set; }
 
     }
+
+    
 }
