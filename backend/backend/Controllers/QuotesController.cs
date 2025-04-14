@@ -45,6 +45,12 @@ namespace backend.Controllers
                 return NotFound($"Job with ID {request.JobId} does not exist.");
             }
 
+            if (job.UserId == userId)
+            {
+                return BadRequest("You cannot create a quote for a job that belongs to you.");
+            }
+
+
             var quote = new Quote
             {
                 FreelancerId = freelancer.FreelancerId,
@@ -54,6 +60,26 @@ namespace backend.Controllers
             };
 
             _context.Quotes.Add(quote);
+
+            //Create Notification for the job poster
+            
+            var jobPoster = _context.Users.Find(job.UserId);
+            if (jobPoster != null)
+            {
+                var notification = new Notification
+                {
+                    UserId = jobPoster.Id,
+                    Message = $"Ο χρήστης {freelancer.User.UserName} έκανε προσφορά για τη δουλειά σου: '{job.Title}'",
+                    CreatedAt = DateTime.UtcNow
+                };
+
+                _context.Notifications.Add(notification);
+            }
+
+
+
+
+
             _context.SaveChanges();
 
             var response = new QuoteResponseDto
@@ -110,6 +136,11 @@ namespace backend.Controllers
         public IActionResult DeleteAllMyQuotes()
         {
             var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+            if (userId == null)
+            {
+                return Unauthorized();
+            }
+
             var freelancer = _context.Freelancers.FirstOrDefault(f => f.UserId == userId);
             if (freelancer == null)
                 return BadRequest("Only freelancers can create quotes.");
@@ -179,7 +210,9 @@ namespace backend.Controllers
 
             var quote = _context.Quotes
                 .Include(q => q.Job)
-                .ThenInclude(j => j.User)
+                    .ThenInclude(j => j.User)
+                .Include(q => q.Freelancer)
+                    .ThenInclude(f => f.User)
                 .FirstOrDefault(q => q.Id == quoteId);
 
             if (quote == null)
@@ -199,6 +232,21 @@ namespace backend.Controllers
             // Set accepted quote and update job state
             job.AcceptedQuoteId = quoteId;
             job.State = JobState.InProgress;
+
+
+
+            // Send notification to freelancer
+            var notification = new Notification
+            {
+                UserId = quote.Freelancer.UserId,
+                Message = $"Η προσφορά σου με ID {quoteId} για τη δουλειά '{job.Title}' έγινε αποδεκτή!",
+                CreatedAt = DateTime.UtcNow
+            };
+            _context.Notifications.Add(notification);
+
+
+
+
 
             _context.SaveChanges();
 
@@ -221,8 +269,9 @@ namespace backend.Controllers
             
             var quote = _context.Quotes
                 .Include(q => q.Job)
+                    .ThenInclude(j => j.User)
                 .Include(q => q.Freelancer)
-                .ThenInclude(f => f.User)
+                    .ThenInclude(f => f.User)
                 .FirstOrDefault(q => q.Id == quoteId);
 
             if (quote == null)
@@ -243,8 +292,45 @@ namespace backend.Controllers
                 return BadRequest("You are not allowed to cancel this accepted quote.");
 
             
+         
+
+
+
+            // Send notification to the other party
+            Notification notification = null;
+
+            if (isJobOwner)
+            {
+                notification = new Notification
+                {
+                    UserId = quote.Freelancer.UserId,
+                    Message = $"Ο '{job.User.UserName}' ακύρωσε την αποδοχή της προσφοράς σου για τη δουλειά '{job.Title}'.",
+                    CreatedAt = DateTime.UtcNow
+                };
+            }
+            else if (isAcceptedFreelancer)
+            {
+                notification = new Notification
+                {
+                    UserId = job.UserId,
+                    Message = $"Ο '{quote.Freelancer.User.UserName}' ακύρωσε την αποδοχή της προσφοράς του για τη δουλειά '{job.Title}'.",
+                    CreatedAt = DateTime.UtcNow
+                };
+            }
+
+
+
+            if (notification != null)
+                _context.Notifications.Add(notification);
+
             job.State = JobState.Open;
             job.AcceptedQuoteId = null;
+
+
+
+
+
+
 
             _context.SaveChanges();
 

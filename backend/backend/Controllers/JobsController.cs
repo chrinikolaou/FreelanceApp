@@ -133,7 +133,15 @@ namespace backend.Controllers
         {
             var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
 
-            var job = _context.Jobs.FirstOrDefault(j => j.Id == id);
+            if (userId == null)
+            {
+                return Unauthorized();
+            }
+
+            var job = _context.Jobs
+                .Include(j => j.User)
+                .Include(j => j.AcceptedQuote)
+                .FirstOrDefault(j => j.Id == id);
 
             if (job == null)
                 return NotFound();
@@ -141,8 +149,46 @@ namespace backend.Controllers
             if (job.UserId != userId)
                 return Unauthorized();
 
+
+            if (job.AcceptedQuoteId != null)
+            {
+                job.State = JobState.Open;
+                job.AcceptedQuoteId = null;
+                job.AcceptedQuote = null;
+                _context.Jobs.Update(job);
+                _context.SaveChanges();
+            }
+
             //Delete Relative Quotes
-            var quotes = _context.Quotes.Where(q => q.JobId == job.Id).ToList();
+            var quotes = _context.Quotes
+                .Include(q => q.Job)
+                    .ThenInclude(j => j.User)
+                .Include(q => q.Freelancer)
+                    .ThenInclude(f => f.User)
+                .Where(q => q.JobId == job.Id)
+                .ToList();
+
+
+
+            //Send Notifications
+            foreach (var quote in quotes)
+            {
+                string message = $"Το quote σας για την δουλειά '{job.Title}' έχει αφαιρεθεί, καθώς η δουλειά ανανεώθηκε.";
+
+               
+                var notification = new Notification
+                {
+                    UserId = quote.Freelancer.UserId,
+                    Message = message,
+                    CreatedAt = DateTime.UtcNow,
+                };
+
+               
+                _context.Notifications.Add(notification);
+            }
+
+
+
             _context.Quotes.RemoveRange(quotes);
 
 
@@ -170,7 +216,15 @@ namespace backend.Controllers
         {
             var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
 
-            var job = _context.Jobs.FirstOrDefault(j => j.Id == id);
+            if (userId == null)
+            {
+                return Unauthorized();
+            }
+
+            var job = _context.Jobs
+                .Include(j => j.User)
+                .Include(j => j.AcceptedQuote)
+                .FirstOrDefault(j => j.Id == id);
 
             if (job == null)
                 return NotFound();
@@ -178,11 +232,52 @@ namespace backend.Controllers
             if (job.UserId != userId)
                 return Unauthorized();
 
-            var quotes = _context.Quotes.Where(q => q.JobId == job.Id).ToList();
+            
+            if (job.AcceptedQuoteId != null)
+            {
+                job.State = JobState.Open;
+                job.AcceptedQuoteId = null;
+                job.AcceptedQuote = null;
+                _context.Jobs.Update(job);
+                _context.SaveChanges();
+            }
+
+            var quotes = _context.Quotes
+                .Include(q => q.Job)
+                    .ThenInclude(j => j.User)
+                .Include(q => q.Freelancer)
+                    .ThenInclude(f => f.User)
+                .Where(q => q.JobId == job.Id)
+                .ToList();
+
+
+
+
+            //Send notification
+            
+            foreach (var quote in quotes)
+            {
+                string message = $"Το quote σας με Id '{quote.Id}' για την δουλειά '{job.Title}' έχει αφαιρεθεί, καθώς η δουλειά διαγράφηκε.";
+
+                var notification = new Notification
+                {
+                    UserId = quote.Freelancer.UserId,
+                    Message = message,
+                    CreatedAt = DateTime.UtcNow,
+                };
+
+                // Αποθήκευση της ειδοποίησης στη βάση δεδομένων
+                _context.Notifications.Add(notification);
+            }
+
+
+            
+
             _context.Quotes.RemoveRange(quotes);
 
-
             _context.Jobs.Remove(job);
+
+
             _context.SaveChanges();
 
             return Ok(new { message = "Job deleted successfully" });
