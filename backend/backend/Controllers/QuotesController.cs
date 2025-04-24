@@ -1,6 +1,7 @@
 ﻿using backend.Data;
 using backend.Dto.QuoteDto;
 using backend.Enum;
+using backend.Evaluator;
 using backend.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -15,13 +16,15 @@ namespace backend.Controllers
     public class QuotesController : ControllerBase
     {
         private readonly DataContext _context;
-
-        public QuotesController(DataContext context)
+        private readonly IQuoteEvaluator _quoteEvaluator;
+        public QuotesController(DataContext context, IQuoteEvaluator quoteEvaluator)
         {
             _context = context;
+            _quoteEvaluator = quoteEvaluator;
+
         }
 
-        
+
         [HttpPost("create-quote")]
         [Authorize]
         public IActionResult CreateQuote([FromBody] CreateQuoteDto request)
@@ -45,24 +48,39 @@ namespace backend.Controllers
                 return NotFound($"Job with ID {request.JobId} does not exist.");
             }
 
+
             if (job.UserId == userId)
             {
                 return BadRequest("You cannot create a quote for a job that belongs to you.");
             }
+            if (job.State == JobState.Completed)
+            {
+                return BadRequest("You cannot create a quote for a completed job");
+            }
 
+            var evaluationResult = _quoteEvaluator.EvaluateQuote(freelancer, job, request.Price);
 
             var quote = new Quote
             {
                 FreelancerId = freelancer.FreelancerId,
                 JobId = request.JobId,
                 Price = request.Price,
-                Comment = request.Comment
+                Comment = request.Comment,
+                EvaluationScore = evaluationResult.Score,
+                EvaluationDecision = evaluationResult.Decision
             };
 
             _context.Quotes.Add(quote);
 
-            //Create Notification for the job poster
+
+
             
+          
+
+         
+
+            //Create Notification for the job poster
+
             var jobPoster = _context.Users.Find(job.UserId);
             if (jobPoster != null)
             {
@@ -90,7 +108,9 @@ namespace backend.Controllers
                 FreelancerId = freelancer.FreelancerId,
                 FreelancerUsername = freelancer.User.UserName,
                 Price = quote.Price,
-                Comment = quote.Comment
+                Comment = quote.Comment,
+                Decision = quote.EvaluationDecision
+                
             };
 
             return CreatedAtAction(nameof(GetAllQuotesForAJobById), new { jobId = quote.JobId }, response);
@@ -102,24 +122,48 @@ namespace backend.Controllers
         public IActionResult DeleteQuoteById(int id)
         {
             var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
-            var freelancer = _context.Freelancers.FirstOrDefault(f => f.UserId == userId);
+            var freelancer = _context.Freelancers
+                .Include(f => f.User)
+                .FirstOrDefault(f => f.UserId == userId);
+
+
+
             if (freelancer == null)
-                return BadRequest("Only freelancers can create quotes.");
+                return BadRequest("Only freelancers can delete quotes.");
 
             var quote = _context.Quotes
              .Include(q => q.Job)
+             .ThenInclude(job => job.User)
              .FirstOrDefault(q => q.Id == id);
+
             if (quote == null)
                 return NotFound();
 
             if (quote.FreelancerId != freelancer.FreelancerId)
-                return BadRequest("Only freelancers can create quotes.");
-
+                return BadRequest("You can only delete your quotes.");
 
             if (quote.Job != null && quote.Job.AcceptedQuoteId == quote.Id)
             {
+
+                var message = $"Η αποδεκτή προσφορά για τη δουλειά '{quote.Job.Title}' μόλις διαγράφηκε από τον freelancer {freelancer.User.UserName}!";
+
+                var notification = new Notification
+                {
+                    UserId = quote.Job.UserId,
+                    Message = message,
+                    CreatedAt = DateTime.UtcNow
+                };
+
+                quote.Job.AcceptedQuote = null;
                 quote.Job.AcceptedQuoteId = null;
-                quote.Job.State = JobState.Open;
+
+                if (quote.Job.State != JobState.Completed)
+                {
+                    quote.Job.State = JobState.Open;
+                    _context.Notifications.Add(notification);
+                }
+                _context.Jobs.Update(quote.Job);
+                _context.SaveChanges();
             }
 
 
@@ -141,12 +185,16 @@ namespace backend.Controllers
                 return Unauthorized();
             }
 
-            var freelancer = _context.Freelancers.FirstOrDefault(f => f.UserId == userId);
+            var freelancer = _context.Freelancers
+                .Include(f => f.User)
+                .FirstOrDefault(f => f.UserId == userId);
+
             if (freelancer == null)
-                return BadRequest("Only freelancers can create quotes.");
+                return BadRequest("Only freelancers can delete quotes.");
 
             var quotes = _context.Quotes
                 .Include(q => q.Job)
+                .ThenInclude(job => job.User)
                 .Where(q => q.FreelancerId == freelancer.FreelancerId)
                 .ToList();
 
@@ -159,8 +207,26 @@ namespace backend.Controllers
             {
                 if (quote.Job != null && quote.Job.AcceptedQuoteId == quote.Id)
                 {
+
+                    var message = $"Η αποδεκτή προσφορά για τη δουλειά '{quote.Job.Title}' μόλις διαγράφηκε από τον freelancer {freelancer.User.UserName}!";
+
+                    var notification = new Notification
+                    {
+                        UserId = quote.Job.UserId,
+                        Message = message,
+                        CreatedAt = DateTime.UtcNow
+                    };
+
+                    quote.Job.AcceptedQuote = null;
                     quote.Job.AcceptedQuoteId = null;
-                    quote.Job.State = JobState.Open;
+
+                     if (quote.Job.State != JobState.Completed)
+                     {
+                         quote.Job.State = JobState.Open;
+                         _context.Notifications.Add(notification);
+                     }
+                    _context.Jobs.Update(quote.Job);
+                    _context.SaveChanges();
                 }
             }
 
@@ -192,7 +258,8 @@ namespace backend.Controllers
                     FreelancerId = q.FreelancerId,
                     FreelancerUsername = q.Freelancer.User.UserName,
                     Price = q.Price,
-                    Comment = q.Comment
+                    Comment = q.Comment,
+                    Decision = q.EvaluationDecision
                 })
                 .ToList();
 
@@ -284,15 +351,16 @@ namespace backend.Controllers
             
             if (job.AcceptedQuoteId != quoteId)
                 return BadRequest("This quote is not the accepted quote for the job.");
-
+           
             bool isJobOwner = job.UserId == userId;
             bool isAcceptedFreelancer = quote.Freelancer.UserId == userId;
 
             if (!isJobOwner && !isAcceptedFreelancer)
                 return BadRequest("You are not allowed to cancel this accepted quote.");
 
-            
-         
+            if (job.State == JobState.Completed)
+                return BadRequest("This quote cannot be cancelled because the job is completed");
+
 
 
 
@@ -370,7 +438,8 @@ namespace backend.Controllers
                     FreelancerId = q.FreelancerId,
                     FreelancerUsername = q.Freelancer.User.UserName,
                     Price = q.Price,
-                    Comment = q.Comment
+                    Comment = q.Comment,
+                    Decision = q.EvaluationDecision
                 })
                 .ToList();
 
@@ -412,7 +481,9 @@ namespace backend.Controllers
                     FreelancerId = q.FreelancerId,
                     FreelancerUsername = q.Freelancer.User.UserName,
                     Price = q.Price,
-                    Comment = q.Comment
+                    Comment = q.Comment,
+                    Decision = q.EvaluationDecision
+
                 })
                 .ToList();
 
@@ -455,7 +526,8 @@ namespace backend.Controllers
                     FreelancerId = q.FreelancerId,
                     FreelancerUsername = q.Freelancer.User.UserName,
                     Price = q.Price,
-                    Comment = q.Comment
+                    Comment = q.Comment,
+                    Decision = q.EvaluationDecision
                 })
                 .ToList();
 
@@ -466,6 +538,11 @@ namespace backend.Controllers
 
             return Ok(quotes);
         }
+
+       
+
+
+
 
 
     }

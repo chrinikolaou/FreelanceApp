@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.AspNetCore.Identity;
+using backend.Evaluator;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -71,7 +72,7 @@ builder.Services.AddCors(options =>
     });
 });
 
-
+builder.Services.AddScoped<IQuoteEvaluator, QuoteEvaluatorService>();
 
 var app = builder.Build();
 

@@ -24,6 +24,10 @@ namespace backend.Models
         [Required]
         public RoleState Role { get; set; }
 
+
+        public int CompletedJobs { get; set; } = 0;
+
+
     }
 
     

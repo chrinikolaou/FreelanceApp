@@ -13,7 +13,7 @@ namespace backend.Controllers
 {
     [ApiController]
     [Route("api/v1/user")]
-    public class UserController : Controller
+    public class UserController : ControllerBase
     {
         private readonly DataContext _context;
 
@@ -49,9 +49,11 @@ namespace backend.Controllers
                     Email = freelancer.User.Email,
                     Address = freelancer.User.Address,
                     ImageUrl = freelancer.User.ImageUrl,
+                    IsAdmin = freelancer.User.IsAdmin,
                     Biography = freelancer.Biography,
                     Balance = freelancer.Balance,
-                    Role = freelancer.Role.ToString()
+                    Role = freelancer.Role.ToString(),
+                    CompletedJobs = freelancer.CompletedJobs
                 };
 
                 return Ok(freelancerProfile);
@@ -65,7 +67,8 @@ namespace backend.Controllers
                     UserName = user.UserName,
                     Email = user.Email,
                     Address = user.Address,
-                    ImageUrl = user.ImageUrl
+                    ImageUrl = user.ImageUrl,
+                    IsAdmin= user.IsAdmin
                 };
 
                 return Ok(userProfile);

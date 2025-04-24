@@ -12,6 +12,8 @@ namespace backend.Data
         public DbSet<Job> Jobs { get; set; }
         public DbSet<Quote> Quotes { get; set; }
         public DbSet<Notification> Notifications { get; set; }
+        public DbSet<Rating> Ratings { get; set; }
+        public DbSet<CompletedJob> CompletedJobs { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -22,6 +24,8 @@ namespace backend.Data
             modelBuilder.Entity<Job>().ToTable("Job");
             modelBuilder.Entity<Quote>().ToTable("Quote");
             modelBuilder.Entity<Notification>().ToTable("Notification");
+            modelBuilder.Entity<Rating>().ToTable("Rating");
+            modelBuilder.Entity<CompletedJob>().ToTable("CompletedJob");
 
             // Quote - Job relationship
             modelBuilder.Entity<Quote>()
@@ -53,6 +57,13 @@ namespace backend.Data
                 .HasOne(n => n.User)
                 .WithMany() // δεν έχει navigation στο User
                 .HasForeignKey(n => n.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            // Freelancer - Rating relationship
+            modelBuilder.Entity<Rating>()
+                .HasOne(r => r.Freelancer)
+                .WithMany()
+                .HasForeignKey(r => r.FreelancerId)
                 .OnDelete(DeleteBehavior.Cascade);
         }
 

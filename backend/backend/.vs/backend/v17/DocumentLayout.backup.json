@@ -3,48 +3,140 @@
   "WorkspaceRootPath": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\controllers\\jobscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:controllers\\jobscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\evaluator\\quoteevaluatorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:evaluator\\quoteevaluatorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\controllers\\quotescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:controllers\\quotescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\models\\job.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:models\\job.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\dto\\quotedto\\evaluatequotedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:dto\\quotedto\\evaluatequotedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\models\\quote.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:models\\quote.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\controllers\\notificationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:controllers\\notificationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\dto\\quotedto\\quoteresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:dto\\quotedto\\quoteresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\dto\\notificationdto\\notificationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:dto\\notificationdto\\notificationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Migrations\\20250424194155_All.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20250424194155_All.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\dto\\notificationdto\\createnotificationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:dto\\notificationdto\\createnotificationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\controllers\\jobscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:controllers\\jobscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\dto\\completedjob\\completedjobresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:dto\\completedjob\\completedjobresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\models\\freelancer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:models\\freelancer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\evaluator\\iquoteevaluator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:evaluator\\iquoteevaluator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\dto\\quotedto\\quoteevaluationresultdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:dto\\quotedto\\quoteevaluationresultdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\models\\completedjob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:models\\completedjob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\dto\\quotedto\\createquotedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:dto\\quotedto\\createquotedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\dto\\authdto\\registerrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:dto\\authdto\\registerrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\models\\rating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:models\\rating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\dto\\jobdto\\createjobdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:dto\\jobdto\\createjobdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\controllers\\ratingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:controllers\\ratingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\dto\\ratingdto\\createratingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:dto\\ratingdto\\createratingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\models\\job.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:models\\job.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\dto\\freelancerdto\\freelancerprofiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:dto\\freelancerdto\\freelancerprofiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\dto\\freelancerdto\\freelancerregisterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:dto\\freelancerdto\\freelancerregisterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\controllers\\notificationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:controllers\\notificationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\dto\\ratingdto\\viewratingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:dto\\ratingdto\\viewratingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\dto\\admindto\\viewjobdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:dto\\admindto\\viewjobdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\dto\\admindto\\viewquotedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:dto\\admindto\\viewquotedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\dto\\admindto\\viewuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:dto\\admindto\\viewuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\dto\\jobdto\\jobresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:dto\\jobdto\\jobresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\enum\\jobstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -55,131 +147,20 @@
       "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:enum\\rolestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\models\\freelancer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:models\\freelancer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\dto\\quotedto\\quoteresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:dto\\quotedto\\quoteresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\migrations\\20250413200640_quotesmig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:migrations\\20250413200640_quotesmig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\dto\\jobdto\\jobresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:dto\\jobdto\\jobresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\dto\\freelancerdto\\freelancerprofiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:dto\\freelancerdto\\freelancerprofiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\dto\\admindto\\viewfreelancerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:dto\\admindto\\viewfreelancerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\dto\\userdto\\userprofiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:dto\\userdto\\userprofiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\dto\\authdto\\loginrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:dto\\authdto\\loginrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\migrations\\20250421192329_newuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:migrations\\20250421192329_newuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\dto\\quotedto\\createquotedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:dto\\quotedto\\createquotedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\dto\\jobdto\\updatejobdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:dto\\jobdto\\updatejobdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\dto\\freelancerdto\\freelancerregisterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:dto\\freelancerdto\\freelancerregisterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\dto\\authdto\\registerrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:dto\\authdto\\registerrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Migrations\\20250413142723_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20250413142723_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Migrations\\20250411223808_LastFix.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20250411223808_LastFix.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Migrations\\20250411223041_new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20250411223041_new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Migrations\\20250411222709_Rnadom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20250411222709_Rnadom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Migrations\\20250411222302_FreelancerA.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20250411222302_FreelancerA.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Migrations\\20250411221418_NoActionMigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20250411221418_NoActionMigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Migrations\\20250411221117_AddQuoteTableAndRelations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20250411221117_AddQuoteTableAndRelations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Migrations\\20250411220655_Set Null.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20250411220655_Set Null.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Migrations\\20250411220354_Quote2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20250411220354_Quote2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Migrations\\20250411210910_JobMigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20250411210910_JobMigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\CodingProjects\\VisualStudio\\FreelanceApp-master\\backend\\backend\\Migrations\\20250409214728_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\backend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:backend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\migrations\\20250413173003_newdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:migrations\\20250413173003_newdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\migrations\\20250413163304_updatefreelancer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:migrations\\20250413163304_updatefreelancer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\migrations\\20250413160818_databaseupdates.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:migrations\\20250413160818_databaseupdates.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\migrations\\20250413143212_fixedcascadeissue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:migrations\\20250413143212_fixedcascadeissue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\migrations\\20250413191753_newmigrations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:migrations\\20250413191753_newmigrations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\githubrepositories\\freelance\\freelanceapp\\backend\\backend\\migrations\\20250422221609_allupdates.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:migrations\\20250422221609_allupdates.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -189,50 +170,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "NotificationsController.cs",
-              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Controllers\\NotificationsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\NotificationsController.cs",
-              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Controllers\\NotificationsController.cs",
-              "RelativeToolTip": "Controllers\\NotificationsController.cs",
-              "ViewState": "AgIAAE8AAAAAAAAAAAAswJIAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T23:26:39.318Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Job.cs",
-              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Models\\Job.cs",
-              "RelativeDocumentMoniker": "Models\\Job.cs",
-              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Models\\Job.cs",
-              "RelativeToolTip": "Models\\Job.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAAACMAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T20:08:13.517Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "JobsController.cs",
-              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Controllers\\JobsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\JobsController.cs",
-              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Controllers\\JobsController.cs",
-              "RelativeToolTip": "Controllers\\JobsController.cs",
-              "ViewState": "AgIAAKYAAAAAAAAAAAAAAKsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-11T16:06:13.854Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -242,253 +184,196 @@
               "RelativeDocumentMoniker": "Controllers\\QuotesController.cs",
               "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Controllers\\QuotesController.cs",
               "RelativeToolTip": "Controllers\\QuotesController.cs",
-              "ViewState": "AgIAACUBAAAAAAAAAAAAwEYBAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAPABAAAAAAAAAAAtwAgCAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T14:52:02.884Z",
+              "WhenOpened": "2025-04-21T16:55:31.168Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Quote.cs",
-              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Models\\Quote.cs",
-              "RelativeDocumentMoniker": "Models\\Quote.cs",
-              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Models\\Quote.cs",
-              "RelativeToolTip": "Models\\Quote.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-11T21:33:00.002Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DataContext.cs",
-              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Data\\DataContext.cs",
-              "RelativeDocumentMoniker": "Data\\DataContext.cs",
-              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Data\\DataContext.cs",
-              "RelativeToolTip": "Data\\DataContext.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAIwDUAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T21:27:03.647Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "NotificationDto.cs",
-              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Dto\\NotificationDto\\NotificationDto.cs",
-              "RelativeDocumentMoniker": "Dto\\NotificationDto\\NotificationDto.cs",
-              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Dto\\NotificationDto\\NotificationDto.cs",
-              "RelativeToolTip": "Dto\\NotificationDto\\NotificationDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T23:23:01.372Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "CreateNotificationDto.cs",
-              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Dto\\NotificationDto\\CreateNotificationDto.cs",
-              "RelativeDocumentMoniker": "Dto\\NotificationDto\\CreateNotificationDto.cs",
-              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Dto\\NotificationDto\\CreateNotificationDto.cs",
-              "RelativeToolTip": "Dto\\NotificationDto\\CreateNotificationDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T23:22:45.146Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAIwFEAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T19:54:56.701Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
-              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Controllers\\UserController.cs",
-              "RelativeToolTip": "Controllers\\UserController.cs",
-              "ViewState": "AgIAAHMAAAAAAAAAAAAywIgAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T18:29:43.654Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
-              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "Controllers\\AuthController.cs",
-              "ViewState": "AgIAAFgAAAAAAAAAAAAwwHUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T20:19:57.784Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "JobState.cs",
-              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Enum\\JobState.cs",
-              "RelativeDocumentMoniker": "Enum\\JobState.cs",
-              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Enum\\JobState.cs",
-              "RelativeToolTip": "Enum\\JobState.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-11T21:34:23.81Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "RoleState.cs",
-              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Enum\\RoleState.cs",
-              "RelativeDocumentMoniker": "Enum\\RoleState.cs",
-              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Enum\\RoleState.cs",
-              "RelativeToolTip": "Enum\\RoleState.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T14:16:46.874Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Freelancer.cs",
-              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Models\\Freelancer.cs",
-              "RelativeDocumentMoniker": "Models\\Freelancer.cs",
-              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Models\\Freelancer.cs",
-              "RelativeToolTip": "Models\\Freelancer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T21:05:27.56Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Models\\User.cs",
-              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Models\\User.cs",
-              "RelativeToolTip": "Models\\User.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAgwCEAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T23:11:24.788Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
               "Title": "QuoteResponseDto.cs",
               "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Dto\\QuoteDto\\QuoteResponseDto.cs",
               "RelativeDocumentMoniker": "Dto\\QuoteDto\\QuoteResponseDto.cs",
               "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Dto\\QuoteDto\\QuoteResponseDto.cs",
               "RelativeToolTip": "Dto\\QuoteDto\\QuoteResponseDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T14:54:50.799Z"
+              "WhenOpened": "2025-04-24T18:09:47.776Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "20250413191753_NewMigrations.cs",
-              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Migrations\\20250413191753_NewMigrations.cs",
-              "RelativeDocumentMoniker": "Migrations\\20250413191753_NewMigrations.cs",
-              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Migrations\\20250413191753_NewMigrations.cs",
-              "RelativeToolTip": "Migrations\\20250413191753_NewMigrations.cs",
+              "DocumentIndex": 2,
+              "Title": "EvaluateQuoteDto.cs",
+              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Dto\\QuoteDto\\EvaluateQuoteDto.cs",
+              "RelativeDocumentMoniker": "Dto\\QuoteDto\\EvaluateQuoteDto.cs",
+              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Dto\\QuoteDto\\EvaluateQuoteDto.cs",
+              "RelativeToolTip": "Dto\\QuoteDto\\EvaluateQuoteDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T18:01:20.31Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Quote.cs",
+              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Models\\Quote.cs",
+              "RelativeDocumentMoniker": "Models\\Quote.cs",
+              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Models\\Quote.cs",
+              "RelativeToolTip": "Models\\Quote.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T17:33:57.024Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "QuoteEvaluatorService.cs",
+              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Evaluator\\QuoteEvaluatorService.cs",
+              "RelativeDocumentMoniker": "Evaluator\\QuoteEvaluatorService.cs",
+              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Evaluator\\QuoteEvaluatorService.cs",
+              "RelativeToolTip": "Evaluator\\QuoteEvaluatorService.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAowCEAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T18:19:42.86Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "20250424194155_All.cs",
+              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Migrations\\20250424194155_All.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250424194155_All.cs",
+              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Migrations\\20250424194155_All.cs",
+              "RelativeToolTip": "Migrations\\20250424194155_All.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T19:17:53.32Z"
+              "WhenOpened": "2025-04-24T19:41:55.415Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "20250413200640_QuotesMig.cs",
-              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Migrations\\20250413200640_QuotesMig.cs",
-              "RelativeDocumentMoniker": "Migrations\\20250413200640_QuotesMig.cs",
-              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Migrations\\20250413200640_QuotesMig.cs",
-              "RelativeToolTip": "Migrations\\20250413200640_QuotesMig.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "JobsController.cs",
+              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Controllers\\JobsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\JobsController.cs",
+              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Controllers\\JobsController.cs",
+              "RelativeToolTip": "Controllers\\JobsController.cs",
+              "ViewState": "AgIAAGIBAAAAAAAAAAAuwGkBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T20:06:41.075Z"
+              "WhenOpened": "2025-04-21T18:08:25.128Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "JobResponseDto.cs",
-              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Dto\\JobDto\\JobResponseDto.cs",
-              "RelativeDocumentMoniker": "Dto\\JobDto\\JobResponseDto.cs",
-              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Dto\\JobDto\\JobResponseDto.cs",
-              "RelativeToolTip": "Dto\\JobDto\\JobResponseDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAxAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "CompletedJobResponseDto.cs",
+              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Dto\\CompletedJob\\CompletedJobResponseDto.cs",
+              "RelativeDocumentMoniker": "Dto\\CompletedJob\\CompletedJobResponseDto.cs",
+              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Dto\\CompletedJob\\CompletedJobResponseDto.cs",
+              "RelativeToolTip": "Dto\\CompletedJob\\CompletedJobResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-11T16:18:11.118Z"
+              "WhenOpened": "2025-04-22T20:01:31.039Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "FreelancerProfileDto.cs",
-              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Dto\\FreelancerDtO\\FreelancerProfileDto.cs",
-              "RelativeDocumentMoniker": "Dto\\FreelancerDtO\\FreelancerProfileDto.cs",
-              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Dto\\FreelancerDtO\\FreelancerProfileDto.cs",
-              "RelativeToolTip": "Dto\\FreelancerDtO\\FreelancerProfileDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "Freelancer.cs",
+              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Models\\Freelancer.cs",
+              "RelativeDocumentMoniker": "Models\\Freelancer.cs",
+              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Models\\Freelancer.cs",
+              "RelativeToolTip": "Models\\Freelancer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T16:00:59.202Z"
+              "WhenOpened": "2025-04-21T17:57:03.136Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "UserProfileDto.cs",
-              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Dto\\UserDto\\UserProfileDto.cs",
-              "RelativeDocumentMoniker": "Dto\\UserDto\\UserProfileDto.cs",
-              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Dto\\UserDto\\UserProfileDto.cs",
-              "RelativeToolTip": "Dto\\UserDto\\UserProfileDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "IQuoteEvaluator.cs",
+              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Evaluator\\IQuoteEvaluator.cs",
+              "RelativeDocumentMoniker": "Evaluator\\IQuoteEvaluator.cs",
+              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Evaluator\\IQuoteEvaluator.cs",
+              "RelativeToolTip": "Evaluator\\IQuoteEvaluator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T18:25:13.543Z"
+              "WhenOpened": "2025-04-24T18:19:19.538Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "LoginRequestDto.cs",
-              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Dto\\AuthDto\\LoginRequestDto.cs",
-              "RelativeDocumentMoniker": "Dto\\AuthDto\\LoginRequestDto.cs",
-              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Dto\\AuthDto\\LoginRequestDto.cs",
-              "RelativeToolTip": "Dto\\AuthDto\\LoginRequestDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "QuoteEvaluationResultDto.cs",
+              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Dto\\QuoteDto\\QuoteEvaluationResultDto.cs",
+              "RelativeDocumentMoniker": "Dto\\QuoteDto\\QuoteEvaluationResultDto.cs",
+              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Dto\\QuoteDto\\QuoteEvaluationResultDto.cs",
+              "RelativeToolTip": "Dto\\QuoteDto\\QuoteEvaluationResultDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T20:27:48.268Z"
+              "WhenOpened": "2025-04-24T18:16:09.949Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "20250413173003_NewDb.cs",
-              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Migrations\\20250413173003_NewDb.cs",
-              "RelativeDocumentMoniker": "Migrations\\20250413173003_NewDb.cs",
-              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Migrations\\20250413173003_NewDb.cs",
-              "RelativeToolTip": "Migrations\\20250413173003_NewDb.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAQwA8AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 11,
+              "Title": "CompletedJob.cs",
+              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Models\\CompletedJob.cs",
+              "RelativeDocumentMoniker": "Models\\CompletedJob.cs",
+              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Models\\CompletedJob.cs",
+              "RelativeToolTip": "Models\\CompletedJob.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAxwBUAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T17:30:03.961Z"
+              "WhenOpened": "2025-04-22T19:49:40.601Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAAAEoAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T18:33:16.868Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "RegisterRequestDto.cs",
+              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Dto\\AuthDto\\RegisterRequestDto.cs",
+              "RelativeDocumentMoniker": "Dto\\AuthDto\\RegisterRequestDto.cs",
+              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Dto\\AuthDto\\RegisterRequestDto.cs",
+              "RelativeToolTip": "Dto\\AuthDto\\RegisterRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T19:24:31.125Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAA3wCUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T19:24:14.067Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "CreateQuoteDto.cs",
               "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Dto\\QuoteDto\\CreateQuoteDto.cs",
               "RelativeDocumentMoniker": "Dto\\QuoteDto\\CreateQuoteDto.cs",
@@ -496,248 +381,301 @@
               "RelativeToolTip": "Dto\\QuoteDto\\CreateQuoteDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-11T21:40:48.693Z"
+              "WhenOpened": "2025-04-22T17:12:19.535Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
+              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T19:10:00.406Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
+              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Controllers\\AdminController.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAOYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T12:17:21.511Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Rating.cs",
+              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Models\\Rating.cs",
+              "RelativeDocumentMoniker": "Models\\Rating.cs",
+              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Models\\Rating.cs",
+              "RelativeToolTip": "Models\\Rating.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T17:02:14.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "CreateJobDto.cs",
+              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Dto\\JobDto\\CreateJobDto.cs",
+              "RelativeDocumentMoniker": "Dto\\JobDto\\CreateJobDto.cs",
+              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Dto\\JobDto\\CreateJobDto.cs",
+              "RelativeToolTip": "Dto\\JobDto\\CreateJobDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T17:45:19.303Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "RatingsController.cs",
+              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Controllers\\RatingsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\RatingsController.cs",
+              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Controllers\\RatingsController.cs",
+              "RelativeToolTip": "Controllers\\RatingsController.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAYwFYAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T17:17:36.405Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "CreateRatingDto.cs",
+              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Dto\\RatingDto\\CreateRatingDto.cs",
+              "RelativeDocumentMoniker": "Dto\\RatingDto\\CreateRatingDto.cs",
+              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Dto\\RatingDto\\CreateRatingDto.cs",
+              "RelativeToolTip": "Dto\\RatingDto\\CreateRatingDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T17:11:41.037Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 22,
-              "Title": "UpdateJobDto.cs",
-              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Dto\\JobDto\\UpdateJobDto.cs",
-              "RelativeDocumentMoniker": "Dto\\JobDto\\UpdateJobDto.cs",
-              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Dto\\JobDto\\UpdateJobDto.cs",
-              "RelativeToolTip": "Dto\\JobDto\\UpdateJobDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Title": "DataContext.cs",
+              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Data\\DataContext.cs",
+              "RelativeDocumentMoniker": "Data\\DataContext.cs",
+              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Data\\DataContext.cs",
+              "RelativeToolTip": "Data\\DataContext.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAwwEEAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-11T16:12:21.064Z"
+              "WhenOpened": "2025-04-22T14:53:21.32Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "20250422221609_AllUpdates.cs",
+              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Migrations\\20250422221609_AllUpdates.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250422221609_AllUpdates.cs",
+              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Migrations\\20250422221609_AllUpdates.cs",
+              "RelativeToolTip": "Migrations\\20250422221609_AllUpdates.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T22:16:09.516Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 23,
+              "Title": "Job.cs",
+              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Models\\Job.cs",
+              "RelativeDocumentMoniker": "Models\\Job.cs",
+              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Models\\Job.cs",
+              "RelativeToolTip": "Models\\Job.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAcwB8AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T17:44:14.251Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
+              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Controllers\\UserController.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAAAEwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-13T18:29:43.654Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "FreelancerProfileDto.cs",
+              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Dto\\FreelancerDtO\\FreelancerProfileDto.cs",
+              "RelativeDocumentMoniker": "Dto\\FreelancerDtO\\FreelancerProfileDto.cs",
+              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Dto\\FreelancerDtO\\FreelancerProfileDto.cs",
+              "RelativeToolTip": "Dto\\FreelancerDtO\\FreelancerProfileDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T18:19:41.531Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
               "Title": "FreelancerRegisterDto.cs",
               "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Dto\\FreelancerDtO\\FreelancerRegisterDto.cs",
               "RelativeDocumentMoniker": "Dto\\FreelancerDtO\\FreelancerRegisterDto.cs",
               "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Dto\\FreelancerDtO\\FreelancerRegisterDto.cs",
               "RelativeToolTip": "Dto\\FreelancerDtO\\FreelancerRegisterDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T15:51:47.548Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "RegisterRequestDto.cs",
-              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Dto\\AuthDto\\RegisterRequestDto.cs",
-              "RelativeDocumentMoniker": "Dto\\AuthDto\\RegisterRequestDto.cs",
-              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Dto\\AuthDto\\RegisterRequestDto.cs",
-              "RelativeToolTip": "Dto\\AuthDto\\RegisterRequestDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T17:40:50.635Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "20250413163304_UpdateFreelancer.cs",
-              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Migrations\\20250413163304_UpdateFreelancer.cs",
-              "RelativeDocumentMoniker": "Migrations\\20250413163304_UpdateFreelancer.cs",
-              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Migrations\\20250413163304_UpdateFreelancer.cs",
-              "RelativeToolTip": "Migrations\\20250413163304_UpdateFreelancer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T16:33:04.499Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "20250413160818_DatabaseUpdates.cs",
-              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Migrations\\20250413160818_DatabaseUpdates.cs",
-              "RelativeDocumentMoniker": "Migrations\\20250413160818_DatabaseUpdates.cs",
-              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Migrations\\20250413160818_DatabaseUpdates.cs",
-              "RelativeToolTip": "Migrations\\20250413160818_DatabaseUpdates.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T16:08:18.433Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "20250413143212_FixedCascadeIssue.cs",
-              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Migrations\\20250413143212_FixedCascadeIssue.cs",
-              "RelativeDocumentMoniker": "Migrations\\20250413143212_FixedCascadeIssue.cs",
-              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Migrations\\20250413143212_FixedCascadeIssue.cs",
-              "RelativeToolTip": "Migrations\\20250413143212_FixedCascadeIssue.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T14:32:12.963Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAACxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-09T20:41:33.213Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "20250413142723_InitialCreate.cs",
-              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Migrations\\20250413142723_InitialCreate.cs",
-              "RelativeDocumentMoniker": "Migrations\\20250413142723_InitialCreate.cs",
-              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Migrations\\20250413142723_InitialCreate.cs",
-              "RelativeToolTip": "Migrations\\20250413142723_InitialCreate.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T14:27:23.803Z"
+              "WhenOpened": "2025-04-22T18:20:05.434Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 27,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
-              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Properties\\launchSettings.json",
-              "RelativeToolTip": "Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-10T16:42:47.708Z"
+              "Title": "NotificationsController.cs",
+              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Controllers\\NotificationsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\NotificationsController.cs",
+              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Controllers\\NotificationsController.cs",
+              "RelativeToolTip": "Controllers\\NotificationsController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAGIAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T14:50:15.739Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 28,
-              "Title": "20250411223808_LastFix.cs",
-              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Migrations\\20250411223808_LastFix.cs",
-              "RelativeDocumentMoniker": "Migrations\\20250411223808_LastFix.cs",
-              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Migrations\\20250411223808_LastFix.cs",
-              "RelativeToolTip": "Migrations\\20250411223808_LastFix.cs",
+              "Title": "ViewRatingDto.cs",
+              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Dto\\RatingDto\\ViewRatingDto.cs",
+              "RelativeDocumentMoniker": "Dto\\RatingDto\\ViewRatingDto.cs",
+              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Dto\\RatingDto\\ViewRatingDto.cs",
+              "RelativeToolTip": "Dto\\RatingDto\\ViewRatingDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-11T22:38:08.813Z"
+              "WhenOpened": "2025-04-22T17:11:58.288Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 29,
-              "Title": "20250411223041_new.cs",
-              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Migrations\\20250411223041_new.cs",
-              "RelativeDocumentMoniker": "Migrations\\20250411223041_new.cs",
-              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Migrations\\20250411223041_new.cs",
-              "RelativeToolTip": "Migrations\\20250411223041_new.cs",
+              "Title": "Notification.cs",
+              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Models\\Notification.cs",
+              "RelativeDocumentMoniker": "Models\\Notification.cs",
+              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Models\\Notification.cs",
+              "RelativeToolTip": "Models\\Notification.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-11T22:30:41.356Z"
+              "WhenOpened": "2025-04-22T14:47:13.574Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 30,
-              "Title": "20250411222709_Rnadom.cs",
-              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Migrations\\20250411222709_Rnadom.cs",
-              "RelativeDocumentMoniker": "Migrations\\20250411222709_Rnadom.cs",
-              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Migrations\\20250411222709_Rnadom.cs",
-              "RelativeToolTip": "Migrations\\20250411222709_Rnadom.cs",
+              "Title": "ViewJobDto.cs",
+              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Dto\\AdminDto\\ViewJobDto.cs",
+              "RelativeDocumentMoniker": "Dto\\AdminDto\\ViewJobDto.cs",
+              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Dto\\AdminDto\\ViewJobDto.cs",
+              "RelativeToolTip": "Dto\\AdminDto\\ViewJobDto.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-11T22:27:09.437Z"
+              "WhenOpened": "2025-04-21T17:52:41.678Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 31,
-              "Title": "20250411222302_FreelancerA.cs",
-              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Migrations\\20250411222302_FreelancerA.cs",
-              "RelativeDocumentMoniker": "Migrations\\20250411222302_FreelancerA.cs",
-              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Migrations\\20250411222302_FreelancerA.cs",
-              "RelativeToolTip": "Migrations\\20250411222302_FreelancerA.cs",
+              "Title": "ViewQuoteDto.cs",
+              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Dto\\AdminDto\\ViewQuoteDto.cs",
+              "RelativeDocumentMoniker": "Dto\\AdminDto\\ViewQuoteDto.cs",
+              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Dto\\AdminDto\\ViewQuoteDto.cs",
+              "RelativeToolTip": "Dto\\AdminDto\\ViewQuoteDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-11T22:23:02.235Z"
+              "WhenOpened": "2025-04-21T17:52:28.675Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 32,
-              "Title": "20250411221418_NoActionMigration.cs",
-              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Migrations\\20250411221418_NoActionMigration.cs",
-              "RelativeDocumentMoniker": "Migrations\\20250411221418_NoActionMigration.cs",
-              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Migrations\\20250411221418_NoActionMigration.cs",
-              "RelativeToolTip": "Migrations\\20250411221418_NoActionMigration.cs",
+              "Title": "ViewUserDto.cs",
+              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Dto\\AdminDto\\ViewUserDto.cs",
+              "RelativeDocumentMoniker": "Dto\\AdminDto\\ViewUserDto.cs",
+              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Dto\\AdminDto\\ViewUserDto.cs",
+              "RelativeToolTip": "Dto\\AdminDto\\ViewUserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-11T22:14:18.849Z"
+              "WhenOpened": "2025-04-21T17:15:56.973Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 33,
-              "Title": "20250411221117_AddQuoteTableAndRelations.cs",
-              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Migrations\\20250411221117_AddQuoteTableAndRelations.cs",
-              "RelativeDocumentMoniker": "Migrations\\20250411221117_AddQuoteTableAndRelations.cs",
-              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Migrations\\20250411221117_AddQuoteTableAndRelations.cs",
-              "RelativeToolTip": "Migrations\\20250411221117_AddQuoteTableAndRelations.cs",
+              "Title": "JobResponseDto.cs",
+              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Dto\\JobDto\\JobResponseDto.cs",
+              "RelativeDocumentMoniker": "Dto\\JobDto\\JobResponseDto.cs",
+              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Dto\\JobDto\\JobResponseDto.cs",
+              "RelativeToolTip": "Dto\\JobDto\\JobResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-11T22:11:17.405Z"
+              "WhenOpened": "2025-04-22T17:13:03.845Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 34,
-              "Title": "20250411220655_Set Null.cs",
-              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Migrations\\20250411220655_Set Null.cs",
-              "RelativeDocumentMoniker": "Migrations\\20250411220655_Set Null.cs",
-              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Migrations\\20250411220655_Set Null.cs",
-              "RelativeToolTip": "Migrations\\20250411220655_Set Null.cs",
+              "Title": "JobState.cs",
+              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Enum\\JobState.cs",
+              "RelativeDocumentMoniker": "Enum\\JobState.cs",
+              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Enum\\JobState.cs",
+              "RelativeToolTip": "Enum\\JobState.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-11T22:06:55.691Z"
+              "WhenOpened": "2025-04-22T14:48:21.523Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 35,
-              "Title": "20250411220354_Quote2.cs",
-              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Migrations\\20250411220354_Quote2.cs",
-              "RelativeDocumentMoniker": "Migrations\\20250411220354_Quote2.cs",
-              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Migrations\\20250411220354_Quote2.cs",
-              "RelativeToolTip": "Migrations\\20250411220354_Quote2.cs",
+              "Title": "RoleState.cs",
+              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Enum\\RoleState.cs",
+              "RelativeDocumentMoniker": "Enum\\RoleState.cs",
+              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Enum\\RoleState.cs",
+              "RelativeToolTip": "Enum\\RoleState.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-11T22:03:54.99Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "20250411210910_JobMigration.cs",
-              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Migrations\\20250411210910_JobMigration.cs",
-              "RelativeDocumentMoniker": "Migrations\\20250411210910_JobMigration.cs",
-              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Migrations\\20250411210910_JobMigration.cs",
-              "RelativeToolTip": "Migrations\\20250411210910_JobMigration.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-11T21:09:10.265Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "appsettings.Development.json",
-              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\appsettings.Development.json",
-              "RelativeToolTip": "appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-10T19:20:20.493Z"
+              "WhenOpened": "2025-04-22T14:48:09.873Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 38,
-              "Title": "20250409214728_initial.cs",
-              "DocumentMoniker": "C:\\CodingProjects\\VisualStudio\\FreelanceApp-master\\backend\\backend\\Migrations\\20250409214728_initial.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\CodingProjects\\VisualStudio\\FreelanceApp-master\\backend\\backend\\Migrations\\20250409214728_initial.cs",
-              "ToolTip": "C:\\CodingProjects\\VisualStudio\\FreelanceApp-master\\backend\\backend\\Migrations\\20250409214728_initial.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\CodingProjects\\VisualStudio\\FreelanceApp-master\\backend\\backend\\Migrations\\20250409214728_initial.cs",
+              "Title": "20250421192329_NewUser.cs",
+              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Migrations\\20250421192329_NewUser.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250421192329_NewUser.cs",
+              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Migrations\\20250421192329_NewUser.cs",
+              "RelativeToolTip": "Migrations\\20250421192329_NewUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T21:47:28.861Z"
+              "WhenOpened": "2025-04-21T19:23:29.515Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "backend.csproj",
-              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\backend.csproj",
-              "RelativeDocumentMoniker": "backend.csproj",
-              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\backend.csproj",
-              "RelativeToolTip": "backend.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-07T21:09:08.171Z"
+              "DocumentIndex": 36,
+              "Title": "ViewFreelancerDto.cs",
+              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Dto\\AdminDto\\ViewFreelancerDto.cs",
+              "RelativeDocumentMoniker": "Dto\\AdminDto\\ViewFreelancerDto.cs",
+              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Dto\\AdminDto\\ViewFreelancerDto.cs",
+              "RelativeToolTip": "Dto\\AdminDto\\ViewFreelancerDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T17:53:53.04Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "UserProfileDto.cs",
+              "DocumentMoniker": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Dto\\UserDto\\UserProfileDto.cs",
+              "RelativeDocumentMoniker": "Dto\\UserDto\\UserProfileDto.cs",
+              "ToolTip": "C:\\GithubRepositories\\Freelance\\FreelanceApp\\backend\\backend\\Dto\\UserDto\\UserProfileDto.cs",
+              "RelativeToolTip": "Dto\\UserDto\\UserProfileDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T16:59:53.179Z"
             }
           ]
         }

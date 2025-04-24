@@ -19,7 +19,7 @@ namespace backend.Models
         public decimal Price { get; set; }
 
         [MaxLength(1000)]
-        public string Comment { get; set; }
+        public string? Comment { get; set; }
 
         [Required]
         public int JobId { get; set; }
@@ -27,6 +27,7 @@ namespace backend.Models
         [ForeignKey("JobId")]
         public Job Job { get; set; }
 
-       
+        public int? EvaluationScore { get; set; }
+        public string? EvaluationDecision { get; set; }
     }
 }

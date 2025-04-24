@@ -44,7 +44,8 @@ namespace backend.Controllers
             var claims = new[]
             {
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                new Claim(ClaimTypes.Name, user.UserName)
+                new Claim(ClaimTypes.Name, user.UserName),
+                new Claim("isAdmin", user.IsAdmin.ToString())
             };
 
             // create key and token
@@ -91,7 +92,8 @@ namespace backend.Controllers
                 LastName = request.LastName,
                 Email = request.Email,
                 Address = request.Address,
-                ImageUrl = request.ImageUrl
+                ImageUrl = request.ImageUrl,
+                IsAdmin = request.IsAdmin
             };
 
             // Hash the password before saving
@@ -121,7 +123,21 @@ namespace backend.Controllers
         public IActionResult GetMe()
         {
             var username = User.Identity?.Name;
-            return Ok(new { username });
+            var user = _context.Users.FirstOrDefault(u => u.UserName == username);
+
+            if (user == null)
+            {
+                return NotFound("User not found");
+            }
+
+            return Ok(new
+            {
+                username = user.UserName,
+                firstName = user.FirstName,
+                lastName = user.LastName,
+                email = user.Email,
+                isAdmin = user.IsAdmin
+            });
         }
 
     }
