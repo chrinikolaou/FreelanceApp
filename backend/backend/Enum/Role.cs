@@ -1,15 +1,14 @@
 ﻿namespace backend.Enum
 {
-    public enum RoleState
+    public enum Role
     {
         UI_DESIGNER,
-        UNITY_DEVELOPER,
         WEB_DEVELOPER,
         DISCORD_BOT_DEVELOPER,
-        GRAPHICS_DESIGNER,
         SOFTWARE_DEVELOPER,
         MOBILE_DEVELOPER,
-        UNREALENGINE_DEVELOPER,
+        GAME_DEVELOPER,
+        GRAPHICS_DESIGNER,
         VFX_DESIGNER,
         ANIMATOR,
         VIDEO_EDITOR,

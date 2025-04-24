@@ -22,7 +22,7 @@ namespace backend.Models
         [Column(TypeName = "decimal(18,2)")]
         public decimal Balance { get; set; }
         [Required]
-        public RoleState Role { get; set; }
+        public Role Role { get; set; }
 
 
         public int CompletedJobs { get; set; } = 0;

@@ -5,7 +5,7 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/v1/admin/view-all-freelancers": {
+    "/view/freelancers": {
       "get": {
         "tags": [
           "Admin"
@@ -17,75 +17,7 @@
         }
       }
     },
-    "/api/v1/admin/delete-freelancer-by-id": {
-      "delete": {
-        "tags": [
-          "Admin"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/v1/admin/view-all-users": {
-      "get": {
-        "tags": [
-          "Admin"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/v1/admin/delete-user-by-id": {
-      "delete": {
-        "tags": [
-          "Admin"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/v1/admin/view-all-quotes": {
-      "get": {
-        "tags": [
-          "Admin"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/v1/admin/delete-quote-by-id/{id}": {
+    "/delete/freelancer/{id}": {
       "delete": {
         "tags": [
           "Admin"
@@ -108,7 +40,7 @@
         }
       }
     },
-    "/api/v1/admin/view-all-jobs": {
+    "/view/users": {
       "get": {
         "tags": [
           "Admin"
@@ -120,7 +52,7 @@
         }
       }
     },
-    "/api/v1/admin/delete-job-by/{id}": {
+    "/api/v1/admin/delete/user/{id}": {
       "delete": {
         "tags": [
           "Admin"
@@ -143,7 +75,77 @@
         }
       }
     },
-    "/api/v1/admin/send-notification": {
+    "/view/quotes": {
+      "get": {
+        "tags": [
+          "Admin"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/delete/quote/{id}": {
+      "delete": {
+        "tags": [
+          "Admin"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/view/jobs": {
+      "get": {
+        "tags": [
+          "Admin"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/delete/job/{id}": {
+      "delete": {
+        "tags": [
+          "Admin"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/send/notification": {
       "post": {
         "tags": [
           "Admin"
@@ -174,7 +176,7 @@
         }
       }
     },
-    "/api/v1/admin/create-user": {
+    "/create/user": {
       "post": {
         "tags": [
           "Admin"
@@ -291,7 +293,7 @@
         }
       }
     },
-    "/api/v1/jobs/create-job": {
+    "/api/v1/jobs/create": {
       "post": {
         "tags": [
           "Jobs"
@@ -322,7 +324,7 @@
         }
       }
     },
-    "/api/v1/jobs/view-all-jobs": {
+    "/api/v1/jobs/all": {
       "get": {
         "tags": [
           "Jobs"
@@ -334,7 +336,7 @@
         }
       }
     },
-    "/api/v1/jobs/view-job/{id}": {
+    "/api/v1/jobs/{id}": {
       "get": {
         "tags": [
           "Jobs"
@@ -357,7 +359,7 @@
         }
       }
     },
-    "/api/v1/jobs/delete-job/{id}": {
+    "/api/v1/jobs/{id}/delete": {
       "delete": {
         "tags": [
           "Jobs"
@@ -380,7 +382,7 @@
         }
       }
     },
-    "/api/v1/jobs/view-my-jobs": {
+    "/me": {
       "get": {
         "tags": [
           "Jobs"
@@ -392,7 +394,7 @@
         }
       }
     },
-    "/api/v1/jobs/{jobId}/freelancer-complete": {
+    "/api/v1/jobs/{jobId}/complete": {
       "post": {
         "tags": [
           "Jobs"
@@ -415,7 +417,7 @@
         }
       }
     },
-    "/api/v1/jobs/{jobId}/owner-confirm-complete": {
+    "/api/v1/jobs/{jobId}/confirm": {
       "post": {
         "tags": [
           "Jobs"
@@ -438,7 +440,7 @@
         }
       }
     },
-    "/api/v1/jobs/{jobId}/owner-deny-complete": {
+    "/api/v1/jobs/{jobId}/provoke": {
       "post": {
         "tags": [
           "Jobs"
@@ -608,7 +610,7 @@
         }
       }
     },
-    "/api/v1/notifications/mark-as-read/{id}": {
+    "/api/v1/notifications/{id}/mark": {
       "put": {
         "tags": [
           "Notifications"
@@ -631,7 +633,7 @@
         }
       }
     },
-    "/api/v1/quotes/create-quote": {
+    "/api/v1/quotes/create": {
       "post": {
         "tags": [
           "Quotes"
@@ -662,7 +664,7 @@
         }
       }
     },
-    "/api/v1/quotes/delete-quote/{id}": {
+    "/api/v1/quotes/{id}/delete": {
       "delete": {
         "tags": [
           "Quotes"
@@ -685,7 +687,7 @@
         }
       }
     },
-    "/api/v1/quotes/delete-my-quotes": {
+    "/api/v1/quotes/me/delete": {
       "delete": {
         "tags": [
           "Quotes"
@@ -697,7 +699,7 @@
         }
       }
     },
-    "/api/v1/quotes/view-quotes-for-job/{jobId}": {
+    "/api/v1/quotes/job/{jobId}": {
       "get": {
         "tags": [
           "Quotes"
@@ -720,7 +722,7 @@
         }
       }
     },
-    "/api/v1/quotes/accept-quote/{quoteId}": {
+    "/api/v1/quotes/accept/{quoteId}": {
       "post": {
         "tags": [
           "Quotes"
@@ -743,7 +745,7 @@
         }
       }
     },
-    "/api/v1/quotes/cancel-quote/{quoteId}": {
+    "/api/v1/quotes/cancel/{quoteId}": {
       "post": {
         "tags": [
           "Quotes"
@@ -766,7 +768,7 @@
         }
       }
     },
-    "/api/v1/quotes/view-all-my-quotes": {
+    "/api/v1/quotes/me": {
       "get": {
         "tags": [
           "Quotes"
@@ -778,7 +780,7 @@
         }
       }
     },
-    "/api/v1/quotes/view-my-accepted-quotes": {
+    "/api/v1/quotes/me/accepted": {
       "get": {
         "tags": [
           "Quotes"
@@ -790,7 +792,7 @@
         }
       }
     },
-    "/api/v1/quotes/view-quotes-for-my-jobs": {
+    "/api/v1/quotes/me/jobs": {
       "get": {
         "tags": [
           "Quotes"
@@ -938,8 +940,7 @@
             "nullable": true
           },
           "category": {
-            "type": "string",
-            "nullable": true
+            "$ref": "#/components/schemas/Role"
           },
           "budget": {
             "type": "number",
@@ -1021,7 +1022,7 @@
             "format": "double"
           },
           "role": {
-            "$ref": "#/components/schemas/RoleState"
+            "$ref": "#/components/schemas/Role"
           }
         },
         "additionalProperties": false
@@ -1098,7 +1099,7 @@
         },
         "additionalProperties": false
       },
-      "RoleState": {
+      "Role": {
         "enum": [
           0,
           1,
@@ -1110,8 +1111,7 @@
           7,
           8,
           9,
-          10,
-          11
+          10
         ],
         "type": "integer",
         "format": "int32"

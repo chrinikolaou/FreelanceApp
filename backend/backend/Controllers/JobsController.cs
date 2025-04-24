@@ -23,7 +23,7 @@ namespace backend.Controllers
 
 
         // POST: Create new Job
-        [HttpPost("create-job")]
+        [HttpPost("create")]
         [Authorize]
         public IActionResult CreateJob([FromBody] CreateJobDto request)
         {
@@ -71,7 +71,7 @@ namespace backend.Controllers
         }
 
         // GET: Get all jobs
-        [HttpGet("view-all-jobs")]
+        [HttpGet("all")]
         public IActionResult GetAllJobs()
         {
             var jobs = _context.Jobs
@@ -95,7 +95,7 @@ namespace backend.Controllers
         }
 
         // GET: Get job by ID
-        [HttpGet("view-job/{id}")]
+        [HttpGet("{id}")]
         public IActionResult GetJobById(int id)
         {
             var job = _context.Jobs
@@ -210,7 +210,7 @@ namespace backend.Controllers
 
 */
         //Delete a job
-        [HttpDelete("delete-job/{id}")]
+        [HttpDelete("{id}/delete")]
         [Authorize]
         public IActionResult DeleteJob(int id)
         {
@@ -285,7 +285,7 @@ namespace backend.Controllers
 
 
 
-        [HttpGet("view-my-jobs")]
+        [HttpGet("/me")]
         [Authorize]
         public IActionResult GetMyJobs()
         {
@@ -312,7 +312,7 @@ namespace backend.Controllers
             return Ok(jobs);
         }
 
-        [HttpPost("{jobId}/freelancer-complete")]
+        [HttpPost("{jobId}/complete")]
         [Authorize]
         public IActionResult MarkJobAsCompletedByFreelancer(int jobId)
         {
@@ -360,7 +360,7 @@ namespace backend.Controllers
         }
 
 
-        [HttpPost("{jobId}/owner-confirm-complete")]
+        [HttpPost("{jobId}/confirm")]
         [Authorize]
         public IActionResult ConfirmJobCompletionByOwner(int jobId)
         {
@@ -480,7 +480,7 @@ namespace backend.Controllers
 
 
 
-        [HttpPost("{jobId}/owner-deny-complete")]
+        [HttpPost("{jobId}/provoke")]
         [Authorize]
         public IActionResult DenyJobCompletionByOwner(int jobId)
         {

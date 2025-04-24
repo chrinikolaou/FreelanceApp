@@ -1,4 +1,6 @@
-﻿namespace backend.Models
+﻿using backend.Enum;
+
+namespace backend.Models
 {
     public class CompletedJob
     {
@@ -10,7 +12,7 @@
         public string JobDescription { get; set; }
         public decimal Budget { get; set; }
         public DateTime JobPostedDate { get; set; }
-        public string JobCategory { get; set; }
+        public Role JobCategory { get; set; }
 
         // Clone του Quote
         public int QuoteId { get; set; }

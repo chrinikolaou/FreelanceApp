@@ -18,7 +18,7 @@ namespace backend.Models
 
         [Required]
         [MaxLength(50)]
-        public string Category { get; set; }
+        public Role Category { get; set; }
 
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 

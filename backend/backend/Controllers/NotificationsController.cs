@@ -113,7 +113,7 @@ namespace backend.Controllers
         }
 
         // PUT: api/v1/notifications/mark-as-read/5
-        [HttpPut("mark-as-read/{id}")]
+        [HttpPut("{id}/mark")]
         [Authorize]
         public IActionResult MarkAsRead(int id)
         {

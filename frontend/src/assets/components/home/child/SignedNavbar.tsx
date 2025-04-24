@@ -14,8 +14,10 @@ function Navbar({active = "home"}: NavbarProps) {
 
     const [isPanelOpen, setPanelOpen] = useState(false);
     const [isWideScreen, setIsWideScreen] = useState(false);
-    const {logout} = useAuth();
+    const {user, logout} = useAuth();
     const navigate = useNavigate();
+
+
 
     const handleLogout = async () => {
         await logout(); 
@@ -25,7 +27,7 @@ function Navbar({active = "home"}: NavbarProps) {
     const actions = [
         <div className="info">
             <img src="/src/assets/images/avatar_man_2.svg"/>
-            <h4>Chris Nikolaou</h4>
+            <h4>{user?.firstName} {user?.lastName}</h4>
             <div className="horizontal-spacer"/>
         </div>
         ,

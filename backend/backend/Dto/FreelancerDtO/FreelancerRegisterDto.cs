@@ -13,6 +13,6 @@ namespace backend.Dto
         public decimal Balance { get; set; }
 
         [Required]
-        public RoleState Role { get; set; }
+        public Role Role { get; set; }
     }
 }

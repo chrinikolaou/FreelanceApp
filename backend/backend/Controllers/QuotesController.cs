@@ -25,7 +25,7 @@ namespace backend.Controllers
         }
 
 
-        [HttpPost("create-quote")]
+        [HttpPost("create")]
         [Authorize]
         public IActionResult CreateQuote([FromBody] CreateQuoteDto request)
         {
@@ -117,7 +117,7 @@ namespace backend.Controllers
         }
 
         
-        [HttpDelete("delete-quote/{id}")]
+        [HttpDelete("{id}/delete")]
         [Authorize]
         public IActionResult DeleteQuoteById(int id)
         {
@@ -175,7 +175,7 @@ namespace backend.Controllers
         }
 
        
-        [HttpDelete("delete-my-quotes")]
+        [HttpDelete("me/delete")]
         [Authorize]
         public IActionResult DeleteAllMyQuotes()
         {
@@ -238,7 +238,7 @@ namespace backend.Controllers
         }
 
         
-        [HttpGet("view-quotes-for-job/{jobId}")]
+        [HttpGet("job/{jobId}")]
         public IActionResult GetAllQuotesForAJobById(int jobId)
         {
             var job = _context.Jobs.Find(jobId);
@@ -269,7 +269,7 @@ namespace backend.Controllers
 
 
 
-        [HttpPost("accept-quote/{quoteId}")]
+        [HttpPost("accept/{quoteId}")]
         [Authorize]
         public IActionResult AcceptQuote(int quoteId)
         {
@@ -327,7 +327,7 @@ namespace backend.Controllers
         }
 
 
-        [HttpPost("cancel-quote/{quoteId}")]
+        [HttpPost("cancel/{quoteId}")]
         [Authorize]
         public IActionResult CancelAcceptedQuote(int quoteId)
         {
@@ -410,7 +410,7 @@ namespace backend.Controllers
             });
         }
 
-        [HttpGet("view-all-my-quotes")]
+        [HttpGet("me")]
         [Authorize]
         public IActionResult ViewAllMyQuotes()
         {
@@ -454,7 +454,7 @@ namespace backend.Controllers
         }
 
 
-        [HttpGet("view-my-accepted-quotes")]
+        [HttpGet("me/accepted")]
         [Authorize]
         public IActionResult ViewMyAcceptedQuotes()
         {
@@ -498,7 +498,7 @@ namespace backend.Controllers
         }
 
 
-        [HttpGet("view-quotes-for-my-jobs")]
+        [HttpGet("me/jobs")]
         [Authorize]
         public IActionResult GetAllQuotesForJobs()
         {

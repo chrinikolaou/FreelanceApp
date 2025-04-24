@@ -1,9 +1,6 @@
 import { useEffect, useState } from 'react';
 import api from '../../AxiosInstance';
-
-interface User {
-    username: string;
-}
+import User from '/src/assets/models/User';
 
 export function useAuth() {
     const [user, setUser] = useState<User | null>(null);
