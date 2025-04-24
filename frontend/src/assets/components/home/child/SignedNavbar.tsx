@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react';
 import '/src/assets/style/navbar.css';
 import SidePanel from '../../global/SidePanel';
+import Dropdown from '../../global/Dropdown';
+import { Link, useNavigate } from 'react-router-dom';
+import { useAuth } from '../../../hooks/useAuth';
 
 
 interface NavbarProps {
@@ -11,6 +14,27 @@ function Navbar({active = "home"}: NavbarProps) {
 
     const [isPanelOpen, setPanelOpen] = useState(false);
     const [isWideScreen, setIsWideScreen] = useState(false);
+    const {logout} = useAuth();
+    const navigate = useNavigate();
+
+    const handleLogout = async () => {
+        await logout(); 
+        navigate("/login");
+    };
+
+    const actions = [
+        <div className="info">
+            <img src="/src/assets/images/avatar_man_2.svg"/>
+            <h4>Chris Nikolaou</h4>
+            <div className="horizontal-spacer"/>
+        </div>
+        ,
+        <Link to=""><span className="material-symbols-outlined">person</span>My Profile</Link>,
+        <Link to=""><span className="material-symbols-outlined">settings</span>Settings</Link>,
+        <Link to=""><span className="material-symbols-outlined">payments</span>Billing</Link>,
+        <div className="horizontal-spacer"/>,
+        <Link to="" className="btn btn-danger" onClick={handleLogout}><span className="material-symbols-outlined">logout</span>Sign Out</Link>
+    ]
 
     useEffect(() => {
         const handleResize = () => {
@@ -71,8 +95,13 @@ function Navbar({active = "home"}: NavbarProps) {
                 
                 </div>
             </form>
-            <a className="btn btn-primary" href="/login">Sign In</a>
-            <a className="btn btn-secondary" href="/register">Register</a>
+            <div className="account-details">
+            <Dropdown main={<img src="/src/assets/images/notification.svg" className="notifications" alt="Notification"/>}
+                actions={actions}/>
+                <Dropdown main={<img src="/src/assets/images/avatar_man_2.svg" alt="Avatar"/>}
+                actions={actions}/>
+                
+            </div>
             <a className="text-tertiary nav-link" href="#">Become a Seller</a>
             </div>
         </>
@@ -100,18 +129,9 @@ function Navbar({active = "home"}: NavbarProps) {
                 </li>
                 <li className="mobile-buttons">
  
-                <a className="text-tertiary nav-link" href="/login">Login</a>
-                <a className="text-tertiary nav-link" href="/register">Register</a>
-                <a className="btn btn-secondary">Become a Seller</a>
-                <form className="mobile-search-form" method="post" action="">
-                <div className="input-group">
-                    <label htmlFor="input_search">
-                        <img src="/src/assets/images/search.svg"/>
-                        <input type="text" name="input_search" id="input_search" placeholder="Search"/></label>
+                
 
-                </div>
-                <button type="submit" className="btn btn-primary">Search</button>
-            </form>
+                <a className="btn btn-secondary">Become a Seller</a>
                 </li>
                 
                 </ul>

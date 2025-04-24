@@ -15,8 +15,9 @@
 
   --primary: #1e66eb;
   --dark: #191919;
-  --light: #f0efef;
+  --light: #ffffff;
   --success: #3da338;
+  --danger: #ce4343;
   --yellow: var(--primary);
 
 
@@ -33,8 +34,8 @@
   --default-text-color: var(--dark);
 
 
-  --light-border: #b3b3b3ed;
-  --dark-border: #282828f5;
+  --light-border: #e1e1e1ed;
+  --dark-border: #232323f5;
   
 
 
@@ -95,6 +96,27 @@ body {
   background-color: var(--btn-primary-hover-color);
 }
 
+
+.btn-danger {
+  color: var(--danger);
+  background-color: #ea60603c;
+
+  transition: all ease-in-out .25s;
+  cursor: pointer;
+  font-weight: 450;
+
+}
+
+.btn-danger:hover {
+  background-color: #ea60604d;
+  color: #e04545;
+}
+
+.btn-danger .material-symbols-outlined {
+  color: var(--danger);
+}
+
+
 .btn-secondary {
 
   color: var(--primary);
@@ -110,6 +132,18 @@ body {
 }
 
 
+.input-groups {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  width: fit-content;
+  padding: 7px;
+  transition: all ease-in-out 2s;
+  flex-wrap: wrap;
+}
+
+
+
 .input-group {
   display: flex;
   flex-direction: row;
@@ -122,15 +156,15 @@ body {
 
 }
 
-.input:focus-within, .input:hover {
+.input:focus-within .select:focus-within, .input:hover, .select:hover {
   border: 1px solid var(--dark);
 }
 
-.input-group:focus-within {
+.input-group:focus-within, .select:focus-within {
   outline: 1px solid var(--dark);
 }
 
-.input-group:hover {
+.input-group:hover, .select:hover {
   outline: 1px solid var(--dark);
 }
 
@@ -155,6 +189,26 @@ body {
 
 }
 
+.select {
+  width: 63%;
+  outline: none;
+  padding: 10px;
+  border: 1px solid var(--default-border);
+  border-radius: 9px;
+  transition: all ease-in-out 2s;
+  font-family: inherit;
+  font-size: var(--default-font-size);
+}
+
+.select option {
+  background-color: var(--default-border);
+}
+
+.select selected {
+  background-color: #1b58c8;
+}
+
+.select option
 .checkbox-group label:hover > .checkmark, .checkmark:hover {
   border: 3px solid var(--dark);
 }
@@ -415,4 +469,151 @@ label {
 .star {
   color: var(--yellow);
   font-size: var(--default-icon-size);
+}
+
+
+.loader-overlay {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  width: 60px;
+  aspect-ratio: .5;
+  display: grid;
+}
+.loader:before {
+  content: "";
+  width: 30%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  margin: auto auto 0;
+  background: var(--primary);
+  animation: l9-0 .5s cubic-bezier(0,800,1,800) infinite;
+}
+.loader:after {
+  content: "";
+  width: 75%;
+  aspect-ratio: 1/cos(30deg);
+  margin: 0 auto auto;
+  clip-path: polygon(50% -50%,100% 50%,50% 150%,0 50%);
+  background: var(--dark);
+  animation: l9-1 .5s linear infinite;
+}
+@keyframes l9-0 {
+  0%,2%  {translate: 0   0%}
+  98%,to {translate: 0 -.2%}
+}
+@keyframes l9-1 {
+  0%,5%  {rotate:  0deg}
+  95%,to {rotate:-60deg}
+}
+
+.horizontal-spacer {
+  height: 1px;
+  width: 100%;
+  border-bottom: 1px solid var(--default-border);
+
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 10;
+  background-color: var(--light);
+  min-width: 225px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+
+
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  text-align: left;
+  gap: 0.7rem;
+
+}
+
+.dropdown-item {
+  text-align: left;
+
+  border-radius: 7px;
+}
+
+.dropdown-item a {
+  text-align: left;
+  padding: 10px;
+  border-radius: 7px;
+}
+
+.dropdown-item > a:not(.btn):hover {
+  background-color: var(--default-border);
+}
+
+
+.account-details {
+  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.account-details img:not(.info > *) {
+  width: 35px;
+  height: 35px;
+  border-radius: 30px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.account-details img.notifications {
+  width: 28px;
+  height: 28px;
+  border-radius: 30px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.account-details img:not(.info > *):hover {
+  background-color: var(--default-border);
+}
+
+
+.account-details .info {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
+  gap: 0.5rem;
+
+}
+
+.account-details a {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  gap: 0.5rem;
+
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
 }

@@ -9,7 +9,7 @@ interface ProtectedRouteProps {
 function ProtectedRoute({ children }: ProtectedRouteProps) {
   const { user, authChecked } = useAuth();
 
-  if (!authChecked) return <div>Loading...</div>;
+  if (!authChecked) return <div className="loader-overlay"><div className="loader"/></div>;
   if (!user) return <Navigate to="/login" />;
 
   return <>{children}</>;

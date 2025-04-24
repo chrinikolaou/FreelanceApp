@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import axios from 'axios';
+import api from '../../AxiosInstance';
 
 interface User {
     username: string;
@@ -10,8 +10,8 @@ export function useAuth() {
     const [authChecked, setAuthChecked] = useState<boolean>(false);
 
     useEffect(()=> {
-        axios
-        .get("/me")
+        api
+        .get("/auth/me")
         .then((res)=> {
             setUser(res.data);
         })
@@ -23,5 +23,15 @@ export function useAuth() {
         });
     }, []);
 
-    return { user, authChecked };
+    const logout = async () => {
+        try {
+            await api.post("/auth/logout", {}, {withCredentials: true});
+        } catch(e) {
+            console.warn("Logout failed, " + e);
+        }
+        setUser(null);
+        
+    }
+
+    return { user, authChecked, logout };
 }

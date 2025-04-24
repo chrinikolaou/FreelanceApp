@@ -1,0 +1,125 @@
+.job-container {
+    margin-top: 100px;
+    width: 70%;
+    min-height: 65vh;
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid var(--default-border);
+    border-radius: 17px;
+}
+
+.job-container .title {
+
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--default-border);
+}
+
+.job-container .job {
+    width: 100%;
+    min-height: 65vh;
+    margin-top: 25px;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.job-container .job .job-id{
+    color: #fff;
+    font-size: 20px;
+}
+
+
+.job-container .job .details {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--default-border);
+    padding: 5px 20px;
+    border-radius: 1999px;
+}
+
+.job-container .job .details img {
+    width: 35px;
+    height: 35px;
+}
+
+.job-container .job .description {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 80%;
+}
+
+.job-container .job .description .description-text {
+    padding: 15px;
+    border: 1px solid var(--default-border);
+    border-radius: 17px;
+    min-height: 200px;
+    font-size: 19px;
+    overflow-y: auto;
+}
+
+.job-container .job .description .buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.25rem;
+    width: 100%;
+    
+}
+
+.job-container .job .description .buttons .general {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+}
+
+.job-container .job .description .buttons .report img {
+    width: 35px;
+    height: 35px;
+}
+
+.job-container .job .description .buttons .report img:hover {
+    transform: scale(1.04);
+}
+
+
+@media (max-width: 700px) {
+
+    .job-container {
+        width: 100%;
+  
+    }
+    .job-container .job {
+        width: 100%;
+    }
+
+    .job-container .job .description .description-text {
+        min-height: 350px;
+    }
+
+    .job-container .job .description .buttons {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .job-container .job .description .buttons .general{
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+}

@@ -1,8 +1,11 @@
 import Footer from "../global/Footer";
 import Navbar from "./child/Navbar";
 import '/src/assets/style/pages/jobs.css';
+import axios from 'axios';
+
 
 function ListingPage() {
+
     return(
         <>
             <Navbar active="listings"/>
