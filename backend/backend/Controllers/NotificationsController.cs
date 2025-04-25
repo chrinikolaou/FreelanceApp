@@ -138,7 +138,7 @@ namespace backend.Controllers
         }
 
         // DELETE: api/v1/notifications/5
-        [HttpDelete("{id}")]
+        [HttpDelete("{id}/delete")]
         [Authorize]
         public IActionResult DeleteNotification(int id)
         {

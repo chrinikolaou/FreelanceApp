@@ -285,7 +285,7 @@ namespace backend.Controllers
 
 
 
-        [HttpGet("/me")]
+        [HttpGet("me")]
         [Authorize]
         public IActionResult GetMyJobs()
         {

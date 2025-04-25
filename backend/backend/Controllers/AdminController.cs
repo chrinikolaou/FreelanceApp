@@ -26,7 +26,7 @@ namespace backend.Controllers
             _passwordHasher = passwordHasher;
         }
 
-        [HttpGet("/view/freelancers/")]
+        [HttpGet("view/freelancers/")]
         [Authorize]
         public IActionResult ViewAllFreelancers()
         {
@@ -55,7 +55,7 @@ namespace backend.Controllers
         }
 
 
-        [HttpDelete("/delete/freelancer/{id}")]
+        [HttpDelete("delete/freelancer/{id}")]
         [Authorize]
         public IActionResult DeleteFreelancer(int id)
         {
@@ -102,7 +102,7 @@ namespace backend.Controllers
 
 
 
-        [HttpGet("/view/users/")]
+        [HttpGet("view/users/")]
         [Authorize]
         public IActionResult ViewAllUsers()
         {
@@ -229,7 +229,7 @@ namespace backend.Controllers
          }
 
          
-        [HttpGet("/view/quotes/")]
+        [HttpGet("view/quotes/")]
         [Authorize]
         public IActionResult ViewAllQuotes()
         {
@@ -262,7 +262,7 @@ namespace backend.Controllers
 
 
 
-        [HttpDelete("/delete/quote/{id}")]
+        [HttpDelete("delete/quote/{id}")]
         [Authorize]
         public IActionResult DeleteQuoteById(int id)
         {
@@ -308,7 +308,7 @@ namespace backend.Controllers
         }
 
 
-        [HttpGet("/view/jobs/")]
+        [HttpGet("view/jobs/")]
         [Authorize]
         public IActionResult ViewAllJobs()
         {
@@ -345,7 +345,7 @@ namespace backend.Controllers
         }
 
        
-        [HttpDelete("/delete/job/{id}")]
+        [HttpDelete("delete/job/{id}")]
         [Authorize]
         public IActionResult DeleteJob(int id)
         {
@@ -415,7 +415,7 @@ namespace backend.Controllers
         }
 
 
-        [HttpPost("/send/notification/")]
+        [HttpPost("send/notification/")]
         [Authorize]
         public IActionResult SendNotification([FromBody] CreateNotificationDto dto)
         {
@@ -441,7 +441,7 @@ namespace backend.Controllers
         }
 
         // Register
-        [HttpPost("/create/user/")]
+        [HttpPost("create/user/")]
         public IActionResult CreateUser(RegisterRequestDto request)
         {
             var existingUser = _context.Users.FirstOrDefault(u => u.UserName == request.Username);

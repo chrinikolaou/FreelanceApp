@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\chchn\\Desktop\\\u03A0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03A3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03A3\u03C4\u03BF \u0394\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\users\\chchn\\desktop\\\u03C0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03C3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03C3\u03C4\u03BF \u03B4\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\users\\chchn\\desktop\\\u03C0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03C3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03C3\u03C4\u03BF \u03B4\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\controllers\\notificationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:controllers\\notificationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\users\\chchn\\desktop\\\u03C0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03C3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03C3\u03C4\u03BF \u03B4\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\chchn\\Desktop\\\u03A0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03A3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03A3\u03C4\u03BF \u0394\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\Migrations\\20250424204502_CMigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20250424204502_CMigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\users\\chchn\\desktop\\\u03C0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03C3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03C3\u03C4\u03BF \u03B4\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\controllers\\jobscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:controllers\\jobscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\users\\chchn\\desktop\\\u03C0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03C3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03C3\u03C4\u03BF \u03B4\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\users\\chchn\\desktop\\\u03C0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03C3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03C3\u03C4\u03BF \u03B4\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,24 +39,12 @@
       "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:controllers\\quotescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\users\\chchn\\desktop\\\u03C0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03C3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03C3\u03C4\u03BF \u03B4\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\controllers\\notificationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:controllers\\notificationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\users\\chchn\\desktop\\\u03C0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03C3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03C3\u03C4\u03BF \u03B4\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\controllers\\jobscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:controllers\\jobscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\users\\chchn\\desktop\\\u03C0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03C3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03C3\u03C4\u03BF \u03B4\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\dto\\jobdto\\createjobdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:dto\\jobdto\\createjobdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\users\\chchn\\desktop\\\u03C0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03C3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03C3\u03C4\u03BF \u03B4\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\dto\\jobdto\\jobresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:dto\\jobdto\\jobresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\users\\chchn\\desktop\\\u03C0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03C3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03C3\u03C4\u03BF \u03B4\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\users\\chchn\\desktop\\\u03C0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03C3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03C3\u03C4\u03BF \u03B4\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\dto\\admindto\\viewjobdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -61,10 +61,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\users\\chchn\\desktop\\\u03C0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03C3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03C3\u03C4\u03BF \u03B4\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\models\\quote.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:models\\quote.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\users\\chchn\\desktop\\\u03C0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03C3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03C3\u03C4\u03BF \u03B4\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\users\\chchn\\desktop\\\u03C0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03C3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03C3\u03C4\u03BF \u03B4\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\models\\job.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -169,6 +165,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\users\\chchn\\desktop\\\u03C0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03C3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03C3\u03C4\u03BF \u03B4\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\migrations\\20250424194155_all.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:migrations\\20250424194155_all.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|c:\\users\\chchn\\desktop\\\u03C0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03C3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03C3\u03C4\u03BF \u03B4\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\migrations\\20250424204502_cmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E281054A-F853-4517-B684-2CA6EE39F91D}|backend.csproj|solutionrelative:migrations\\20250424204502_cmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -178,7 +178,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -186,20 +186,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "20250424204502_CMigration.cs",
-              "DocumentMoniker": "C:\\Users\\chchn\\Desktop\\\u03A0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03A3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03A3\u03C4\u03BF \u0394\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\Migrations\\20250424204502_CMigration.cs",
-              "RelativeDocumentMoniker": "Migrations\\20250424204502_CMigration.cs",
-              "ToolTip": "C:\\Users\\chchn\\Desktop\\\u03A0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03A3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03A3\u03C4\u03BF \u0394\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\Migrations\\20250424204502_CMigration.cs",
-              "RelativeToolTip": "Migrations\\20250424204502_CMigration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T20:45:02.515Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\chchn\\Desktop\\\u03A0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03A3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03A3\u03C4\u03BF \u0394\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -207,38 +194,37 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAACqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-24T20:41:24.218Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T20:41:24.218Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\chchn\\Desktop\\\u03A0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03A3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03A3\u03C4\u03BF \u0394\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
               "ToolTip": "C:\\Users\\chchn\\Desktop\\\u03A0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03A3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03A3\u03C4\u03BF \u0394\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\Controllers\\AuthController.cs",
               "RelativeToolTip": "Controllers\\AuthController.cs",
-              "ViewState": "AgIAAGQAAAAAAAAAAAAowHIAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAwwIsAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-21T19:10:00.406Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "JobsController.cs",
               "DocumentMoniker": "C:\\Users\\chchn\\Desktop\\\u03A0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03A3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03A3\u03C4\u03BF \u0394\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\Controllers\\JobsController.cs",
               "RelativeDocumentMoniker": "Controllers\\JobsController.cs",
               "ToolTip": "C:\\Users\\chchn\\Desktop\\\u03A0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03A3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03A3\u03C4\u03BF \u0394\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\Controllers\\JobsController.cs",
               "RelativeToolTip": "Controllers\\JobsController.cs",
-              "ViewState": "AgIAAOoBAAAAAAAAAAAQwMUBAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAAICAAAAAAAAAAAYwBECAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-21T18:08:25.128Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "JobResponseDto.cs",
               "DocumentMoniker": "C:\\Users\\chchn\\Desktop\\\u03A0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03A3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03A3\u03C4\u03BF \u0394\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\Dto\\JobDto\\JobResponseDto.cs",
               "RelativeDocumentMoniker": "Dto\\JobDto\\JobResponseDto.cs",
@@ -246,12 +232,11 @@
               "RelativeToolTip": "Dto\\JobDto\\JobResponseDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T17:13:03.845Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-22T17:13:03.845Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "CreateJobDto.cs",
               "DocumentMoniker": "C:\\Users\\chchn\\Desktop\\\u03A0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03A3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03A3\u03C4\u03BF \u0394\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\Dto\\JobDto\\CreateJobDto.cs",
               "RelativeDocumentMoniker": "Dto\\JobDto\\CreateJobDto.cs",
@@ -259,25 +244,62 @@
               "RelativeToolTip": "Dto\\JobDto\\CreateJobDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T17:45:19.303Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T17:45:19.303Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "NotificationsController.cs",
               "DocumentMoniker": "C:\\Users\\chchn\\Desktop\\\u03A0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03A3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03A3\u03C4\u03BF \u0394\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\Controllers\\NotificationsController.cs",
               "RelativeDocumentMoniker": "Controllers\\NotificationsController.cs",
               "ToolTip": "C:\\Users\\chchn\\Desktop\\\u03A0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03A3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03A3\u03C4\u03BF \u0394\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\Controllers\\NotificationsController.cs",
               "RelativeToolTip": "Controllers\\NotificationsController.cs",
-              "ViewState": "AgIAAH8AAAAAAAAAAAAcwHMAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAHcAAAAAAAAAAAAAAKUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-22T14:50:15.739Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\chchn\\Desktop\\\u03A0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03A3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03A3\u03C4\u03BF \u0394\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\chchn\\Desktop\\\u03A0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03A3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03A3\u03C4\u03BF \u0394\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Controllers\\AdminController.cs",
+              "ViewState": "AgIAAMcBAAAAAAAAAAAswNsBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T12:17:21.511Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Notification.cs",
+              "DocumentMoniker": "C:\\Users\\chchn\\Desktop\\\u03A0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03A3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03A3\u03C4\u03BF \u0394\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\Models\\Notification.cs",
+              "RelativeDocumentMoniker": "Models\\Notification.cs",
+              "ToolTip": "C:\\Users\\chchn\\Desktop\\\u03A0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03A3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03A3\u03C4\u03BF \u0394\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\Models\\Notification.cs",
+              "RelativeToolTip": "Models\\Notification.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T14:47:13.574Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "20250424204502_CMigration.cs",
+              "DocumentMoniker": "C:\\Users\\chchn\\Desktop\\\u03A0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03A3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03A3\u03C4\u03BF \u0394\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\Migrations\\20250424204502_CMigration.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250424204502_CMigration.cs",
+              "ToolTip": "C:\\Users\\chchn\\Desktop\\\u03A0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03A3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03A3\u03C4\u03BF \u0394\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\Migrations\\20250424204502_CMigration.cs",
+              "RelativeToolTip": "Migrations\\20250424204502_CMigration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T07:26:48.913Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "QuotesController.cs",
               "DocumentMoniker": "C:\\Users\\chchn\\Desktop\\\u03A0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03A3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03A3\u03C4\u03BF \u0394\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\Controllers\\QuotesController.cs",
               "RelativeDocumentMoniker": "Controllers\\QuotesController.cs",
@@ -285,12 +307,11 @@
               "RelativeToolTip": "Controllers\\QuotesController.cs",
               "ViewState": "AgIAAPABAAAAAAAAAAAYwCECAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T16:55:31.168Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-21T16:55:31.168Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\chchn\\Desktop\\\u03A0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03A3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03A3\u03C4\u03BF \u0394\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -298,12 +319,11 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T18:33:16.868Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T18:33:16.868Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "RatingsController.cs",
               "DocumentMoniker": "C:\\Users\\chchn\\Desktop\\\u03A0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03A3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03A3\u03C4\u03BF \u0394\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\Controllers\\RatingsController.cs",
               "RelativeDocumentMoniker": "Controllers\\RatingsController.cs",
@@ -311,21 +331,7 @@
               "RelativeToolTip": "Controllers\\RatingsController.cs",
               "ViewState": "AgIAAEUAAAAAAAAAAAAYwFYAAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T17:17:36.405Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "C:\\Users\\chchn\\Desktop\\\u03A0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03A3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03A3\u03C4\u03BF \u0394\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
-              "ToolTip": "C:\\Users\\chchn\\Desktop\\\u03A0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03A3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03A3\u03C4\u03BF \u0394\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "Controllers\\AdminController.cs",
-              "ViewState": "AgIAAKcBAAAAAAAAAAAkwLgBAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T12:17:21.511Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-22T17:17:36.405Z"
             },
             {
               "$type": "Document",
@@ -337,8 +343,7 @@
               "RelativeToolTip": "Dto\\AdminDto\\ViewJobDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T17:52:41.678Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-21T17:52:41.678Z"
             },
             {
               "$type": "Document",
@@ -350,8 +355,7 @@
               "RelativeToolTip": "Models\\User.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAYwCUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T19:24:14.067Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-21T19:24:14.067Z"
             },
             {
               "$type": "Document",
@@ -363,8 +367,7 @@
               "RelativeToolTip": "Models\\Rating.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T17:02:14.469Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-22T17:02:14.469Z"
             },
             {
               "$type": "Document",
@@ -376,25 +379,11 @@
               "RelativeToolTip": "Models\\Quote.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T17:33:57.024Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-21T17:33:57.024Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 15,
-              "Title": "Notification.cs",
-              "DocumentMoniker": "C:\\Users\\chchn\\Desktop\\\u03A0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03A3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03A3\u03C4\u03BF \u0394\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\Models\\Notification.cs",
-              "RelativeDocumentMoniker": "Models\\Notification.cs",
-              "ToolTip": "C:\\Users\\chchn\\Desktop\\\u03A0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03A3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03A3\u03C4\u03BF \u0394\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\Models\\Notification.cs",
-              "RelativeToolTip": "Models\\Notification.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T14:47:13.574Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
               "Title": "Job.cs",
               "DocumentMoniker": "C:\\Users\\chchn\\Desktop\\\u03A0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03A3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03A3\u03C4\u03BF \u0394\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\Models\\Job.cs",
               "RelativeDocumentMoniker": "Models\\Job.cs",
@@ -402,12 +391,11 @@
               "RelativeToolTip": "Models\\Job.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAA4wBQAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T17:44:14.251Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-21T17:44:14.251Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 16,
               "Title": "Freelancer.cs",
               "DocumentMoniker": "C:\\Users\\chchn\\Desktop\\\u03A0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03A3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03A3\u03C4\u03BF \u0394\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\Models\\Freelancer.cs",
               "RelativeDocumentMoniker": "Models\\Freelancer.cs",
@@ -415,12 +403,11 @@
               "RelativeToolTip": "Models\\Freelancer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T17:57:03.136Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-21T17:57:03.136Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 17,
               "Title": "CompletedJob.cs",
               "DocumentMoniker": "C:\\Users\\chchn\\Desktop\\\u03A0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03A3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03A3\u03C4\u03BF \u0394\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\Models\\CompletedJob.cs",
               "RelativeDocumentMoniker": "Models\\CompletedJob.cs",
@@ -428,12 +415,11 @@
               "RelativeToolTip": "Models\\CompletedJob.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAuwBAAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T19:49:40.601Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-22T19:49:40.601Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 18,
               "Title": "Role.cs",
               "DocumentMoniker": "C:\\Users\\chchn\\Desktop\\\u03A0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03A3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03A3\u03C4\u03BF \u0394\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\Enum\\Role.cs",
               "RelativeDocumentMoniker": "Enum\\Role.cs",
@@ -441,12 +427,11 @@
               "RelativeToolTip": "Enum\\Role.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T14:48:09.873Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-22T14:48:09.873Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 19,
               "Title": "JobState.cs",
               "DocumentMoniker": "C:\\Users\\chchn\\Desktop\\\u03A0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03A3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03A3\u03C4\u03BF \u0394\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\Enum\\JobState.cs",
               "RelativeDocumentMoniker": "Enum\\JobState.cs",
@@ -454,12 +439,11 @@
               "RelativeToolTip": "Enum\\JobState.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T14:48:21.523Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-22T14:48:21.523Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 40,
               "Title": "20250424194155_All.cs",
               "DocumentMoniker": "C:\\Users\\chchn\\Desktop\\\u03A0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03A3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03A3\u03C4\u03BF \u0394\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\Migrations\\20250424194155_All.cs",
               "RelativeDocumentMoniker": "Migrations\\20250424194155_All.cs",
@@ -471,7 +455,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 20,
               "Title": "QuoteEvaluatorService.cs",
               "DocumentMoniker": "C:\\Users\\chchn\\Desktop\\\u03A0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03A3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03A3\u03C4\u03BF \u0394\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\Evaluator\\QuoteEvaluatorService.cs",
               "RelativeDocumentMoniker": "Evaluator\\QuoteEvaluatorService.cs",
@@ -483,7 +467,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 21,
               "Title": "EvaluateQuoteDto.cs",
               "DocumentMoniker": "C:\\Users\\chchn\\Desktop\\\u03A0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03A3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03A3\u03C4\u03BF \u0394\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\Dto\\QuoteDto\\EvaluateQuoteDto.cs",
               "RelativeDocumentMoniker": "Dto\\QuoteDto\\EvaluateQuoteDto.cs",
@@ -495,7 +479,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 22,
               "Title": "QuoteResponseDto.cs",
               "DocumentMoniker": "C:\\Users\\chchn\\Desktop\\\u03A0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03A3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03A3\u03C4\u03BF \u0394\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\Dto\\QuoteDto\\QuoteResponseDto.cs",
               "RelativeDocumentMoniker": "Dto\\QuoteDto\\QuoteResponseDto.cs",
@@ -507,7 +491,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 23,
               "Title": "CompletedJobResponseDto.cs",
               "DocumentMoniker": "C:\\Users\\chchn\\Desktop\\\u03A0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03A3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03A3\u03C4\u03BF \u0394\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\Dto\\CompletedJob\\CompletedJobResponseDto.cs",
               "RelativeDocumentMoniker": "Dto\\CompletedJob\\CompletedJobResponseDto.cs",
@@ -519,7 +503,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 24,
               "Title": "IQuoteEvaluator.cs",
               "DocumentMoniker": "C:\\Users\\chchn\\Desktop\\\u03A0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03A3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03A3\u03C4\u03BF \u0394\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\Evaluator\\IQuoteEvaluator.cs",
               "RelativeDocumentMoniker": "Evaluator\\IQuoteEvaluator.cs",
@@ -531,7 +515,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 25,
               "Title": "QuoteEvaluationResultDto.cs",
               "DocumentMoniker": "C:\\Users\\chchn\\Desktop\\\u03A0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03A3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03A3\u03C4\u03BF \u0394\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\Dto\\QuoteDto\\QuoteEvaluationResultDto.cs",
               "RelativeDocumentMoniker": "Dto\\QuoteDto\\QuoteEvaluationResultDto.cs",
@@ -543,7 +527,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 27,
               "Title": "RegisterRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\chchn\\Desktop\\\u03A0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03A3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03A3\u03C4\u03BF \u0394\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\Dto\\AuthDto\\RegisterRequestDto.cs",
               "RelativeDocumentMoniker": "Dto\\AuthDto\\RegisterRequestDto.cs",
@@ -555,7 +539,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 26,
               "Title": "CreateQuoteDto.cs",
               "DocumentMoniker": "C:\\Users\\chchn\\Desktop\\\u03A0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03A3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03A3\u03C4\u03BF \u0394\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\Dto\\QuoteDto\\CreateQuoteDto.cs",
               "RelativeDocumentMoniker": "Dto\\QuoteDto\\CreateQuoteDto.cs",
@@ -567,7 +551,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 28,
               "Title": "CreateRatingDto.cs",
               "DocumentMoniker": "C:\\Users\\chchn\\Desktop\\\u03A0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03A3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03A3\u03C4\u03BF \u0394\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\Dto\\RatingDto\\CreateRatingDto.cs",
               "RelativeDocumentMoniker": "Dto\\RatingDto\\CreateRatingDto.cs",
@@ -579,7 +563,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 29,
               "Title": "DataContext.cs",
               "DocumentMoniker": "C:\\Users\\chchn\\Desktop\\\u03A0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03A3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03A3\u03C4\u03BF \u0394\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\Data\\DataContext.cs",
               "RelativeDocumentMoniker": "Data\\DataContext.cs",
@@ -591,7 +575,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 39,
               "Title": "20250422221609_AllUpdates.cs",
               "DocumentMoniker": "C:\\Users\\chchn\\Desktop\\\u03A0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03A3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03A3\u03C4\u03BF \u0394\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\Migrations\\20250422221609_AllUpdates.cs",
               "RelativeDocumentMoniker": "Migrations\\20250422221609_AllUpdates.cs",
@@ -603,7 +587,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 30,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\chchn\\Desktop\\\u03A0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03A3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03A3\u03C4\u03BF \u0394\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "Controllers\\UserController.cs",
@@ -615,7 +599,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 31,
               "Title": "FreelancerProfileDto.cs",
               "DocumentMoniker": "C:\\Users\\chchn\\Desktop\\\u03A0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03A3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03A3\u03C4\u03BF \u0394\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\Dto\\FreelancerDtO\\FreelancerProfileDto.cs",
               "RelativeDocumentMoniker": "Dto\\FreelancerDtO\\FreelancerProfileDto.cs",
@@ -627,7 +611,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 32,
               "Title": "FreelancerRegisterDto.cs",
               "DocumentMoniker": "C:\\Users\\chchn\\Desktop\\\u03A0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03A3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03A3\u03C4\u03BF \u0394\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\Dto\\FreelancerDtO\\FreelancerRegisterDto.cs",
               "RelativeDocumentMoniker": "Dto\\FreelancerDtO\\FreelancerRegisterDto.cs",
@@ -635,12 +619,11 @@
               "RelativeToolTip": "Dto\\FreelancerDtO\\FreelancerRegisterDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T18:20:05.434Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-22T18:20:05.434Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 33,
               "Title": "ViewRatingDto.cs",
               "DocumentMoniker": "C:\\Users\\chchn\\Desktop\\\u03A0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03A3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03A3\u03C4\u03BF \u0394\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\Dto\\RatingDto\\ViewRatingDto.cs",
               "RelativeDocumentMoniker": "Dto\\RatingDto\\ViewRatingDto.cs",
@@ -652,7 +635,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 34,
               "Title": "ViewQuoteDto.cs",
               "DocumentMoniker": "C:\\Users\\chchn\\Desktop\\\u03A0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03A3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03A3\u03C4\u03BF \u0394\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\Dto\\AdminDto\\ViewQuoteDto.cs",
               "RelativeDocumentMoniker": "Dto\\AdminDto\\ViewQuoteDto.cs",
@@ -664,7 +647,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 35,
               "Title": "ViewUserDto.cs",
               "DocumentMoniker": "C:\\Users\\chchn\\Desktop\\\u03A0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03A3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03A3\u03C4\u03BF \u0394\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\Dto\\AdminDto\\ViewUserDto.cs",
               "RelativeDocumentMoniker": "Dto\\AdminDto\\ViewUserDto.cs",
@@ -676,7 +659,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 38,
               "Title": "20250421192329_NewUser.cs",
               "DocumentMoniker": "C:\\Users\\chchn\\Desktop\\\u03A0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03A3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03A3\u03C4\u03BF \u0394\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\Migrations\\20250421192329_NewUser.cs",
               "RelativeDocumentMoniker": "Migrations\\20250421192329_NewUser.cs",
@@ -688,7 +671,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 36,
               "Title": "ViewFreelancerDto.cs",
               "DocumentMoniker": "C:\\Users\\chchn\\Desktop\\\u03A0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03A3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03A3\u03C4\u03BF \u0394\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\Dto\\AdminDto\\ViewFreelancerDto.cs",
               "RelativeDocumentMoniker": "Dto\\AdminDto\\ViewFreelancerDto.cs",
@@ -700,7 +683,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 37,
               "Title": "UserProfileDto.cs",
               "DocumentMoniker": "C:\\Users\\chchn\\Desktop\\\u03A0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03B9\u03B1\u03BA\u03AC \u03A3\u03C5\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03B1 \u03A3\u03C4\u03BF \u0394\u03B9\u03B1\u03B4\u03AF\u03BA\u03C4\u03C5\u03BF\\freelanceapp\\backend\\backend\\Dto\\UserDto\\UserProfileDto.cs",
               "RelativeDocumentMoniker": "Dto\\UserDto\\UserProfileDto.cs",

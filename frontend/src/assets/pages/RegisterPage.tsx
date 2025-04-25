@@ -18,7 +18,7 @@ function Register() {
     const [isAdmin, setIsAdmin] = useState(false);
 
 
-    const imageUrl = gender === 'Male' ? '/src/assets/images/avatar_man_1.svg' : gender === 'Female' ? '/src/assets/images/avatar_woman_1.svg' : '';
+    const imageUrl = gender === 'Male' ? 'avatar_man_1.svg' : gender === 'Female' ? 'avatar_woman_1.svg' : '';
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();

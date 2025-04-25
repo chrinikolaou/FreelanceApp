@@ -136,7 +136,8 @@ namespace backend.Controllers
                 firstName = user.FirstName,
                 lastName = user.LastName,
                 email = user.Email,
-                isAdmin = user.IsAdmin
+                isAdmin = user.IsAdmin,
+                imageUrl = user.ImageUrl,
             });
         }
 

@@ -96,6 +96,21 @@ body {
   background-color: var(--btn-primary-hover-color);
 }
 
+.btn-gray {
+
+  color: var(--dark);
+  background-color: #cbcbcb;
+
+  border: 1px solid #cbcbcb;
+  transition: all ease-in-out .25s;
+  cursor: pointer;
+
+}
+
+.btn-gray:hover {
+  background-color: #b0b0b0;
+}
+
 
 .btn-danger {
   color: var(--danger);
@@ -531,17 +546,20 @@ label {
   right: 0;
   z-index: 10;
   background-color: var(--light);
-  min-width: 225px;
+
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
 
-
-  width: 100%;
+  min-width: 300px;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
   text-align: left;
+
+  justify-content: center;
   gap: 0.7rem;
+  overflow-y: auto;
+  max-height: 600px;
 
 }
 
@@ -557,7 +575,8 @@ label {
   border-radius: 7px;
 }
 
-.dropdown-item > a:not(.btn):hover {
+
+.dropdown-item > *:not(.btn,.info):hover {
   background-color: var(--default-border);
 }
 

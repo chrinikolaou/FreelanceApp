@@ -1,4 +1,5 @@
 interface User {
+    id: number;
     username: string;
     firstName: string;
     lastName: string;
@@ -7,7 +8,4 @@ interface User {
     imageUrl: string;
     isAdmin: boolean;
 }
-
-
-
 

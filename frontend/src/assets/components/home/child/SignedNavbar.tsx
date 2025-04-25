@@ -4,10 +4,23 @@ import SidePanel from '../../global/SidePanel';
 import Dropdown from '../../global/Dropdown';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../../hooks/useAuth';
+import { useNotifications } from '../../../hooks/useNotifications';
 
 
 interface NavbarProps {
     active: string;
+}
+
+function formatDate(dateString: string) : string {
+    const date = new Date(dateString);
+
+    return date.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'numeric',
+        day: 'numeric',
+        hour: 'numeric',
+        minute: 'numeric'
+    });
 }
 
 function Navbar({active = "home"}: NavbarProps) {
@@ -15,9 +28,8 @@ function Navbar({active = "home"}: NavbarProps) {
     const [isPanelOpen, setPanelOpen] = useState(false);
     const [isWideScreen, setIsWideScreen] = useState(false);
     const {user, logout} = useAuth();
+    const { notifications, loading, error, markAsRead} = useNotifications(user?.id || null);
     const navigate = useNavigate();
-
-
 
     const handleLogout = async () => {
         await logout(); 
@@ -26,8 +38,8 @@ function Navbar({active = "home"}: NavbarProps) {
 
     const actions = [
         <div className="info">
-            <img src="/src/assets/images/avatar_man_2.svg"/>
-            <h4>{user?.firstName} {user?.lastName}</h4>
+            <img src={`/src/assets/images/${user?.imageUrl}`} alt="Avatar"/>
+            <h4>{user?.username}</h4>
             <div className="horizontal-spacer"/>
         </div>
         ,
@@ -37,6 +49,23 @@ function Navbar({active = "home"}: NavbarProps) {
         <div className="horizontal-spacer"/>,
         <Link to="" className="btn btn-danger" onClick={handleLogout}><span className="material-symbols-outlined">logout</span>Sign Out</Link>
     ]
+
+    const notificationsActions = notifications.map((note)=> (
+        <div key={note.id} className={`notification dropdown-item ${note.isRead ? "mark" : ""}`}>
+            <a>{note.message}</a>
+            <div className="notification-time">{formatDate(note.createdAt)}</div>
+            <form onSubmit={(e)=> {
+                e.preventDefault();
+                e.stopPropagation();
+                if(note.isRead) return;
+                markAsRead(note.id);
+            }}>
+                <button type="submit" className={`btn ${note.isRead ? "mark btn-gray" : "btn-primary"}`}>Read</button>
+            </form>
+        </div>
+    ));
+
+    if(notificationsActions.length === 0) notificationsActions.push(<a id="no-notifications">No notifications yet.</a>);
 
     useEffect(() => {
         const handleResize = () => {
@@ -78,7 +107,7 @@ function Navbar({active = "home"}: NavbarProps) {
             document.removeEventListener("click", closeSearch);
         };
     }, []);
-
+ 
     const NavElements = () => {
         return (
         <>
@@ -98,9 +127,12 @@ function Navbar({active = "home"}: NavbarProps) {
                 </div>
             </form>
             <div className="account-details">
-            <Dropdown main={<img src="/src/assets/images/notification.svg" className="notifications" alt="Notification"/>}
-                actions={actions}/>
-                <Dropdown main={<img src="/src/assets/images/avatar_man_2.svg" alt="Avatar"/>}
+                <div className="notification-menu">
+                <Dropdown main={<img src="/src/assets/images/notification.svg" className="notifications" alt="Notification"/>}
+                actions={notificationsActions}/>
+                </div>
+
+                <Dropdown main={<img src={`/src/assets/images/${user?.imageUrl}`} alt="Avatar"/>}
                 actions={actions}/>
                 
             </div>
