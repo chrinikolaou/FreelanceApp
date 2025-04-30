@@ -7,7 +7,7 @@ export function useJobs() {
     const [loading, setLoading] = useState<boolean>(true);
 
     useEffect(()=> {
-        api.get<Job[]>("/jobs/view")
+        api.get<Job[]>("/jobs/all")
             .then(res=>setJobs(res.data))
             .catch(console.error)
             .finally(()=>setLoading(false));

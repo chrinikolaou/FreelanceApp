@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using backend.Enum;
 
 namespace backend.Models
 {
@@ -27,7 +28,10 @@ namespace backend.Models
         [ForeignKey("JobId")]
         public Job Job { get; set; }
 
+        public QuoteState QuoteState { get; set; }
+
         public int? EvaluationScore { get; set; }
         public string? EvaluationDecision { get; set; }
+
     }
 }

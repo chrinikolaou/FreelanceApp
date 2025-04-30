@@ -13,9 +13,7 @@ export const useNotifications = (userId: number | null) => {
             
             try {
                 const response = await api.get<Notification[]>(`/notifications/me`);
-                console.log("response ", response.data);
                 setNotifications(response.data);
-              
             } catch(err: any) {
                 console.error("Error fetching notifications", err);
                 setError(err.message || "An error occured while fetching notifications.");

@@ -118,7 +118,7 @@ function Register() {
 
                 <button type="submit" className="btn btn-primary">Sign up</button>
                 <hr/>
-                <a className="text-link" href="/user/login">Already have an account? Sign in.</a>
+                <a className="text-link" href="/login">Already have an account? Sign in.</a>
             </form>
         </div>
     );

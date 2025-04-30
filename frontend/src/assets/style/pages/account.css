@@ -1,0 +1,176 @@
+.account-container {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    min-height: 600px;
+
+    
+}
+
+.no-account-container {
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  min-height: 600px;
+  font-size: 23px;
+  font-weight: 450;
+}
+
+.account-container .active {
+    background-color: var(--primary);
+    color: var(--light);
+}
+.account-container .profile {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: end;
+    border-bottom: 1px solid var(--default-border);
+    padding: 5px 0;
+    gap: 1.25rem;
+}
+
+.account-container .profile .avatar {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+
+
+.account-container .profile .avatar h3 {
+
+    padding: 10px;
+    border-radius: 7px;
+    width: 100%;
+    background-color: var(--default-border);
+}
+
+.account-container .profile .avatar img {
+    width: 250px;
+    height: 250px;
+    background-color: var(--default-border);
+    border: 1px solid #727272;
+    border-radius: 1999px;
+}
+
+
+.account-container .profile .actions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.account-container .profile .actions a {
+    padding: 10px;
+    border-radius: 7px;
+}
+
+.account-container .adjustableSection {
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+
+    border: 1px solid var(--default-border);
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    text-align: center;
+  }
+  
+thead {
+  background-color: #c1d4f2;
+  color: var(--dark);
+
+}
+
+thead th {
+  padding: 0.75rem 1rem;
+
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+tbody td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+tbody tr:hover {
+  background-color: #f9fafb;
+  transition: background-color 0.2s ease;
+}
+
+.account-container .account-name {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  width: 100%;
+
+  margin-top: 10px;
+
+}
+
+
+.account-container .buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0.4rem;
+  align-items: center;
+  justify-content: center;
+}
+.freelancer-tag {
+  border-radius: 30px;
+  border: none;
+  padding: 10px;
+  background-color: var(--primary);
+  color: var(--light);
+
+}
+
+  @media (max-width: 1000px) {
+
+    .account-container {
+      width: 90%;
+      flex-wrap: wrap;
+      font-size: 15px;
+      gap: 2.25rem;
+    }
+    .account-container table {
+      width: 100%;
+      overflow: auto;
+
+      display: block;
+    }
+
+
+  }

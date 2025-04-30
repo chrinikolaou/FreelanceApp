@@ -112,7 +112,8 @@ namespace backend.Controllers
                     Budget = j.Budget,
                     Deadline = j.Deadline,
                     State = j.State.ToString(),
-                    AcceptedQuoteId = j.AcceptedQuoteId
+                    AcceptedQuoteId = j.AcceptedQuoteId,
+                    FreelancerUsername = j.AcceptedQuote.Freelancer.User.UserName
                 })
                 .FirstOrDefault();
 
@@ -305,12 +306,50 @@ namespace backend.Controllers
                     Budget = j.Budget,
                     Deadline = j.Deadline,
                     State = j.State.ToString(),
-                    AcceptedQuoteId = j.AcceptedQuoteId
+                    AcceptedQuoteId = j.AcceptedQuoteId,
+                    FreelancerUsername = j.AcceptedQuote.Freelancer.User.UserName
                 })
                 .ToList();
 
             return Ok(jobs);
         }
+
+        [HttpGet("me/work")]
+        [Authorize]
+        public IActionResult GetMyWork()
+        {
+            var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+
+            var freelancer = _context.Freelancers
+                .Include(f => f.User)
+                .FirstOrDefault(f => f.UserId == userId);
+
+            if (freelancer == null)
+                return BadRequest("Freelancer was not found.");
+
+            var jobs = _context.Jobs
+                .Include(j => j.User)
+                .Include(j => j.AcceptedQuote)
+                .Where(j => j.AcceptedQuote.FreelancerId == freelancer.FreelancerId)
+                .Select(j => new JobResponseDto
+                {
+                    Id = j.Id,
+                    Title = j.Title,
+                    Description = j.Description,
+                    Category = j.Category,
+                    CreatedAt = j.CreatedAt,
+                    Username = j.User.UserName,
+                    Budget = j.Budget,
+                    Deadline = j.Deadline,
+                    State = j.State.ToString(),
+                    AcceptedQuoteId = j.AcceptedQuoteId,
+                    FreelancerUsername = j.AcceptedQuote.Freelancer.User.UserName
+                })
+                .ToList();
+
+            return Ok(jobs);
+        }
+
 
         [HttpPost("{jobId}/complete")]
         [Authorize]

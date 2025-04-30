@@ -23,7 +23,7 @@ namespace backend.Controllers
         }
 
 
-        [HttpGet("view-profile")]
+        [HttpGet]
         [Authorize]
         public IActionResult ViewMyProfile()
         {
@@ -77,7 +77,7 @@ namespace backend.Controllers
 
 
 
-        [HttpPost("register-as-freelancer")]
+        [HttpPost("freelancer/register")]
         [Authorize]
         public IActionResult BecomeFreelancer([FromBody] FreelancerRegisterDto freelancerDto)
         {
@@ -113,8 +113,56 @@ namespace backend.Controllers
             return Ok(new { message = "You are now registered as a freelancer." });
         }
 
+        [HttpGet("{username}")]
+        [Authorize]
+        public IActionResult GetUserByUsername(string username)
+        {
+            var user = _context.Users.FirstOrDefault(u => u.UserName == username);
+            if (user == null)
+                return NotFound("User not found.");
 
-        [HttpDelete("unregister-from-freelancer")]
+            var freelancer = _context.Freelancers
+                .Include(f => f.User)
+                .FirstOrDefault(f => f.User.UserName == username);
+
+            if (freelancer != null)
+            {
+                var freelancerProfile = new FreelancerProfileDto
+                {
+                    FirstName = freelancer.User.FirstName,
+                    LastName = freelancer.User.LastName,
+                    UserName = freelancer.User.UserName,
+                    Email = freelancer.User.Email,
+                    Address = freelancer.User.Address,
+                    ImageUrl = freelancer.User.ImageUrl,
+                    IsAdmin = freelancer.User.IsAdmin,
+                    Biography = freelancer.Biography,
+                    Balance = freelancer.Balance,
+                    Role = freelancer.Role.ToString(),
+                    CompletedJobs = freelancer.CompletedJobs
+                };
+
+                return Ok(freelancerProfile);
+            }
+            else
+            {
+                var userProfile = new UserProfileDto
+                {
+                    FirstName = user.FirstName,
+                    LastName = user.LastName,
+                    UserName = user.UserName,
+                    Email = user.Email,
+                    Address = user.Address,
+                    ImageUrl = user.ImageUrl,
+                    IsAdmin = user.IsAdmin
+                };
+
+                return Ok(userProfile);
+            }
+        }
+
+
+        [HttpDelete("freelancer/unregister")]
         [Authorize]
         public IActionResult UnregisterFromFreelancer()
         {

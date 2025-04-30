@@ -4,6 +4,7 @@ import Footer from "../components/global/Footer";
 import Navbar from "../components/home/child/Navbar";
 import SignedNavbar from "../components/home/child/SignedNavbar";
 import '/src/assets/style/pages/jobs.css';
+import { Link } from "react-router-dom";
 
 
 function formatDate(dateString: string) : string {
@@ -37,7 +38,7 @@ function ListingPage() {
                 {/* Retrieve backend values  */}
                 {jobs.length == 0 && <p className="empty-jobs"><b>No available jobs at the moment.</b></p>}
                 <div className="jobs">
-                {jobs.map(job => (
+                {jobs.filter(job=>job.state === "Open").map(job => (
                     
                     <div className="card">
                     <div className="card-details">
@@ -56,7 +57,7 @@ function ListingPage() {
                     <p>{job.description}</p>
       
                     <div className="card-buttons">
-                    <a href={`/listings/${job.id}`} className="text-link">Learn More...</a>
+                    <Link to={`/listings/${job.id}`} className="text-link">Learn More...</Link>
                         </div>
                     </div>
                 ))}

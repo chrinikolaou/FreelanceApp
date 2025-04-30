@@ -10,7 +10,7 @@ export function useJob(id: string | undefined) {
     useEffect(()=> {
         if(!id) return;
         setLoading(true);
-        api.get<Job>(`/jobs/view/${id}`)
+        api.get<Job>(`/jobs/${id}`)
         .then(res=>setJob(res.data))
         .catch(err=>{
             console.error(err);

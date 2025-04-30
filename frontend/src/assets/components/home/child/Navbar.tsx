@@ -1,6 +1,7 @@
-import { useEffect, useState } from 'react';
+import { FormEvent, useEffect, useState } from 'react';
 import '/src/assets/style/navbar.css';
 import SidePanel from '../../global/SidePanel';
+import { redirect, useNavigate } from 'react-router-dom';
 
 
 interface NavbarProps {
@@ -9,15 +10,24 @@ interface NavbarProps {
 
 function Navbar({active = "home"}: NavbarProps) {
 
+
     const [isPanelOpen, setPanelOpen] = useState(false);
     const [isWideScreen, setIsWideScreen] = useState(false);
 
+    const [target, setTarget] = useState<string>('');
+    const navigate = useNavigate();
+
+    function searchUser(e: FormEvent) {
+        
+        return navigate("/profile/"+target);
+    }
+
     useEffect(() => {
         const handleResize = () => {
-          if (window.innerWidth > 1000 && isPanelOpen) {
+          if (window.innerWidth > 1062 && isPanelOpen) {
             setPanelOpen(false); 
           }
-          setIsWideScreen(window.innerWidth > 1000);
+          setIsWideScreen(window.innerWidth > 1062);
         };
     
         window.addEventListener('resize', handleResize);
@@ -53,31 +63,35 @@ function Navbar({active = "home"}: NavbarProps) {
         };
     }, []);
 
-    const NavElements = () => {
+    function NavLinks() {
         return (
-        <>
-            <div className="nav-links">
-                <a className={`nav-link ${active === "home" ? "active" : ""}`} href="/">Home</a>
-                <a className={`nav-link ${active === "listings" ? "active" : ""}`} href="/listings">View Listings</a>
-                <a className={`nav-link ${active === "quote" ? "active" : ""}`}>Get a Quote</a>
-                <a className={`nav-link ${active === "pricing" ? "active" : ""}`} href="/pricing">Pricing</a>
-        </div>
+            <>
+                <div className="nav-links">
+                    <a className={`nav-link ${active === "home" ? "active" : ""}`} href="/">Home</a>
+                    <a className={`nav-link ${active === "listings" ? "active" : ""}`} href="/listings">View Listings</a>
+                    <a className={`nav-link ${active === "quote" ? "active" : ""}`} href="/quote">Get a Quote</a>
+                    <a className={`nav-link ${active === "pricing" ? "active" : ""}`} href="/pricing">Pricing</a>
+            </div>
+            </>
+        );
+    }
+
+    function NavButtons() {
+
+        return (
+            <>
             <div className="nav-buttons">
-            <form className="" method="post" action="">
-                <div className="input-group search_div">
-                    <label htmlFor="input_search">
-                        <img src="/src/assets/images/search.svg"/>
-                        <input type="text" name="input_search" id="input_search" placeholder="Search"/></label>
-                
-                </div>
-            </form>
+
             <a className="btn btn-primary" href="/login">Sign In</a>
             <a className="btn btn-secondary" href="/register">Register</a>
             <a className="text-tertiary nav-link" href="#">Become a Seller</a>
             </div>
+            
         </>
         );
     };
+
+
 
     return (
 
@@ -93,7 +107,7 @@ function Navbar({active = "home"}: NavbarProps) {
                     <a className={`nav-link ${active === "listings" ? "active" : ""}`} href="/listings">View Listings</a>
                 </li>
                 <li>
-                    <a className={`nav-link ${active === "quote" ? "active" : ""}`}>Get a Quote</a>
+                    <a className={`nav-link ${active === "quote" ? "active" : ""}`} href="/quote">Get a Quote</a>
                 </li>
                 <li>
                     <a className={`nav-link ${active === "pricing" ? "active" : ""}`} href="/pricing">Pricing</a>
@@ -103,11 +117,11 @@ function Navbar({active = "home"}: NavbarProps) {
                 <a className="text-tertiary nav-link" href="/login">Login</a>
                 <a className="text-tertiary nav-link" href="/register">Register</a>
                 <a className="btn btn-secondary">Become a Seller</a>
-                <form className="mobile-search-form" method="post" action="">
+                <form className="mobile-search-form" onSubmit={searchUser}>
                 <div className="input-group">
                     <label htmlFor="input_search">
                         <img src="/src/assets/images/search.svg"/>
-                        <input type="text" name="input_search" id="input_search" placeholder="Search"/></label>
+                        <input type="text" name="input_search" id="input_search" placeholder="Search User" value={target} onChange={(e)=>setTarget(e.target.value)}/></label>
 
                 </div>
                 <button type="submit" className="btn btn-primary">Search</button>
@@ -117,8 +131,18 @@ function Navbar({active = "home"}: NavbarProps) {
                 </ul>
             </SidePanel>
             
-            
-            {!isPanelOpen && <NavElements/>}
+            {!isPanelOpen && <NavLinks/>}
+
+            {!isPanelOpen && isWideScreen && <form className="search_nav" method="get" onSubmit={searchUser}>
+                <div className="input-group search_div">
+                    <label htmlFor="input_search">
+                        <img src="/src/assets/images/search.svg"/>
+                        <input type="text" name="input_search" id="input_search" placeholder="Search User" value={target} onChange={(e)=>setTarget(e.target.value)}/></label>                
+                </div>
+                <button type="submit" className="btn btn-primary">Search</button>
+            </form>}
+           
+            {!isPanelOpen && <NavButtons/>}
           {!isWideScreen && <img className="nav-menu-button" src={isPanelOpen ? "/src/assets/images/close.svg" : "/src/assets/images/menu.svg"} onClick={()=>setPanelOpen(!isPanelOpen)}/>}
         </nav>
 

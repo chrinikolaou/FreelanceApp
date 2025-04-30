@@ -12,7 +12,7 @@ namespace backend.Dto.AdminDto
         public string Description { get; set; }
         public Role Category { get; set; }
         public decimal Budget { get; set; }
-        public DateTime Deadline { get; set; }
+        public DateTime? Deadline { get; set; }
         public DateTime CreatedAt { get; set; }
         public string UserEmail { get; set; }
         public string UserName { get; set; }

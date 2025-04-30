@@ -18,7 +18,7 @@ function SidePanel({ className, children, isOpen, hasCloseButton, onClose}: Side
 
         if (isOpen) {
             document.addEventListener("keydown", handleKeyDown);
-            document.body.style.overflow = "hidden"; // Prevent scrolling when open
+            document.body.style.overflow = "hidden"; 
         } else {
             document.body.style.overflow = "";
         }

@@ -146,7 +146,7 @@ namespace backend.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("Deadline")
+                    b.Property<DateTime?>("Deadline")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
@@ -192,10 +192,15 @@ namespace backend.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("QuoteId")
+                        .HasColumnType("int");
+
                     b.Property<int>("UserId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("QuoteId");
 
                     b.HasIndex("UserId");
 
@@ -228,6 +233,9 @@ namespace backend.Migrations
 
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("QuoteState")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -268,7 +276,11 @@ namespace backend.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("CompletedJobId");
+
                     b.HasIndex("FreelancerId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Rating", (string)null);
                 });
@@ -352,11 +364,18 @@ namespace backend.Migrations
 
             modelBuilder.Entity("backend.Models.Notification", b =>
                 {
+                    b.HasOne("backend.Models.Quote", "Quote")
+                        .WithMany()
+                        .HasForeignKey("QuoteId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
                     b.HasOne("backend.Models.User", "User")
                         .WithMany()
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
+
+                    b.Navigation("Quote");
 
                     b.Navigation("User");
                 });
@@ -382,13 +401,29 @@ namespace backend.Migrations
 
             modelBuilder.Entity("backend.Models.Rating", b =>
                 {
+                    b.HasOne("backend.Models.CompletedJob", "CompletedJob")
+                        .WithMany()
+                        .HasForeignKey("CompletedJobId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
                     b.HasOne("backend.Models.Freelancer", "Freelancer")
                         .WithMany()
                         .HasForeignKey("FreelancerId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
+                    b.HasOne("backend.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("CompletedJob");
+
                     b.Navigation("Freelancer");
+
+                    b.Navigation("User");
                 });
 #pragma warning restore 612, 618
         }

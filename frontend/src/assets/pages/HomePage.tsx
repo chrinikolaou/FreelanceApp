@@ -16,7 +16,6 @@ function HomePage() {
 
     return (
         <>
-            {/* Conditionally render Navbar or SignedNavbar based on user authentication */}
             {user ? <SignedNavbar active="home" /> : <Navbar active="home" />}
             <Hero />
             <Listings />

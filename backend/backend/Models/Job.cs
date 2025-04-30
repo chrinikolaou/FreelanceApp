@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using backend.Enum;
+using Azure.Identity;
 
 namespace backend.Models
 {
@@ -35,13 +36,14 @@ namespace backend.Models
         [Required]
         public JobState State { get; set; } = JobState.Open;
 
-        public DateTime Deadline { get; set; }
+        public DateTime? Deadline { get; set; }
 
         public int? AcceptedQuoteId { get; set; }
 
         [ForeignKey("AcceptedQuoteId")]
         public Quote? AcceptedQuote { get; set; }
 
+        
 
     }
 }

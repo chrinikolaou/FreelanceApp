@@ -17,9 +17,15 @@ namespace backend.Models
         [Required]
         public int CompletedJobId { get; set; }
 
+        [ForeignKey("CompletedJobId")]
+        public CompletedJob CompletedJob { get; set; } 
+
         // The user (job owner) who submitted the rating
         [Required]
         public int UserId { get; set; }
+
+        [ForeignKey("UserId")]
+        public User User { get; set; }
 
         [Required]
         [Range(1, 5, ErrorMessage = "Rating must be between 1 and 5.")]
@@ -29,6 +35,6 @@ namespace backend.Models
         public string Comment { get; set; }
 
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
-
     }
+
 }

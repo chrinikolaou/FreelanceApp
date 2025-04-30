@@ -41,6 +41,12 @@ namespace backend.Data
                 .HasForeignKey(q => q.FreelancerId)
                 .OnDelete(DeleteBehavior.Restrict);
 
+            modelBuilder.Entity<Notification>()
+                .HasOne(n => n.Quote)
+                .WithMany()
+                .HasForeignKey(n => n.QuoteId)
+                .OnDelete(DeleteBehavior.SetNull);
+
 
             //Freelancer - User relationShip
             modelBuilder.Entity<Freelancer>()
@@ -57,14 +63,33 @@ namespace backend.Data
                 .HasOne(n => n.User)
                 .WithMany() // δεν έχει navigation στο User
                 .HasForeignKey(n => n.UserId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.Restrict);
+
 
             // Freelancer - Rating relationship
+            //modelBuilder.Entity<Rating>()
+            //    .HasOne(r => r.Freelancer)
+            //    .WithMany()
+            //    .HasForeignKey(r => r.FreelancerId)
+            //    .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<Rating>()
+            .HasOne(r => r.User)
+            .WithMany()
+            .HasForeignKey(r => r.UserId)
+            .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Rating>()
+                .HasOne(r => r.CompletedJob)
+                .WithMany()
+                .HasForeignKey(r => r.CompletedJobId)
+                .OnDelete(DeleteBehavior.Restrict);
+
             modelBuilder.Entity<Rating>()
                 .HasOne(r => r.Freelancer)
                 .WithMany()
                 .HasForeignKey(r => r.FreelancerId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.Restrict); 
         }
 
 

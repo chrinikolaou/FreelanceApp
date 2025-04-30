@@ -70,14 +70,8 @@ namespace backend.Controllers
                 EvaluationDecision = evaluationResult.Decision
             };
 
-            _context.Quotes.Add(quote);
-
-
-
-            
-          
-
-         
+            quote.QuoteState = QuoteState.PENDING;
+            _context.Quotes.Add(quote);         
 
             //Create Notification for the job poster
 
@@ -88,7 +82,8 @@ namespace backend.Controllers
                 {
                     UserId = jobPoster.Id,
                     Message = $"Ο χρήστης {freelancer.User.UserName} έκανε προσφορά για τη δουλειά σου: '{job.Title}'",
-                    CreatedAt = DateTime.UtcNow
+                    CreatedAt = DateTime.UtcNow,
+                    Quote = quote
                 };
 
                 _context.Notifications.Add(notification);
@@ -296,10 +291,20 @@ namespace backend.Controllers
             if (job.State != JobState.Open)
                 return BadRequest("Only open jobs can accept quotes.");
 
+
+            if (quote.QuoteState == QuoteState.REJECTED)
+                return BadRequest("You have already declined this quote.");
+
+            if (quote.QuoteState == QuoteState.APPROVED)
+                return BadRequest("You have already accepted this quote.");
+
+            if (quote.QuoteState == QuoteState.CANCELED)
+                return BadRequest("You can't accept/deny this quote because it is canceled.");
+
             // Set accepted quote and update job state
             job.AcceptedQuoteId = quoteId;
             job.State = JobState.InProgress;
-
+            quote.QuoteState = QuoteState.APPROVED;
 
 
             // Send notification to freelancer
@@ -325,6 +330,69 @@ namespace backend.Controllers
                 jobState = job.State.ToString()
             });
         }
+
+        [HttpPost("decline/{quoteId}")]
+        [Authorize]
+        public IActionResult DeclineQuote(int quoteId)
+        {
+            var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+
+            var quote = _context.Quotes
+                .Include(q => q.Job)
+                    .ThenInclude(j => j.User)
+                .Include(q => q.Freelancer)
+                    .ThenInclude(f => f.User)
+                .FirstOrDefault(q => q.Id == quoteId);
+
+            if (quote == null)
+                return NotFound("Quote not found.");
+
+
+            var job = quote.Job;
+
+            if (job == null)
+                return NotFound("Associated job not found.");
+
+            if (job.UserId != userId)
+                return BadRequest("You are not the owner of this job.");
+
+            if (job.State != JobState.Open)
+                return BadRequest("Only open jobs can decline quotes.");
+
+            if (quote.QuoteState == QuoteState.REJECTED)
+                return BadRequest("You have already declined this quote.");
+
+            if (quote.QuoteState == QuoteState.APPROVED)
+                return BadRequest("You have already accepted this quote.");
+
+            if (quote.QuoteState == QuoteState.CANCELED)
+                return BadRequest("You can't accept/deny this quote because it is canceled.");
+
+
+            job.AcceptedQuoteId = null;
+            job.State = JobState.Open;  // You may leave this as 'Open' or adjust based on your requirements.
+            quote.QuoteState = QuoteState.REJECTED;
+
+            // Send notification to freelancer
+            var notification = new Notification
+            {
+                UserId = quote.Freelancer.UserId,
+                Message = $"Η προσφορά σου με ID {quoteId} για τη δουλειά '{job.Title}' απορρίφθηκε.",
+                CreatedAt = DateTime.UtcNow
+            };
+            _context.Notifications.Add(notification);
+
+            _context.SaveChanges();
+
+            return Ok(new
+            {
+                message = "Quote declined successfully.",
+                jobId = job.Id,
+                jobState = job.State.ToString(),
+                quote = quote
+            });
+        }
+
 
 
         [HttpPost("cancel/{quoteId}")]
@@ -362,8 +430,7 @@ namespace backend.Controllers
                 return BadRequest("This quote cannot be cancelled because the job is completed");
 
 
-
-
+     
             // Send notification to the other party
             Notification notification = null;
 
@@ -393,12 +460,7 @@ namespace backend.Controllers
 
             job.State = JobState.Open;
             job.AcceptedQuoteId = null;
-
-
-
-
-
-
+            quote.QuoteState = QuoteState.CANCELED;
 
             _context.SaveChanges();
 
@@ -439,15 +501,11 @@ namespace backend.Controllers
                     FreelancerUsername = q.Freelancer.User.UserName,
                     Price = q.Price,
                     Comment = q.Comment,
-                    Decision = q.EvaluationDecision
+                    Decision = q.EvaluationDecision,
+                    QuoteState = q.QuoteState,
+                    Username = q.Job.User.UserName
                 })
                 .ToList();
-
-            
-            if (!quotes.Any())
-            {
-                return Ok(new { message = "You have no quotes." });
-            }
 
            
             return Ok(quotes);
@@ -469,7 +527,7 @@ namespace backend.Controllers
                 return BadRequest("You are not a freelancer.");
             }
 
-            
+
             var acceptedQuotes = _context.Quotes
                 .Include(q => q.Job)
                 .Where(q => q.FreelancerId == freelancer.FreelancerId && q.Job.AcceptedQuoteId == q.Id)
@@ -482,18 +540,13 @@ namespace backend.Controllers
                     FreelancerUsername = q.Freelancer.User.UserName,
                     Price = q.Price,
                     Comment = q.Comment,
-                    Decision = q.EvaluationDecision
+                    Decision = q.EvaluationDecision,
+                    QuoteState = q.QuoteState,
+                    Username = q.Job.User.UserName,
 
                 })
                 .ToList();
 
-            
-            if (!acceptedQuotes.Any())
-            {
-                return Ok(new { message = "You have no accepted quotes." });
-            }
-
-            
             return Ok(acceptedQuotes);
         }
 
@@ -527,14 +580,12 @@ namespace backend.Controllers
                     FreelancerUsername = q.Freelancer.User.UserName,
                     Price = q.Price,
                     Comment = q.Comment,
-                    Decision = q.EvaluationDecision
+                    Decision = q.EvaluationDecision,
+                    QuoteState = q.QuoteState,
+                    Job = q.Job,
+                    Username = q.Job.User.UserName,
                 })
                 .ToList();
-
-            if (!quotes.Any())
-            {
-                return Ok(new { message = "No quotes found for your jobs." });
-            }
 
             return Ok(quotes);
         }

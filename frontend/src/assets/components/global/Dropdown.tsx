@@ -2,8 +2,8 @@
 import React, { useState, useEffect, useRef, ReactNode } from 'react';
 
 interface DropdownProps {
-  main: ReactNode; // The clickable trigger (image, div, button, etc.)
-  actions: ReactNode[]; // The dropdown items (could be buttons, links, etc.)
+  main: ReactNode; // The clickable trigger
+  actions: ReactNode[]; // The dropdown items 
 }
 
 const Dropdown: React.FC<DropdownProps> = ({ main, actions }) => {
@@ -27,12 +27,10 @@ const Dropdown: React.FC<DropdownProps> = ({ main, actions }) => {
 
   return (
     <div className="dropdown" ref={dropdownRef}>
-      {/* Trigger (main) */}
       <div onClick={toggleDropdown} className="dropdown-trigger" style={{ cursor: 'pointer' }}>
         {main}
       </div>
 
-      {/* Dropdown menu */}
       {isOpen && (
         <div className="dropdown-menu">
           {actions.map((action, index) => (

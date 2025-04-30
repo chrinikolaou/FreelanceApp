@@ -115,7 +115,34 @@ namespace backend.Controllers
         }
 
 
+        [HttpGet("freelancer")]
+        [Authorize]
+        public IActionResult GetIsFreelancer()
+        {
+            var username = User.Identity?.Name;
+            var user = _context.Freelancers.FirstOrDefault(u => u.User.UserName == username);
 
+            if (user == null)
+            {
+                return NotFound(false);
+            }
+            return Ok(true);
+            
+        }
+
+        [HttpGet("freelancer/{username}")]
+        [Authorize]
+        public IActionResult GetIsFreelancerOther(string username)
+        {
+            var user = _context.Freelancers.FirstOrDefault(u => u.User.UserName == username);
+
+            if (user == null)
+            {
+                return NotFound(false);
+            }
+            return Ok(true);
+
+        }
 
 
         [HttpGet("me")]

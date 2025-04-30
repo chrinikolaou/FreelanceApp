@@ -42,7 +42,9 @@ namespace backend.Controllers
                     Id = n.Id,
                     Message = n.Message,
                     IsRead = n.IsRead,
-                    CreatedAt = n.CreatedAt
+                    CreatedAt = n.CreatedAt,
+                    Quote = n.Quote,
+                    FreelancerUsername = n.Quote.Freelancer.User.UserName,
                 })
                 .ToList();
 

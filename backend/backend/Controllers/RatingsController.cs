@@ -67,7 +67,70 @@ namespace backend.Controllers
             return Ok(new { message = "Rating submitted successfully." });
         }
 
-        [HttpGet("freelancer")]
+        [HttpGet("received/{freelancerId}")]
+        [Authorize]
+        public IActionResult GetRatingsForFreelancer(int freelancerId)
+        {
+            var freelancer = _context.Freelancers.FirstOrDefault(f => f.FreelancerId == freelancerId);
+            if (freelancer == null)
+                return NotFound("Freelancer not found");
+
+            var ratings = _context.Ratings
+                .Where(r => r.FreelancerId == freelancerId)
+                .OrderByDescending(r => r.CreatedAt)
+                .ToList();
+
+            var result = ratings.Select(r =>
+            {
+                var job = _context.CompletedJobs.FirstOrDefault(j => j.JobId == r.CompletedJobId);
+                var user = _context.Users.Find(r.UserId);
+
+                return new ViewRatingDto
+                {
+                    Id = r.Id,
+                    Rate = r.Rate,
+                    Comment = r.Comment,
+                    CreatedAt = r.CreatedAt,
+                    JobId = r.CompletedJobId,
+                    JobTitle = job?.JobTitle,
+                    UserId = r.UserId,
+                    Username = user?.UserName
+                };
+            }).ToList();
+
+            return Ok(result);
+        }
+
+        [HttpGet("sent/{userId}")]
+        [Authorize]
+        public IActionResult GetRatingsFromUser(int userId)
+        {
+            var user = _context.Users.Find(userId);
+            if (user == null)
+                return NotFound("User not found");
+
+            var ratings = _context.Ratings
+                .Where(r => r.UserId == userId)
+                .OrderByDescending(r => r.CreatedAt)
+                .Select(r => new ViewRatingDto
+                {
+                    Id = r.Id,
+                    Rate = r.Rate,
+                    Comment = r.Comment,
+                    CreatedAt = r.CreatedAt,
+                    JobId = r.CompletedJobId,
+                    JobTitle = r.CompletedJob.JobTitle,
+                    UserId = r.UserId,
+                    Username = r.User.UserName
+                })
+                .ToList();
+
+            return Ok(ratings);
+        }
+
+
+
+        [HttpGet("received")]
         [Authorize]
         public IActionResult GetMyRatings()
         {
@@ -104,7 +167,34 @@ namespace backend.Controllers
 
         }
 
-        [HttpGet("freelancer/{ratingId}")]
+        [HttpGet("sent")]
+        [Authorize]
+        public IActionResult GetSentRatings()
+        {
+            var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+
+            var ratings = _context.Ratings
+                .Where(r => r.UserId == userId)
+                .OrderByDescending(r => r.CreatedAt)
+                .Select(r => new ViewRatingDto
+                {
+                    Id = r.Id,
+                    Rate = r.Rate,
+                    Comment = r.Comment,
+                    CreatedAt = r.CreatedAt,
+                    JobId = r.CompletedJobId,
+                    JobTitle = r.CompletedJob.JobTitle,  // Using navigation property
+                    UserId = r.UserId,
+                    Username = r.User.UserName           // Using navigation property
+                })
+                .ToList();
+
+            return Ok(ratings);
+        }
+
+
+
+        [HttpGet("{ratingId}")]
         [Authorize]
         public IActionResult GetFreelancerRatingById(int ratingId)
         {

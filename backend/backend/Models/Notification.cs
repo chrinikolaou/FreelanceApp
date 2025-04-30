@@ -15,5 +15,10 @@ namespace backend.Models
 
         [ForeignKey("UserId")]
         public User User { get; set; }
+
+        public int? QuoteId { get; set; }
+
+        [ForeignKey("QuoteId")]
+        public Quote? Quote { get; set; } = null;
     }
 }

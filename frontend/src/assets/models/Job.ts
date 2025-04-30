@@ -9,4 +9,5 @@ export interface Job {
     deadline: string;
     state: string;
     acceptedQuoteId: number | null;
+    freelancerUsername: string | null;
 }

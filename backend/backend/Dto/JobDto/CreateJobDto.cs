@@ -8,6 +8,6 @@ namespace backend.Dto.JobDto
         public string Description { get; set; } = string.Empty;
         public Role Category { get; set; } = 0;
         public decimal Budget { get; set; }
-        public DateTime Deadline { get; set; }
+        public DateTime? Deadline { get; set; }
     }
 }

@@ -18,12 +18,14 @@
   --light: #ffffff;
   --success: #3da338;
   --danger: #ce4343;
-  --yellow: var(--primary);
+  --yellow: #f1e954;
 
 
   --btn-primary-color: var(--light);
   --btn-secondary-color: var(--light);
+  --btn-alert-color: var(--yellow);
   --btn-primary-hover-color: #1b58c8;
+  --btn-alert-hover-color: rgb(227, 218, 56);
 
   --default-font-size: 17px;
   --default-icon-size: 35px;
@@ -75,6 +77,14 @@ body {
   color: var(--primary);
 }
 
+.tag {
+  font-size: 17px;
+  border-radius: 30px;
+  background-color: var(--success);
+  color: var(--light);
+  padding: 7px 10px;
+}
+
 .btn {
   padding: 8px 17px;
   font-size: 17px;
@@ -85,15 +95,30 @@ body {
 
   color: var(--btn-primary-color);
   background-color: var(--primary);
-
+  cursor: pointer;
   border: 1px solid var(--primary);
   transition: all ease-in-out .25s;
-  cursor: pointer;
 
 }
 
 .btn-primary:hover {
   background-color: var(--btn-primary-hover-color);
+}
+
+.btn-alert {
+
+  color: var(--dark);
+  background-color: var(--btn-alert-color);
+
+  border: 1px solid var(--btn-alert-color);
+  transition: all ease-in-out .25s;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.btn-alert:hover {
+  background-color: var(--btn-alert-hover-color);
+  border: 1px solid var(--btn-alert-hover-color);
 }
 
 .btn-gray {
@@ -110,14 +135,15 @@ body {
 .btn-gray:hover {
   background-color: #b0b0b0;
 }
-
+.not-allowed {
+  cursor: not-allowed;
+}
 
 .btn-danger {
   color: var(--danger);
   background-color: #ea60603c;
 
   transition: all ease-in-out .25s;
-  cursor: pointer;
   font-weight: 450;
 
 }
@@ -168,7 +194,16 @@ body {
   width: fit-content;
   padding: 7px;
   transition: all ease-in-out 2s;
+  align-items: center;
+}
 
+
+label {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 1.25rem;
+  align-items: center;
 }
 
 .input:focus-within .select:focus-within, .input:hover, .select:hover {
