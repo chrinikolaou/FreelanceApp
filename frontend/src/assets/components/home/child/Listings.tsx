@@ -1,71 +1,59 @@
+import { useJobs } from '../../../hooks/useJobs';
+import { useUserProfile } from '../../../hooks/useUser';
+import { Job } from '../../../models/Job';
 import '/src/assets/style/listings.css';
 
+function formatDate(dateString: string) : string {
+    const date = new Date(dateString);
+
+    return date.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: 'numeric',
+        minute: 'numeric',
+    });
+}
+
+
 function Listings() {
+    const {jobs, loading} = useJobs();
+
+
+    if(loading) return <div className='loader-overlay'><div className='loader'/></div>;
+
+    const JobCard = ({job}: {job: Job}) => {
+
+        const { profile, loading: userLoading } = useUserProfile(job.username);
+
+        if(userLoading) return <div className='loader-overlay'><div className='loader'/></div>;
+
+        return (
+        <div className="card">
+        <div className="card-details">
+        <img src={`/src/assets/images/${profile.imageUrl}`}/>
+        <p>{formatDate(job.createdAt)}</p>
+        </div>
+        
+        <p>{job.description}</p>
+        <div className="card-buttons">
+        <a href={`/listings/${job.id}`} className="text-link">Learn More...</a>
+        </div>
+    </div>
+        );
+    }
 
     return (
         <div className="listings-container">
             <div className="text">
                 <h2>Latest Listings</h2>
-                <a href="" className="nav-link text-tertiary active">View all</a>
+                <a href="/listings" className="nav-link text-tertiary active">View all</a>
             </div>
             <div className="listings">
-
-                <div className="card">
-                    <div className="card-details">
-                    <img src="/src/assets/images/avatar_man_1.svg"/>
-                    <p>21/03/2025 - 21:36 PM</p>
-                    </div>
-                    
-                    <p>I need a web application with react framework and spring boot as backend 
-                        that is going to be a ticket system.. 
-                    </p>
-                    <div className="card-buttons">
-                    <a href="#"className="text-link">Learn More...</a>
-                        </div>
-                </div>
-
-                <div className="card">
-                    <div className="card-details">
-                    <img src="/src/assets/images/avatar_man_2.svg"/>
-                    <p>22/03/2025 - 22:00 PM</p>
-                    </div>
-                    
-                    <p>I need a fully functional minecraft practice core coded from scratch with the source included. My budget
-                        is N/A.
-                    </p>
-                    <div className="card-buttons">
-                    <a href="#"className="text-link">Learn More...</a>
-                        </div>
-                </div>
-
-                <div className="card">
-                    <div className="card-details">
-                    <img src="/src/assets/images/avatar_man_2.svg"/>
-                    <p>22/03/2025 - 22:00 PM</p>
-                    </div>
-                    
-                    <p>I need a fully functional minecraft practice core coded from scratch with the source included. My budget
-                        is N/A.
-                    </p>
-                    <div className="card-buttons">
-                    <a href="#"className="text-link">Learn More...</a>
-                        </div>
-                </div>
-
-                <div className="card">
-                    <div className="card-details">
-                    <img src="/src/assets/images/avatar_man_2.svg"/>
-                    <p>22/03/2025 - 22:00 PM</p>
-                    </div>
-                    
-                    <p>I need a fully functional minecraft practice core coded from scratch with the source included. My budget
-                        is N/A.
-                    </p>
-                    <div className="card-buttons">
-                    <a href="#"className="text-link">Learn More...</a>
-                        </div>
-                </div>
-
+            {jobs.length == 0 && <p className="empty-jobs"><b>No available jobs at the moment.</b></p>}
+            {jobs.filter(j=>j.state==="Open").map(job=> (
+               <JobCard key={job.id} job={job}/>
+            ))}
 
             </div>
         </div>

@@ -1,4 +1,5 @@
 ﻿using backend.Data;
+using backend.Dto.CompletedJob;
 using backend.Dto.JobDto;
 using backend.Enum;
 using backend.Models;
@@ -20,7 +21,6 @@ namespace backend.Controllers
         {
             _context = context;
         }
-
 
         // POST: Create new Job
         [HttpPost("create")]
@@ -100,6 +100,9 @@ namespace backend.Controllers
         {
             var job = _context.Jobs
                 .Include(j => j.User)
+                .Include(j => j.AcceptedQuote)
+                    .ThenInclude(q => q.Freelancer)
+                        .ThenInclude(f => f.User)
                 .Where(j => j.Id == id)
                 .Select(j => new JobResponseDto
                 {
@@ -127,89 +130,89 @@ namespace backend.Controllers
 
 
 
-/*       //Update job
-        [HttpPut("update-job/{id}")]
-        [Authorize]
-        public IActionResult UpdateJob(int id, [FromBody] UpdateJobDto request)
-        {
-            var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
-
-            if (userId == null)
-            {
-                return Unauthorized();
-            }
-
-            var job = _context.Jobs
-                .Include(j => j.User)
-                .Include(j => j.AcceptedQuote)
-                .FirstOrDefault(j => j.Id == id);
-
-            if (job == null)
-                return NotFound();
-
-            if (job.UserId != userId)
-                return Unauthorized();
-
-
-            if (job.AcceptedQuoteId != null)
-            {
-                job.State = JobState.Open;
-                job.AcceptedQuoteId = null;
-                job.AcceptedQuote = null;
-                _context.Jobs.Update(job);
-                _context.SaveChanges();
-            }
-
-            //Delete Relative Quotes
-            var quotes = _context.Quotes
-                .Include(q => q.Job)
-                    .ThenInclude(j => j.User)
-                .Include(q => q.Freelancer)
-                    .ThenInclude(f => f.User)
-                .Where(q => q.JobId == job.Id)
-                .ToList();
-
-
-
-            //Send Notifications
-            foreach (var quote in quotes)
-            {
-                string message = $"Το quote σας για την δουλειά '{job.Title}' έχει αφαιρεθεί, καθώς η δουλειά ανανεώθηκε.";
-
-               
-                var notification = new Notification
+        /*       //Update job
+                [HttpPut("update-job/{id}")]
+                [Authorize]
+                public IActionResult UpdateJob(int id, [FromBody] UpdateJobDto request)
                 {
-                    UserId = quote.Freelancer.UserId,
-                    Message = message,
-                    CreatedAt = DateTime.UtcNow,
-                };
+                    var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
 
-               
-                _context.Notifications.Add(notification);
-            }
+                    if (userId == null)
+                    {
+                        return Unauthorized();
+                    }
 
+                    var job = _context.Jobs
+                        .Include(j => j.User)
+                        .Include(j => j.AcceptedQuote)
+                        .FirstOrDefault(j => j.Id == id);
 
+                    if (job == null)
+                        return NotFound();
 
-            _context.Quotes.RemoveRange(quotes);
-
-
-
-            job.Title = request.Title;
-            job.Description = request.Description;
-            job.Category = request.Category;
-            job.Budget = request.Budget;
-            job.Deadline = request.Deadline;
-            job.State = request.State;
-            job.AcceptedQuoteId = null;
+                    if (job.UserId != userId)
+                        return Unauthorized();
 
 
+                    if (job.AcceptedQuoteId != null)
+                    {
+                        job.State = JobState.Open;
+                        job.AcceptedQuoteId = null;
+                        job.AcceptedQuote = null;
+                        _context.Jobs.Update(job);
+                        _context.SaveChanges();
+                    }
 
-            _context.SaveChanges();
+                    //Delete Relative Quotes
+                    var quotes = _context.Quotes
+                        .Include(q => q.Job)
+                            .ThenInclude(j => j.User)
+                        .Include(q => q.Freelancer)
+                            .ThenInclude(f => f.User)
+                        .Where(q => q.JobId == job.Id)
+                        .ToList();
 
-            return Ok(new { message = "Job updated successfully" });
-        }
 
-*/
+
+                    //Send Notifications
+                    foreach (var quote in quotes)
+                    {
+                        string message = $"Το quote σας για την δουλειά '{job.Title}' έχει αφαιρεθεί, καθώς η δουλειά ανανεώθηκε.";
+
+
+                        var notification = new Notification
+                        {
+                            UserId = quote.Freelancer.UserId,
+                            Message = message,
+                            CreatedAt = DateTime.UtcNow,
+                        };
+
+
+                        _context.Notifications.Add(notification);
+                    }
+
+
+
+                    _context.Quotes.RemoveRange(quotes);
+
+
+
+                    job.Title = request.Title;
+                    job.Description = request.Description;
+                    job.Category = request.Category;
+                    job.Budget = request.Budget;
+                    job.Deadline = request.Deadline;
+                    job.State = request.State;
+                    job.AcceptedQuoteId = null;
+
+
+
+                    _context.SaveChanges();
+
+                    return Ok(new { message = "Job updated successfully" });
+                }
+
+        */
         //Delete a job
         [HttpDelete("{id}/delete")]
         [Authorize]
@@ -233,7 +236,7 @@ namespace backend.Controllers
             if (job.UserId != userId)
                 return Unauthorized();
 
-            
+
             if (job.AcceptedQuoteId != null)
             {
                 job.State = JobState.Open;
@@ -255,7 +258,7 @@ namespace backend.Controllers
 
 
             //Send notification
-            
+
             foreach (var quote in quotes)
             {
                 string message = $"Το quote σας με Id '{quote.Id}' για την δουλειά '{job.Title}' διαγράφηκε, καθώς η δουλειά διαγράφηκε.";
@@ -272,7 +275,7 @@ namespace backend.Controllers
             }
 
 
-            
+
 
             _context.Quotes.RemoveRange(quotes);
 
@@ -293,8 +296,11 @@ namespace backend.Controllers
             var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
 
             var jobs = _context.Jobs
-                .Where(j => j.UserId == userId)
                 .Include(j => j.User)
+                .Include(j => j.AcceptedQuote)
+                    .ThenInclude(q => q.Freelancer)
+                        .ThenInclude(f => f.User)
+                .Where(j => j.UserId == userId)
                 .Select(j => new JobResponseDto
                 {
                     Id = j.Id,
@@ -330,6 +336,8 @@ namespace backend.Controllers
             var jobs = _context.Jobs
                 .Include(j => j.User)
                 .Include(j => j.AcceptedQuote)
+                    .ThenInclude(q => q.Freelancer)
+                        .ThenInclude(f => f.User)
                 .Where(j => j.AcceptedQuote.FreelancerId == freelancer.FreelancerId)
                 .Select(j => new JobResponseDto
                 {
@@ -350,6 +358,32 @@ namespace backend.Controllers
             return Ok(jobs);
         }
 
+        [HttpGet("completed")]
+        [Authorize]
+        public IActionResult GetCompletedJobs()
+        {
+
+            var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+            if (userId == null)
+            {
+                return Unauthorized();
+            }
+
+            var completedJobs = _context.CompletedJobs
+                .Where(cj => cj.UserId == userId || cj.FreelancerUserId == userId)
+                .Select(cj => new CompletedJobResponseDto
+                {
+                    Id = cj.Id,
+                    JobTitle = cj.JobTitle,
+                    FreelancerUsername = cj.FreelancerUsername,
+                    QuotePrice = cj.QuotePrice,
+                    CompletedAt = cj.CompletedAt,
+                })
+                .ToList();
+
+            return Ok(completedJobs);
+        }
+
 
         [HttpPost("{jobId}/complete")]
         [Authorize]
@@ -365,6 +399,7 @@ namespace backend.Controllers
             var job = _context.Jobs
                 .Include(j => j.AcceptedQuote)
                     .ThenInclude(q => q.Freelancer)
+                        .ThenInclude(f => f.User)
                 .Include(j => j.User)
                 .FirstOrDefault(j => j.Id == jobId);
 
@@ -425,7 +460,7 @@ namespace backend.Controllers
             if (job.State != JobState.Pending)
                 return BadRequest("Job is not pending confirmation");
 
-            if(job.AcceptedQuote == null)
+            if (job.AcceptedQuote == null)
                 return BadRequest("Job has no accepted Quote");
 
             var freelancer = _context.Freelancers.FirstOrDefault(f => f.FreelancerId == job.AcceptedQuote.Freelancer.FreelancerId);
@@ -510,7 +545,7 @@ namespace backend.Controllers
 
 
             // Increase freelancer's completed job count
-           
+
 
             _context.SaveChanges();
 

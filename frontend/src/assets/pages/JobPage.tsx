@@ -57,7 +57,7 @@ function JobPage() {
     };
 
     const handleQuoteSubmit = async (comment: string, price: number) => {
-        alert(user?.id);
+        
         try {
           const response = await api.post('/quotes/create', {
             jobId: job?.id,
@@ -94,7 +94,7 @@ function JobPage() {
                 <p><b>Role: </b><span>{meta.icon}{meta.label}</span></p>
                 <p><b>Budget: </b>${job?.budget}</p>
                 <p><b>Deadline: </b>{job?.deadline ? formatDate(job?.deadline) : "N/A"}</p>
-                <p><b>Taken by: </b>{job?.freelancerUsername ? <a href={`/profile/${job?.freelancerUsername}`} className="text-link">(Freelancer) {job?.freelancerUsername}</a> : "None"}</p>{}
+                <p><b>Taken by: </b>{job?.freelancerUsername ? <a href={user.username !== job?.freelancerUsername ? `/profile/${job?.freelancerUsername}` : `/account/information`} className="text-link">(Freelancer) {job?.freelancerUsername}</a> : "None"}</p>{}
               
             </div>
 

@@ -24,8 +24,13 @@
     "Order": 0,
     "Parameters": [
       {
+        "Name": "username",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
         "Name": "id",
-        "Type": "System.Int32",
+        "Type": "",
         "IsRequired": true
       }
     ],
@@ -66,14 +71,14 @@
   {
     "ContainingType": "backend.Controllers.AdminController",
     "Method": "DeleteUserById",
-    "RelativePath": "api/v1/admin/delete/user/{id}",
+    "RelativePath": "api/v1/admin/delete/user/{username}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
-        "Type": "System.Int32",
+        "Name": "username",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],
@@ -90,6 +95,27 @@
       {
         "Name": "dto",
         "Type": "backend.Dto.NotificationDto.CreateNotificationDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend.Controllers.AdminController",
+    "Method": "UpdateUser",
+    "RelativePath": "api/v1/admin/update/user/{username}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updatedto",
+        "Type": "backend.Dto.AdminDto.UpdateUserDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "username",
+        "Type": "",
         "IsRequired": true
       }
     ],
@@ -297,6 +323,16 @@
     "ContainingType": "backend.Controllers.JobsController",
     "Method": "GetAllJobs",
     "RelativePath": "api/v1/jobs/all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend.Controllers.JobsController",
+    "Method": "GetCompletedJobs",
+    "RelativePath": "api/v1/jobs/completed",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -605,6 +641,22 @@
     "Parameters": [
       {
         "Name": "ratingId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend.Controllers.RatingsController",
+    "Method": "GetCompletedJobRating",
+    "RelativePath": "api/v1/ratings/completedJob/{completedJobId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "completedJobId",
         "Type": "System.Int32",
         "IsRequired": true
       }

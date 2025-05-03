@@ -9,6 +9,7 @@ import { Rating } from "../models/Rating";
 import '../style/pages/account.css';
 import { FormEvent, useState } from "react";
 import { useIsFreelancerOther } from "../hooks/useIsFreelancerOther";
+import { useAuth } from "../hooks/useAuth";
 
 interface ProfileProps {
     active: string;
@@ -43,8 +44,8 @@ function Information({profile}: UserProps) {
           <td>{profile.email ? profile.email : "Not specified"}</td>
           <td>{profile.address ? profile.address : "Not specified"}</td>
           <td>{profile.biography ? profile.biography : "Not specified"}</td>
-          <td>{profile.completedJobs}</td>
-          <td>${profile.balance}</td>
+          <td>{profile.completedJobs ? profile.completedJobs : "None"}</td>
+          <td>${profile.balance ? profile.balance : "0.0"}</td>
           <td></td>
         </tr>
       </tbody>
@@ -54,10 +55,24 @@ function Information({profile}: UserProps) {
 }
 
 function SentRatings({profile}: UserProps) {
+    console.log(profile); 
     const { ratings, loading } = useSentRatings(profile.id);
-    
-    if (loading) return <p>Loading ratings...</p>;
-
+    console.log("id: " + profile.id + " username: " + profile.userName);
+    if (loading) return (
+        <table>
+            <thead>
+                <tr>
+                    <th>Rating</th>
+                    <th>From</th>
+                    <th>Comment</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>User hasn't sent any ratings.</td></tr>
+            </tbody>
+        </table>
+    );
+  
     return (
         <table>
             <thead>
@@ -74,7 +89,7 @@ function SentRatings({profile}: UserProps) {
                     ratings.map((rating: Rating) => (
                         <tr key={rating.id}>
                             <td>{rating.rate}</td>
-                            <td>{rating.freelancer.user.username || "Unknown"}</td>
+                            <td>{rating.freelancerUsername || "Unknown"}</td>
                             <td>{rating.comment || "No message"}</td>
                         </tr>
                     ))
@@ -85,16 +100,28 @@ function SentRatings({profile}: UserProps) {
 }
 
 function ReceivedRatings({ profile }: UserProps) {
-    const { ratings, loading } = useReceivedRatings(profile.id);
-
-    if (loading) return <p>Loading ratings...</p>;
-
+    const { ratings, loading, error} = useReceivedRatings(profile.freelancerId);
+    if (loading) return (
+        <table>
+            <thead>
+                <tr>
+                    <th>Rating</th>
+                    <th>From</th>
+                    <th>Comment</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>User hasn't received any ratings.</td></tr>
+            </tbody>
+        </table>
+    );
+    
     return (
         <table>
             <thead>
                 <tr>
                     <th>Rating</th>
-                    <th>To</th>
+                    <th>From</th>
                     <th>Comment</th>
                 </tr>
             </thead>
@@ -105,7 +132,7 @@ function ReceivedRatings({ profile }: UserProps) {
                     ratings.map((rating: Rating) => (
                         <tr key={rating.id}>
                             <td>{rating.rate}</td>
-                            <td>{rating.freelancer.user.username || "Unknown"}</td>
+                            <td>{rating.username || "Unknown"}</td>
                             <td>{rating.comment || "No message"}</td>
                         </tr>
                     ))
@@ -116,17 +143,20 @@ function ReceivedRatings({ profile }: UserProps) {
 }
 
 export default function ProfileOtherPage({ active = "information" }: ProfileProps) {
+    const {user} = useAuth();
     const { username } = useParams<{ username: string }>();
     const { profile, loading, error } = useUserProfile(username);
     const {isFreelancerOther, loading: freelancerLoading} = useIsFreelancerOther(username);
     const navigate = useNavigate();
     const [target, setTarget] = useState<string>('');
+    if (loading || freelancerLoading) return <div className="loader-overlay"><div className="loader"/></div>;
+
 
     function searchUser(e: FormEvent) {
+        if(target === user?.username) return navigate("/account/information");
         return navigate("/profile/"+target);
     }
-    
-    if (loading || freelancerLoading) return <div className="loader-overlay"><div className="loader"/></div>;
+
     if(!profile && error) {
         return (
         <>

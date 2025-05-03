@@ -27,6 +27,10 @@ namespace backend.Data
             modelBuilder.Entity<Rating>().ToTable("Rating");
             modelBuilder.Entity<CompletedJob>().ToTable("CompletedJob");
 
+            modelBuilder.Entity<User>()
+            .HasIndex(u => u.UserName)
+            .IsUnique();
+
             // Quote - Job relationship
             modelBuilder.Entity<Quote>()
                 .HasOne(q => q.Job)

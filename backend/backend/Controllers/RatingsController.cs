@@ -121,7 +121,8 @@ namespace backend.Controllers
                     JobId = r.CompletedJobId,
                     JobTitle = r.CompletedJob.JobTitle,
                     UserId = r.UserId,
-                    Username = r.User.UserName
+                    Username = r.User.UserName,
+                    FreelancerUsername = r.CompletedJob.FreelancerUsername,
                 })
                 .ToList();
 
@@ -183,9 +184,10 @@ namespace backend.Controllers
                     Comment = r.Comment,
                     CreatedAt = r.CreatedAt,
                     JobId = r.CompletedJobId,
-                    JobTitle = r.CompletedJob.JobTitle,  // Using navigation property
+                    JobTitle = r.CompletedJob.JobTitle,
                     UserId = r.UserId,
-                    Username = r.User.UserName           // Using navigation property
+                    Username = r.User.UserName,
+                    FreelancerUsername = r.Freelancer.User.UserName
                 })
                 .ToList();
 
@@ -200,15 +202,43 @@ namespace backend.Controllers
         {
             var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
 
-            var freelancer = _context.Freelancers.FirstOrDefault(f => f.UserId == userId);
-            if (freelancer == null)
-                return Unauthorized("Only freelancers can access their ratings.");
-
             var rating = _context.Ratings
-                .FirstOrDefault(r => r.Id == ratingId && r.FreelancerId == freelancer.FreelancerId);
+                .FirstOrDefault(r => r.Id == ratingId);
 
             if (rating == null)
-                return NotFound("Rating not found.");
+                return NotFound("Rating not found. " + ratingId);
+
+            var job = _context.CompletedJobs.Find(rating.CompletedJobId);
+            var user = _context.Users.Find(rating.UserId);
+
+            var result = new ViewRatingDto
+            {
+                Id = rating.Id,
+                Rate = rating.Rate,
+                Comment = rating.Comment,
+                CreatedAt = rating.CreatedAt,
+                JobId = rating.CompletedJobId,
+                JobTitle = job?.JobTitle,
+                UserId = rating.UserId,
+                Username = user?.UserName,
+                FreelancerUsername = rating.Freelancer.User.UserName
+            };
+
+            return Ok(result);
+        }
+
+        [HttpGet("completedJob/{completedJobId}")]
+        [Authorize]
+        public IActionResult GetCompletedJobRating(int completedJobId)
+        {
+            var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+
+            
+            var rating = _context.Ratings
+                .FirstOrDefault(r => r.CompletedJobId == completedJobId);
+
+            if (rating == null)
+                return NotFound("Rating not found. " + completedJobId);
 
             var job = _context.CompletedJobs.Find(rating.CompletedJobId);
             var user = _context.Users.Find(rating.UserId);
@@ -227,6 +257,7 @@ namespace backend.Controllers
 
             return Ok(result);
         }
+
 
     }
 }

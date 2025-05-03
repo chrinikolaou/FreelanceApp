@@ -3,7 +3,7 @@
     public class ViewRatingDto
     {
         public int Id { get; set; }
-        public int Rate { get; set; }
+        public double Rate { get; set; }
         public string Comment { get; set; }
         public DateTime CreatedAt { get; set; }
 
@@ -12,5 +12,6 @@
 
         public int UserId { get; set; }
         public string Username { get; set; }
+        public string FreelancerUsername { get; set; }
     }
 }

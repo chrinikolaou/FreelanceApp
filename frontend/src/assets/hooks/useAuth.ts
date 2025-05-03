@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import api from '../../AxiosInstance';
-import User from '/src/assets/models/User';
+import { User } from '../models/User';
 
 export function useAuth() {
     const [user, setUser] = useState<User | null>(null);
@@ -11,6 +11,7 @@ export function useAuth() {
         .get("/auth/me")
         .then((res)=> {
             setUser(res.data);
+            
         })
         .catch(()=> {
             setUser(null);

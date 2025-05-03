@@ -197,6 +197,9 @@ body {
   align-items: center;
 }
 
+.w-full {
+  width: 100%;
+}
 
 label {
   display: flex;
@@ -230,6 +233,19 @@ label {
   font-size: var(--form-search-input-size);
   font-weight: 400;
   font-family: inherit;
+}
+
+.disabled {
+  color: #ebebeb;
+  background-color: #ebebeb;
+}
+
+.disabled input, .disabled label {
+  color: #ebebeb;
+}
+
+.disabled img {
+  display: none;
 }
 
 .input-group img {

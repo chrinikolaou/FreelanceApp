@@ -11,9 +11,11 @@ export function useReceivedRatings(freelancerId: number) {
         const fetchRatings = async () => {
             try {
                 setLoading(true);
-                const response = await api.get<Rating[]>(`/ratings/received/${freelancerId}`);
+                const response = await api.get(`/ratings/received/${freelancerId}`);
                 setRatings(response.data);
+                console.log(response.data);
             } catch (err: any) {
+                console.warn(err);
                 setError(err.message || "An error occurred while fetching ratings.");
             } finally {
                 setLoading(false);

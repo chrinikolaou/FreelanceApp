@@ -10,10 +10,11 @@ export function useIsFreelancer() {
     const fetchIsFreelancer = async () => {
       try {
         setLoading(true);
-        const response = await api.get<boolean>("/auth/freelancer");
+        const response = await api.get("/auth/freelancer");
         setIsFreelancer(response.data);
       
       } catch (err: any) {
+        setIsFreelancer(false);
         setError(err.message || "Failed to fetch.");
       } finally {
         setLoading(false);

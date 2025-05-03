@@ -71,7 +71,7 @@ namespace backend.Controllers
             };
 
             quote.QuoteState = QuoteState.PENDING;
-            _context.Quotes.Add(quote);         
+            _context.Quotes.Add(quote);
 
             //Create Notification for the job poster
 
@@ -105,13 +105,13 @@ namespace backend.Controllers
                 Price = quote.Price,
                 Comment = quote.Comment,
                 Decision = quote.EvaluationDecision
-                
+
             };
 
             return CreatedAtAction(nameof(GetAllQuotesForAJobById), new { jobId = quote.JobId }, response);
         }
 
-        
+
         [HttpDelete("{id}/delete")]
         [Authorize]
         public IActionResult DeleteQuoteById(int id)
@@ -169,7 +169,7 @@ namespace backend.Controllers
             return Ok(new { message = "Quote deleted successfully." });
         }
 
-       
+
         [HttpDelete("me/delete")]
         [Authorize]
         public IActionResult DeleteAllMyQuotes()
@@ -215,11 +215,11 @@ namespace backend.Controllers
                     quote.Job.AcceptedQuote = null;
                     quote.Job.AcceptedQuoteId = null;
 
-                     if (quote.Job.State != JobState.Completed)
-                     {
-                         quote.Job.State = JobState.Open;
-                         _context.Notifications.Add(notification);
-                     }
+                    if (quote.Job.State != JobState.Completed)
+                    {
+                        quote.Job.State = JobState.Open;
+                        _context.Notifications.Add(notification);
+                    }
                     _context.Jobs.Update(quote.Job);
                     _context.SaveChanges();
                 }
@@ -232,7 +232,7 @@ namespace backend.Controllers
             return Ok(new { message = "All your quotes have been deleted." });
         }
 
-        
+
         [HttpGet("job/{jobId}")]
         public IActionResult GetAllQuotesForAJobById(int jobId)
         {
@@ -401,7 +401,7 @@ namespace backend.Controllers
         {
             var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
 
-            
+
             var quote = _context.Quotes
                 .Include(q => q.Job)
                     .ThenInclude(j => j.User)
@@ -416,10 +416,10 @@ namespace backend.Controllers
             if (job == null)
                 return NotFound("Associated job not found.");
 
-            
+
             if (job.AcceptedQuoteId != quoteId)
                 return BadRequest("This quote is not the accepted quote for the job.");
-           
+
             bool isJobOwner = job.UserId == userId;
             bool isAcceptedFreelancer = quote.Freelancer.UserId == userId;
 
@@ -430,7 +430,7 @@ namespace backend.Controllers
                 return BadRequest("This quote cannot be cancelled because the job is completed");
 
 
-     
+
             // Send notification to the other party
             Notification notification = null;
 
@@ -478,17 +478,17 @@ namespace backend.Controllers
         {
             var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
 
-           
+
             var freelancer = _context.Freelancers
                 .FirstOrDefault(f => f.UserId == userId);
 
-           
+
             if (freelancer == null)
             {
                 return BadRequest("You are not a freelancer.");
             }
 
-           
+
             var quotes = _context.Quotes
                 .Include(q => q.Job)
                 .Where(q => q.FreelancerId == freelancer.FreelancerId)
@@ -507,7 +507,7 @@ namespace backend.Controllers
                 })
                 .ToList();
 
-           
+
             return Ok(quotes);
         }
 
@@ -521,7 +521,7 @@ namespace backend.Controllers
             var freelancer = _context.Freelancers
                 .FirstOrDefault(f => f.UserId == userId);
 
-           
+
             if (freelancer == null)
             {
                 return BadRequest("You are not a freelancer.");
@@ -556,7 +556,7 @@ namespace backend.Controllers
         public IActionResult GetAllQuotesForJobs()
         {
             var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
-               
+
             var jobs = _context.Jobs
                 .Where(j => j.UserId == userId)
                 .Select(j => j.Id)
@@ -570,6 +570,8 @@ namespace backend.Controllers
             // Βρίσκουμε τα quotes για τα jobs που ανήκουν στον χρήστη
             var quotes = _context.Quotes
                 .Include(q => q.Freelancer)
+                    .ThenInclude(f => f.User)
+                .Include(q => q.Job)
                 .Where(q => jobs.Contains(q.JobId))
                 .Select(q => new QuoteResponseDto
                 {
@@ -590,7 +592,7 @@ namespace backend.Controllers
             return Ok(quotes);
         }
 
-       
+
 
 
 

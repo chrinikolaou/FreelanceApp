@@ -46,7 +46,7 @@ function Navbar({active = "home"}: NavbarProps) {
     const [target, setTarget] = useState<string>('');
 
     function searchUser(e: FormEvent) {
-        
+        if(target === user.username) return navigate("/account/information");
         return navigate("/profile/"+target);
     }
 

@@ -139,7 +139,9 @@ namespace backend.Controllers
                     Biography = freelancer.Biography,
                     Balance = freelancer.Balance,
                     Role = freelancer.Role.ToString(),
-                    CompletedJobs = freelancer.CompletedJobs
+                    CompletedJobs = freelancer.CompletedJobs,
+                    FreelancerId = freelancer.FreelancerId,
+                    Id = freelancer.UserId
                 };
 
                 return Ok(freelancerProfile);
@@ -154,7 +156,8 @@ namespace backend.Controllers
                     Email = user.Email,
                     Address = user.Address,
                     ImageUrl = user.ImageUrl,
-                    IsAdmin = user.IsAdmin
+                    IsAdmin = user.IsAdmin,
+                    Id = user.Id
                 };
 
                 return Ok(userProfile);

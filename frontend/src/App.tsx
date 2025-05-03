@@ -72,9 +72,11 @@ function App() {
           <Route path="/account/information" element={<ProtectedRoute><ProfilePage active="information"/></ProtectedRoute>}/>
           <Route path="/account/quotes" element={<ProtectedRoute><ProfilePage active="quotes"/></ProtectedRoute>}/>
           <Route path="/account/jobs" element={<ProtectedRoute><ProfilePage active="jobs"/></ProtectedRoute>}/>
+          <Route path="/account/completed" element={<ProtectedRoute><ProfilePage active="completed"/></ProtectedRoute>}/>
           <Route path="/account/work" element={<ProtectedRoute><ProfilePage active="work"/></ProtectedRoute>}/>
           <Route path="/account/ratings/sent" element={<ProtectedRoute><ProfilePage active="sent-ratings"/></ProtectedRoute>}/>
           <Route path="/account/ratings/received" element={<ProtectedRoute><ProfilePage active="received-ratings"/></ProtectedRoute>}/>
+          <Route path="/account/admin" element={<ProtectedRoute><ProfilePage active="admin"/></ProtectedRoute>}/>
 
         </Routes>
       </Router>

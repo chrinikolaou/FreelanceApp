@@ -13,7 +13,6 @@ export function useReceivedQuotes() {
         setLoading(true);
         const response = await api.get<Quote[]>("/quotes/me/jobs");
         setQuotes(response.data);
-        console.log(response.data);
       
       } catch (err: any) {
         setError(err.message || "Failed to fetch your quotes.");

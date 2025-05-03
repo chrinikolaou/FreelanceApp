@@ -35,7 +35,7 @@ function ListingPage() {
             <div className="jobs-container">
                 <h1>All Jobs Posted</h1>
                 <p>Click the <a className="text-link" href="#">Learn More</a> button in a job listing to learn more information about it.</p>
-                {/* Retrieve backend values  */}
+                
                 {jobs.length == 0 && <p className="empty-jobs"><b>No available jobs at the moment.</b></p>}
                 <div className="jobs">
                 {jobs.filter(job=>job.state === "Open").map(job => (

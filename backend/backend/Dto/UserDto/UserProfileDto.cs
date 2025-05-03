@@ -9,5 +9,6 @@
         public string? Address { get; set; }
         public string? ImageUrl { get; set; }
         public bool IsAdmin { get; set; }
+        public int Id { get; set; }
     }
 }

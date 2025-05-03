@@ -13,5 +13,7 @@
         public decimal Balance { get; set; }
         public string Role { get; set; }
         public int CompletedJobs {  get; set; }
+        public int FreelancerId { get; set; }
+        public int Id { get; set; }
     }
 }

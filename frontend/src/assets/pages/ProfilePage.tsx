@@ -16,20 +16,30 @@ import { useMyReceivedRatings } from "../hooks/useMyReceivedRatings";
 import { useIsFreelancer } from "../hooks/useIsFreelancer";
 import { useWorkJobs } from "../hooks/useWorkJobs";
 import { Job } from "../models/Job";
+import { Profile } from "../models/Profile";
+import { useUserProfile } from "../hooks/useUser";
+import { useCompletedJobs } from "../hooks/useCompletedJobs";
+import { useRating } from "../hooks/useRating";
+import { useEffect, useState } from "react";
+import { Rating } from "../models/Rating";
+import RatingPopup from "../components/global/RatingPopup";
+import AdminPopup from "../components/global/AdminPopup";
+import { RoleMetaMap } from "../models/meta/RoleMeta";
+import { Role, RoleByOrdinal } from "../models/Role";
 
 interface ProfileProps {
     active: string;
 }
 
 interface UserProps {
-    user: User;
+  user: User;
 }
 
 interface QuoteProps {
   quote: Quote;
 }
 
-function Information({user}: UserProps) {
+function Information({profile}: {profile: Profile}) {
     return (
         <>
     <table>
@@ -40,15 +50,21 @@ function Information({user}: UserProps) {
           <th>User Name</th>
           <th>Email</th>
           <th>Address</th>
+          <th>Biography</th>
+          <th>Jobs Completed</th>
+          <th>Balance</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>{user.firstName ? user.firstName : "Not specified"}</td>
-          <td>{user.lastName ? user.lastName : "Not specified"}</td>
-          <td>{user.username ? user.username : "Not specified"}</td>
-          <td>{user.email ? user.email : "Not specified"}</td>
-          <td>{user.address ? user.address : "Not specified"}</td>
+          <td>{profile.firstName ? profile.firstName : "Not specified"}</td>
+          <td>{profile.lastName ? profile.lastName : "Not specified"}</td>
+          <td>{profile.username ? profile.username : "Not specified"}</td>
+          <td>{profile.email ? profile.email : "Not specified"}</td>
+          <td>{profile.address ? profile.address : "Not specified"}</td>
+          <td>{profile.biography ? profile.biography : "Not specified"}</td>
+          <td>{profile.completedJobs ? profile.completedJobs : "None"}</td>
+          <td>${profile.balance ? profile.balance : "0.0"}</td>
         </tr>
       </tbody>
     </table>
@@ -184,6 +200,114 @@ function Jobs() {
     );
   }
 
+  function CompletedJobs({user}: UserProps) {
+    const { completedJobs, loading} = useCompletedJobs();
+    const [ratings, setRatings] = useState<Record<number, Rating | null>>({});
+    const [loadingRatings, setLoadingRatings] = useState<boolean>(true);
+    const [isRatingPopupOpen, setRatingPopupOpen] = useState(false); 
+
+    useEffect(() => {
+      const fetchRatings = async () => {
+        const fetchedRatings: Record<number, Rating | null> = {};
+    
+        for (const job of completedJobs) {
+          try {
+            const response = await api.get<Rating>(`/ratings/completedJob/${job.id}`);
+            fetchedRatings[job.id] = response.data || null;
+          } catch (error) {
+            console.warn(`Failed to fetch rating for job ${job.id}:`, error);
+            fetchedRatings[job.id] = null; 
+          }
+          finally {
+            setLoadingRatings(false);
+          }
+        }
+    
+        setRatings(fetchedRatings);
+        setLoadingRatings(false);
+      };
+    
+      if (completedJobs.length > 0) {
+        fetchRatings();
+      }
+      setLoadingRatings(false);
+    }, [completedJobs]);
+  
+
+    if (loading || loadingRatings) return <div className="loader-overlay"><div className="loader" /></div>;
+  
+    const handleOpenRatingPopup = () => {
+      setRatingPopupOpen(true);
+  };
+
+  const handleCloseRatingPopup = () => {
+      setRatingPopupOpen(false);
+  };
+
+  const handleRatingSubmit = async (completedJobId: number, comment: string, rate: number) => {
+      
+    try {
+      const response = await api.post('/ratings', {
+        completedJobId: completedJobId,
+        rate: rate,
+        comment: comment,
+      });
+    
+      console.log('Rating created:', response.data);
+      alert('Rating submitted successfully!');
+    } catch (err) {
+      console.error('Failed to submit rating.', err);
+      alert('Failed to submit rating. Please try again.');
+    }
+  }    
+
+    return (
+      <table>
+        <thead>
+          <tr>
+            <th>Job ID</th>
+            <th>Title</th>
+            <th>Status</th>
+            <th>Created At</th>
+            <th>Freelancer</th>
+            <th>Rating</th>
+          </tr>
+        </thead>
+        <tbody>
+          {completedJobs.length === 0 ? (
+            <tr><td colSpan={5}>You don't have any completed job yet.</td></tr>
+          ) : (
+            completedJobs.map((job) => (
+            
+              <tr key={job.id}> 
+                <td>{job.id}</td>
+                <td>{job.jobTitle}</td>
+                <td>Completed</td>
+                <td>{new Date(job.completedAt).toLocaleDateString()}</td>
+                <td><a href={`/profile/${job.freelancerUsername}`} className="text-link">{job.freelancerUsername}</a></td>
+                <td className="buttons">
+                  {user.username !== job.freelancerUsername && 
+                  
+                  ( ratings[job.id] ? <p>{ratings[job.id]?.rate}/5 - {ratings[job.id]?.comment}</p> : <a className="btn btn-primary" onClick={handleOpenRatingPopup}>Rate Freelancer</a>)
+                  }
+                  {user.username === job.freelancerUsername && (
+                    ratings[job.id] ? (
+                      <p>{ratings[job.id]?.rate}/5 - {ratings[job.id]?.comment}</p>
+                    ) : (
+                      <p>Not Rated Yet.</p>
+                    )
+                  )}
+                  <RatingPopup isOpen={isRatingPopupOpen} onClose={handleCloseRatingPopup} completedJobId={job.id} onSubmit={handleRatingSubmit}/>
+                </td>
+              </tr>
+              
+            ))
+          )}
+        </tbody>
+      </table>
+    );
+  }
+
   function Quotes({user}: UserProps) {
     const { quotes: myQuotes, loading: myQuotesLoading, error: myQuotesError } = useMyQuotes();
     const { quotes: receivedQuotes, loading: receivedQuotesLoading, error: receivedQuotesError } = useReceivedQuotes();  
@@ -272,6 +396,7 @@ function Jobs() {
             <th>Job</th>
             <th>Freelancer</th>
             <th>Status</th>
+            <th>Evaluation</th>
             <th>Actions</th>
           </tr>
         </thead>
@@ -288,7 +413,7 @@ function Jobs() {
                 <td><Link className="text-link" to={`/listings/${quote.jobId}`}>{quote.jobTitle || "Unknown"}</Link></td>
                 <td>{quote.freelancerUsername || "Unknown"}</td>
                 <td>{getQuoteState(quote.quoteState)}</td>
-                
+                <td>{quote.decision ? quote.decision : "N/A"}</td>
                 <td className="buttons">
                 {quote.quoteState == 1 && quote.freelancerUsername ===  user.username && <td><a className="btn btn-danger" onClick={()=>cancelQuote(quote.id)}>Cancel</a></td>}
                 {quote.username === user.username && <AddQuoteFunctions quote={quote}/>}
@@ -304,6 +429,23 @@ function Jobs() {
   
 function SentRatings({user}: UserProps) {
   const {ratings, loading} = useMySentRatings();
+  
+  if(loading) return (
+    <table>
+      <thead>
+        <tr>
+          <th>Rating</th>
+          <th>To</th>
+          <th>Comment</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr><td>You haven't sent any ratings.</td></tr>
+      </tbody>
+    </table>
+);
+
   return (
     <table>
       <thead>
@@ -321,7 +463,7 @@ function SentRatings({user}: UserProps) {
             ratings.map((rating) => (
               <tr key={rating.id}>
                 <td>{rating.rate}</td>
-                <td>{rating.freelancer.user.username || "Unknown"}</td>
+                <td>{rating.freelancerUsername || "Unknown"}</td>
                 <td>{rating.comment || "No message"}</td>
               </tr>
             ))
@@ -333,12 +475,28 @@ function SentRatings({user}: UserProps) {
 
 function ReceivedRatings({user}: UserProps) {
   const {ratings, loading} = useMyReceivedRatings();
+  if(loading) return (
+      <table>
+        <thead>
+          <tr>
+            <th>Rating</th>
+            <th>From</th>
+            <th>Comment</th>
+          </tr>
+        </thead>
+  
+        <tbody>
+          <tr><td>You haven't received any ratings.</td></tr>
+        </tbody>
+      </table>
+  );
+
   return (
     <table>
       <thead>
         <tr>
           <th>Rating</th>
-          <th>To</th>
+          <th>From</th>
           <th>Comment</th>
         </tr>
       </thead>
@@ -350,7 +508,7 @@ function ReceivedRatings({user}: UserProps) {
             ratings.map((rating) => (
               <tr key={rating.id}>
                 <td>{rating.rate}</td>
-                <td>{rating.freelancer.user.username || "Unknown"}</td>
+                <td>{rating.username || "Unknown"}</td>
                 <td>{rating.comment || "No message"}</td>
               </tr>
             ))
@@ -363,14 +521,97 @@ function ReceivedRatings({user}: UserProps) {
 
 export default function ProfilePage({active = "information"}: ProfileProps) {
     
-    const {user, logout} = useAuth();
+    const {user, authChecked} = useAuth();
+    const {profile, loading: profileLoading} = useUserProfile(user?.username);
     const { notifications, loading, error, markAsRead} = useNotifications(user?.id || null);
     const {isFreelancer} = useIsFreelancer();
+    const [isAdminPanelOpen, setIsAdminPanelOpen] = useState<boolean>(false);
 
-    if (loading || !user || !notifications) {
+    const handleAdminSubmit = async (
+      firstName: string,
+      lastName: string,
+      username: string,
+      password: string,
+      email: string,
+      address: string,
+      bio: string,
+      balance: number,
+      action: string,
+      role: number
+    ) => {
+      if(username.trim().length < 3) {
+        alert("Username must be at-least three letters long.");
+        return;
+      }
+
+
+      switch(action) {
+
+          case "create":
+          try {
+            const response = await api.post("/admin/create/user", {
+              username: username,
+              password: password,
+              firstname: firstName,
+              lastname: lastName, 
+              email: email,
+              address: address,
+              imageUrl: "avatar_man_1.svg", 
+              isAdmin: false,
+              
+            }); 
+           
+            alert("User " + username + " has been created successfully.");
+          } catch(err: any) {
+            alert(err.response.data);
+            console.warn(err || "An error occurred while creating a user.");
+          }
+          break;
+
+          case "edit":
+            try {
+              const response = await api.put(`/admin/update/user/${username}`, {
+                previousUsername: username,
+                firstname: firstName,
+                lastname: lastName, 
+                email: email,
+                address: address,
+                imageUrl: "avatar_man_1.svg",
+                bio: bio,
+                role: role
+                
+              }); 
+              
+              alert("User " + username + " has been updated successfully.");
+            } catch(err: any) {
+              alert(err.response.data);
+              console.warn(err || "An error occurred while updating a user.");
+            }
+          break;
+
+          case "delete":
+            try {
+              const response = await api.post(`/admin/delete/user/${username}`);
+              alert("User " + username + " has been deleted successfully.");  
+              
+            } catch(err: any) {
+              alert(err.response.data);
+              console.warn(err || "An error occurred while deleting a user.");
+            }
+          break;
+      }
+
+    };
+
+    if (!authChecked || loading || !user || !notifications) {
         return <div className="loader-overlay"><div className="loader"/></div>
       }
 
+
+      if(profileLoading) {
+        return <div className="loader-overlay"><div className="loader"/></div>
+      }
+      
     return (
         <>
             <SignedNavbar active=""/>
@@ -381,28 +622,33 @@ export default function ProfilePage({active = "information"}: ProfileProps) {
                     <div className="account-name">
                       <h3>{user?.firstName} {user?.lastName}</h3>
                       {isFreelancer && <span className="freelancer-tag">Freelancer</span>}
+                      {user?.isAdmin && <span className="admin-tag">Admin</span>}
                     </div>
                     </div>
                     <div className="actions">
                     <Link to="/account" className={`text-link ${active === "information" ? "active" : ""}`}>Information</Link>
                     <Link to="/account/jobs" className={`text-link ${active === "jobs" ? "active" : ""}`}>My Jobs</Link>
+                    <Link to="/account/completed" className={`text-link ${active === "completed" ? "active" : ""}`}>My Completed Jobs</Link>
                     <Link to="/account/work" className={`text-link ${active === "work" ? "active" : ""}`}>My Work</Link>
                     <Link to="/account/quotes" className={`text-link ${active === "quotes" ? "active" : ""}`}>My Quotes</Link>
                     <Link to="/account/ratings/received" className={`text-link ${active === "received-ratings" ? "active" : ""}`}>Received Ratings</Link>
                     <Link to="/account/ratings/sent" className={`text-link ${active === "sent-ratings" ? "active" : ""}`}>Sent Ratings</Link>
                     {!isFreelancer && <Link to="/freelancing" className="btn btn-primary">Become a Freelancer</Link>}
+                    {user.isAdmin && <a href="#" className="btn btn-danger" onClick={()=>setIsAdminPanelOpen(true)}>Admin Panel</a>}
                  
                     </div>
                 </div>
 
                 <div className="adjustableSection">
-                    {active==="information" && <Information user={user}/>}
+                    {active==="information" && profile && <Information profile={profile}/>}
                     {active==="jobs" && <Jobs/>}
+                    {active==="completed" && <CompletedJobs user={user}/>}
                     {active==="work" && <Work/>}
                     {active==="quotes" && <Quotes user={user}/>}
                     {active==="sent-ratings" && <SentRatings user={user}/>}
                     {active==="received-ratings" && <ReceivedRatings user={user}/>}
-     
+                    {user.isAdmin && active==="admin"}
+                    <AdminPopup isOpen={isAdminPanelOpen} onClose={()=>setIsAdminPanelOpen(false)} onSubmit={handleAdminSubmit}/>
                 </div>
             </div>
             <Footer/>

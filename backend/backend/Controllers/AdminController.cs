@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Conventions;
 using System.Security.Claims;
 
 namespace backend.Controllers
@@ -34,7 +35,7 @@ namespace backend.Controllers
             if (isAdminClaim == null || !bool.Parse(isAdminClaim))
                 return Unauthorized("You are not an Admin.");
 
-            
+
             var freelancers = _context.Freelancers
                  .Include(f => f.User)
                  .Select(u => new ViewFreelancerDto
@@ -57,14 +58,16 @@ namespace backend.Controllers
 
         [HttpDelete("delete/freelancer/{id}")]
         [Authorize]
-        public IActionResult DeleteFreelancer(int id)
+        public IActionResult DeleteFreelancer(string username)
         {
             var isAdminClaim = User.Claims.FirstOrDefault(c => c.Type == "isAdmin")?.Value;
-            if (isAdminClaim == null || !bool.Parse(isAdminClaim)) 
+            if (isAdminClaim == null || !bool.Parse(isAdminClaim))
                 return Unauthorized("You are not an Admin.");
 
 
-            var freelancer = _context.Freelancers.FirstOrDefault(f => f.UserId == id);
+            var freelancer = _context.Freelancers
+                .Include(f => f.User)
+                .FirstOrDefault(f => f.User.UserName == username);
             if (freelancer == null)
             {
 
@@ -130,26 +133,26 @@ namespace backend.Controllers
         }
 
 
-        [HttpDelete("delete/user/{id}")]
-         [Authorize]
-         public IActionResult DeleteUserById(int id)
-         {
-                 var isAdminClaim = User.Claims.FirstOrDefault(c => c.Type == "isAdmin")?.Value;
-                 if (isAdminClaim == null || !bool.Parse(isAdminClaim))
-                     return BadRequest("You are not an Admin.");
+        [HttpDelete("delete/user/{username}")]
+        [Authorize]
+        public IActionResult DeleteUserById(string username)
+        {
+            var isAdminClaim = User.Claims.FirstOrDefault(c => c.Type == "isAdmin")?.Value;
+            if (isAdminClaim == null || !bool.Parse(isAdminClaim))
+                return BadRequest("You are not an Admin.");
 
-                 var user = _context.Users.FirstOrDefault(u => u.Id == id);
-                 if (user == null)
-                 {
-                     return BadRequest("User not found.");
-                 }
+            var user = _context.Users.FirstOrDefault(u => u.UserName == username);
+            if (user == null)
+            {
+                return BadRequest("User not found.");
+            }
+            int id = user.Id;
 
-    
-                // 1. Διαγραφή jobs του χρήστη
-                var jobs = _context.Jobs
-                .Include(j => j.AcceptedQuote)
-                .Where(j => j.UserId == id)
-                .ToList();
+            // 1. Διαγραφή jobs του χρήστη
+            var jobs = _context.Jobs
+            .Include(j => j.AcceptedQuote)
+            .Where(j => j.UserId == id)
+            .ToList();
 
             foreach (var job in jobs)
             {
@@ -186,7 +189,7 @@ namespace backend.Controllers
 
             _context.Jobs.RemoveRange(jobs);
 
-           
+
             var freelancer = _context.Freelancers.FirstOrDefault(f => f.UserId == id);
             if (freelancer != null)
             {
@@ -226,9 +229,9 @@ namespace backend.Controllers
             _context.SaveChanges();
 
             return Ok(new { message = "User and related data deleted successfully." });
-         }
+        }
 
-         
+
         [HttpGet("view/quotes/")]
         [Authorize]
         public IActionResult ViewAllQuotes()
@@ -244,11 +247,11 @@ namespace backend.Controllers
                 .Include(q => q.Job)
                 .Select(q => new ViewQuoteDto
                 {
-                     Id = q.Id,
-                     Price = q.Price,
-                     Comment = q.Comment,
-                     FreelancerName = q.Freelancer.User.UserName,
-                     JobTitle = q.Job.Title
+                    Id = q.Id,
+                    Price = q.Price,
+                    Comment = q.Comment,
+                    FreelancerName = q.Freelancer.User.UserName,
+                    JobTitle = q.Job.Title
                 }).ToList();
 
 
@@ -269,7 +272,7 @@ namespace backend.Controllers
             var isAdminClaim = User.Claims.FirstOrDefault(c => c.Type == "isAdmin")?.Value;
             if (isAdminClaim == null || !bool.Parse(isAdminClaim))
                 return Unauthorized("You are not an Admin.");
-         
+
             var quote = _context.Quotes
              .Include(q => q.Job)
              .ThenInclude(job => job.User)
@@ -320,19 +323,19 @@ namespace backend.Controllers
             var jobs = _context.Jobs
                  .Include(j => j.User)
                  .Select(j => new ViewJobDto
-                  {
-                    Id = j.Id,
-                    Title = j.Title,
-                    Description = j.Description,
-                    Category = j.Category,
-                    Budget = j.Budget,
-                    Deadline = j.Deadline,
-                    CreatedAt = j.CreatedAt,
-                    UserEmail = j.User.Email,
-                    UserName = j.User.UserName,
-                    State = j.State.ToString(),
-                    AcceptedQuoteId = j.AcceptedQuoteId
-                  })
+                 {
+                     Id = j.Id,
+                     Title = j.Title,
+                     Description = j.Description,
+                     Category = j.Category,
+                     Budget = j.Budget,
+                     Deadline = j.Deadline,
+                     CreatedAt = j.CreatedAt,
+                     UserEmail = j.User.Email,
+                     UserName = j.User.UserName,
+                     State = j.State.ToString(),
+                     AcceptedQuoteId = j.AcceptedQuoteId
+                 })
                 .ToList();
 
 
@@ -344,7 +347,7 @@ namespace backend.Controllers
             return Ok(jobs);
         }
 
-       
+
         [HttpDelete("delete/job/{id}")]
         [Authorize]
         public IActionResult DeleteJob(int id)
@@ -470,6 +473,70 @@ namespace backend.Controllers
             return Ok("User created successfully");
         }
 
+        // Update
+        [HttpPut("update/user/{username}")]
+        [Authorize]
+        public IActionResult UpdateUser([FromBody] UpdateUserDto updatedto)
+        {
+            var isAdminClaim = User.Claims.FirstOrDefault(c => c.Type == "isAdmin")?.Value;
+            if (isAdminClaim == null || !bool.Parse(isAdminClaim))
+                return Unauthorized("You are not an Admin.");
 
+            var user = _context.Users.FirstOrDefault(u => u.UserName == updatedto.PreviousUsername);
+            if (user == null)
+            {
+                return BadRequest("User not found.");
+            }
+
+            var freelancer = _context.Freelancers
+                .Include(f => f.User)
+                .FirstOrDefault(f => f.User.UserName == updatedto.PreviousUsername);
+
+            user.FirstName = updatedto.FirstName ?? user.FirstName;
+            user.LastName = updatedto.LastName ?? user.LastName;
+            user.Address = updatedto.Address ?? user.Address;
+            user.ImageUrl = updatedto.ImageUrl ?? user.ImageUrl;
+            user.Email = updatedto.Email ?? user.Email;
+
+            _context.Users.Update(user);
+
+            if (freelancer != null)
+            {
+                freelancer.Biography = updatedto.Biography ?? freelancer.Biography;
+                freelancer.Role = updatedto.Role ?? freelancer.Role;
+                _context.Freelancers.Update(freelancer);
+            }
+
+
+
+            // Ενημέρωση CompletedJobs
+            var completedJobs = _context.CompletedJobs
+                .Where(cj => cj.UserId == user.Id || cj.FreelancerUserId == user.Id)
+                .ToList();
+
+            foreach (var job in completedJobs)
+            {
+                if (job.UserId == user.Id)
+                {
+                    job.UserUsername = user.UserName;
+                    job.UserEmail = user.Email;
+                }
+
+                if (job.FreelancerUserId == user.Id && freelancer != null)
+                {
+                    job.FreelancerUsername = user.UserName;
+                    job.FreelancerUserEmail = user.Email;
+                }
+
+                _context.CompletedJobs.Update(job);
+            }
+
+
+
+
+
+            _context.SaveChanges();
+            return Ok("User updated successfully.");
+        }
     }
 }

@@ -13,6 +13,7 @@ export function useSentRatings(userId: number) {
                 setLoading(true);
                 const response = await api.get<Rating[]>(`/ratings/sent/${userId}`);
                 setRatings(response.data);
+                console.log(response.data);
             } catch (err: any) {
                 setError(err.message || "An error occurred while fetching ratings.");
             } finally {

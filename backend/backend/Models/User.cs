@@ -20,6 +20,8 @@ namespace backend.Models
         
         [Required]
         [MaxLength(30)]
+        [MinLength(3)]
+        [RegularExpression(@"^\S(.*\S)?$", ErrorMessage = "Username cannot be blank or whitespace.")]
         public string UserName { get; set; }
        
         

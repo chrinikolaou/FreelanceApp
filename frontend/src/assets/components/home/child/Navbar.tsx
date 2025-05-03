@@ -18,7 +18,6 @@ function Navbar({active = "home"}: NavbarProps) {
     const navigate = useNavigate();
 
     function searchUser(e: FormEvent) {
-        
         return navigate("/profile/"+target);
     }
 
